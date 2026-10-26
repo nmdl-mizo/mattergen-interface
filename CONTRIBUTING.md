@@ -4,7 +4,7 @@ This repository is research code that accompanies a paper (see `README.md` and `
 provided so that the results can be inspected and reproduced; it is not an actively developed software package.
 
 Issues are welcome (questions about reproduction, bug reports, errors in the documentation) at
-[nmdl-mizo/symmetry-constrained-mattergen](https://github.com/nmdl-mizo/symmetry-constrained-mattergen).
+[nmdl-mizo/mattergen-interface](https://github.com/nmdl-mizo/mattergen-interface).
 Pull requests are accepted only in a limited way: small fixes that keep the released results reproducible are
 welcome, while larger changes or new features are better made in a fork.
 

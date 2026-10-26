@@ -1,4 +1,4 @@
-# symmetry-constrained-mattergen
+# mattergen-interface
 
 > [!IMPORTANT]
 > This repository is a modified version of [microsoft/mattergen](https://github.com/microsoft/mattergen) (snapshot of September 2025). It is **not** affiliated with,
@@ -47,7 +47,7 @@ The training structures were built with the grain-boundary construction code *in
 Two environments are used (see `docs/reproduce.md`): generation/training (CPython 3.10, CUDA 12.8) and evaluation/plotting.
 
 ```bash
-git clone https://github.com/nmdl-mizo/symmetry-constrained-mattergen && cd symmetry-constrained-mattergen
+git clone https://github.com/nmdl-mizo/mattergen-interface && cd mattergen-interface
 # generation / training
 uv venv .venv --python 3.10 && source .venv/bin/activate
 uv pip install -r environment-gen.txt && uv pip install -e .
@@ -106,13 +106,15 @@ UPSTREAM_README.md                           README of upstream MatterGen (kept 
 
 ## 7. Citation
 
-If you use this repository, please cite the paper:
+If you use this repository, please cite it as given in `CITATION.cff` (on GitHub, "Cite this repository" in the sidebar):
 
 ```
-<AUTHORS>. Energy-conditioned generation of Al Σ5(210)[001] grain boundaries with a symmetry-constrained MatterGen. <PAPER_DOI> (in preparation).
+Miyamoto, K. and Mizoguchi, T. mattergen-interface: symmetry-constrained MatterGen for Al Σ5(210)[001] grain boundaries. https://github.com/nmdl-mizo/mattergen-interface
 ```
 
-and the works it builds on: Zeni et al., "A generative model for inorganic materials design", Nature 639, 624-632 (2025), doi:10.1038/s41586-025-08628-5 (MatterGen);
+The accompanying paper, "Energy-conditioned generation of Al Σ5(210)[001] grain boundaries with a symmetry-constrained MatterGen", is in preparation; its reference will be added here when it is published.
+
+Please also cite the works it builds on: Zeni et al., "A generative model for inorganic materials design", Nature 639, 624-632 (2025), doi:10.1038/s41586-025-08628-5 (MatterGen);
 Batatia et al., "Cross Learning between Electronic Structure Theories for Unifying Molecular, Surface, and Inorganic Crystal Foundation Force Fields", arXiv:2510.25380 (MACE-MH-1).
 Xie, Shibata and Mizoguchi, "interface_master: Python package building CSL and approximate CSL interfaces of any two lattices -- an effective tool for interface engineers", arXiv:2211.15173 (2022), doi:10.48550/arXiv.2211.15173 (interface_master, used to build the training structures).
 `CITATION.cff` has the same information.

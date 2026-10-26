@@ -49,5 +49,5 @@ MIT License (see `LICENSE`; the same license as the upstream MatterGen weights).
 
 ## Citation
 
-<AUTHORS>. Energy-conditioned generation of Al Sigma5(210)[001] grain boundaries with a symmetry-constrained MatterGen. <PAPER_DOI> (in preparation).
+Please cite this repository as given in `CITATION.cff`. The accompanying paper, "Energy-conditioned generation of Al Sigma5(210)[001] grain boundaries with a symmetry-constrained MatterGen", is in preparation.
 Please also cite MatterGen: Zeni et al., Nature 639, 624-632 (2025), doi:10.1038/s41586-025-08628-5. See `CITATION.cff`.

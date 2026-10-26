@@ -15,7 +15,7 @@ All commands use environment variables instead of paths; there are no defaults (
 | `GEN_PY` | python of the generation environment (`environment-gen.txt`); required by every `gb_eval` script because the shared constants module reads it, even where it is not run |
 
 ```bash
-export GBREL_CODE=/path/to/symmetry-constrained-mattergen
+export GBREL_CODE=/path/to/mattergen-interface
 export GBREL_DATA=/path/to/extracted/data-record
 export GBREL_WORK=/path/to/empty/work
 export MACE_MODEL_PATH=/path/to/mace-mh-1.model
