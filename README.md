@@ -6,6 +6,11 @@
 
 Reference implementation, trained weights and data of the paper "Energy-conditioned generation of Al Σ5(210)[001] grain boundaries with a symmetry-constrained MatterGen" (in preparation, `<PAPER_DOI>`).
 
+<p align="center">
+  <img src="docs/images/denoising_trajectory.gif" alt="Denoising trajectory of an Al Σ5(210)[001] bicrystal generated with the symmetry-constrained MatterGen" width="100%">
+</p>
+<p align="center"><em>Example of a denoising trajectory: an Al Σ5(210)[001] bicrystal generated with the symmetry-constrained MatterGen.</em></p>
+
 In file names, configuration names and environment variables, `scm` is the abbreviation of *symmetry-constrained MatterGen* (for example the `scm_*` configurations and `SCM_HOST_Z`).
 
 ## 1. Overview
