@@ -1,0 +1,5 @@
+stol,near_nomatch,near_match,outside_nomatch,outside_match,n_total
+0.015,91,0,158,1,250
+0.025,90,1,155,4,250
+0.040,84,7,155,4,250
+0.060,66,25,148,11,250

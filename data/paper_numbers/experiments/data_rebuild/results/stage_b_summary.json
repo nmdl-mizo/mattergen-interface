@@ -1,0 +1,12460 @@
+{
+ "cnids": [
+  "cnid_0_0",
+  "cnid_0_1",
+  "cnid_0_2",
+  "cnid_0_3",
+  "cnid_0_4",
+  "cnid_0_5",
+  "cnid_0_6",
+  "cnid_0_9",
+  "cnid_1_0",
+  "cnid_1_2",
+  "cnid_1_3",
+  "cnid_1_4",
+  "cnid_1_9",
+  "cnid_2_0",
+  "cnid_2_1",
+  "cnid_2_4",
+  "cnid_2_9",
+  "cnid_3_0",
+  "cnid_3_1",
+  "cnid_3_2",
+  "cnid_4_0",
+  "cnid_4_1",
+  "cnid_5_0",
+  "cnid_5_1",
+  "cnid_5_2",
+  "cnid_5_3",
+  "cnid_5_4",
+  "cnid_6_2",
+  "cnid_6_3",
+  "cnid_6_4",
+  "cnid_7_4"
+ ],
+ "expected_total": 6510,
+ "n_structures": 6510,
+ "deficit_total": 0,
+ "deficit_cap": 65,
+ "n_frozen_check_failed": 0,
+ "success_by_k": {
+  "0": 310,
+  "1": 1550,
+  "2": 1550,
+  "3": 1550,
+  "4": 1550
+ },
+ "deficit_by_k": {
+  "0": 0,
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 0
+ },
+ "removal_skip_reason_counts": {
+  "duplicate_removal_set": 434
+ },
+ "per_cnid_dx_k": [
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_5",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_6",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_0_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_1_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_2_9",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_3_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_4_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_0",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_1",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_5_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_2",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_3",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_6_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.75,
+   "dx_idx": 0,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.6,
+   "dx_idx": 1,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.45,
+   "dx_idx": 2,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.3,
+   "dx_idx": 3,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": -0.15,
+   "dx_idx": 4,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.0,
+   "dx_idx": 5,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.15,
+   "dx_idx": 6,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.3,
+   "dx_idx": 7,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.45,
+   "dx_idx": 8,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 0,
+   "success": 1,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 1,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 2,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 3,
+   "success": 5,
+   "deficit": 0
+  },
+  {
+   "cnid": "cnid_7_4",
+   "dx_A": 0.6,
+   "dx_idx": 9,
+   "k": 4,
+   "success": 5,
+   "deficit": 0
+  }
+ ],
+ "elapsed_s": 1913.9221684932709
+}

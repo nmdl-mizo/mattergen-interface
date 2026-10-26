@@ -1,0 +1,23 @@
+{
+  "design": "data-rebuild plan, stage E-3",
+  "gamma_csv": "${GBREL_DATA}/training/gamma_dedup.csv",
+  "split_json": "${GBREL_DATA}/training/split.json",
+  "n_train": 4419,
+  "mu_uncond": -0.04579090291921249,
+  "sigma2": 0.18528099361717523,
+  "n_rows": 4419,
+  "n_unique_levels": 10,
+  "level_counts": {
+    "-0.75": 407,
+    "-0.6": 386,
+    "-0.45": 412,
+    "-0.3": 439,
+    "-0.15": 443,
+    "0.0": 450,
+    "0.15": 444,
+    "0.3": 477,
+    "0.45": 455,
+    "0.6": 506
+  },
+  "recipe": "mu_uncond=mean(dx_A), sigma2=population variance (ddof=0), train rows only"
+}

@@ -1,0 +1,144 @@
+{
+  "design": "data-rebuild plan, stage E-3",
+  "gamma_csv": "${GBREL_DATA}/training/gamma_dedup.csv",
+  "split_json": "${GBREL_DATA}/training/split.json",
+  "n_train": 4419,
+  "gamma_col": "gamma_Jm2",
+  "n_train_rows": 4419,
+  "min": 0.5301740882645838,
+  "max": 2.536703469279315,
+  "targets": [
+    0.7308270263660569,
+    1.1321329025690032,
+    1.5334387787719495,
+    1.934744654974896,
+    2.3360505311778423,
+    0.1288682120616375,
+    2.9380093454822616
+  ],
+  "labels": [
+    "inner0",
+    "inner1",
+    "inner2",
+    "inner3",
+    "inner4",
+    "extrap_low",
+    "extrap_high"
+  ],
+  "order": "[inner0..4 (ascending), extrap_low = min - delta, extrap_high = max + delta]",
+  "chunk_seed_rule": "chunk c = 0..13: target = targets[c // 2], seed = 20301000 + c (same value for proposed and baseline)",
+  "rule": "range: min + W*{0.1,0.3,0.5,0.7,0.9}; outer min-Delta, max+Delta; Delta=0.2*W",
+  "W": 2.0065293810147313,
+  "delta_range": 0.4013058762029463,
+  "supersedes": "targets of the earlier targets file (based on quantiles). Main comparison w=2.0 only",
+  "decision": "${GBREL_WORK}/workspace/an internal note that is not included",
+  "superseded_quantile_based": {
+    "note": "Values of the earlier targets (based on quantiles of the training gamma; stage E-3 of the data rebuild). Unrelated to the targets of this file. Set aside to prevent misreading.",
+    "values": {
+      "q10": 0.7191837893803571,
+      "q90": 1.5579839687610781,
+      "delta": 0.20970004484518026,
+      "chunks": [
+        {
+          "chunk": 0,
+          "target_index": 0,
+          "label": "inner0",
+          "target_gamma_Jm2": 0.7191837893803571,
+          "seed": 20301000
+        },
+        {
+          "chunk": 1,
+          "target_index": 0,
+          "label": "inner0",
+          "target_gamma_Jm2": 0.7191837893803571,
+          "seed": 20301001
+        },
+        {
+          "chunk": 2,
+          "target_index": 1,
+          "label": "inner1",
+          "target_gamma_Jm2": 0.9288838342255373,
+          "seed": 20301002
+        },
+        {
+          "chunk": 3,
+          "target_index": 1,
+          "label": "inner1",
+          "target_gamma_Jm2": 0.9288838342255373,
+          "seed": 20301003
+        },
+        {
+          "chunk": 4,
+          "target_index": 2,
+          "label": "inner2",
+          "target_gamma_Jm2": 1.1385838790707177,
+          "seed": 20301004
+        },
+        {
+          "chunk": 5,
+          "target_index": 2,
+          "label": "inner2",
+          "target_gamma_Jm2": 1.1385838790707177,
+          "seed": 20301005
+        },
+        {
+          "chunk": 6,
+          "target_index": 3,
+          "label": "inner3",
+          "target_gamma_Jm2": 1.348283923915898,
+          "seed": 20301006
+        },
+        {
+          "chunk": 7,
+          "target_index": 3,
+          "label": "inner3",
+          "target_gamma_Jm2": 1.348283923915898,
+          "seed": 20301007
+        },
+        {
+          "chunk": 8,
+          "target_index": 4,
+          "label": "inner4",
+          "target_gamma_Jm2": 1.5579839687610781,
+          "seed": 20301008
+        },
+        {
+          "chunk": 9,
+          "target_index": 4,
+          "label": "inner4",
+          "target_gamma_Jm2": 1.5579839687610781,
+          "seed": 20301009
+        },
+        {
+          "chunk": 10,
+          "target_index": 5,
+          "label": "extrap_low",
+          "target_gamma_Jm2": 0.32047404341940355,
+          "seed": 20301010
+        },
+        {
+          "chunk": 11,
+          "target_index": 5,
+          "label": "extrap_low",
+          "target_gamma_Jm2": 0.32047404341940355,
+          "seed": 20301011
+        },
+        {
+          "chunk": 12,
+          "target_index": 6,
+          "label": "extrap_high",
+          "target_gamma_Jm2": 2.7464035141244953,
+          "seed": 20301012
+        },
+        {
+          "chunk": 13,
+          "target_index": 6,
+          "label": "extrap_high",
+          "target_gamma_Jm2": 2.7464035141244953,
+          "seed": 20301013
+        }
+      ],
+      "percentile_method": "numpy.percentile default (linear)"
+    }
+  }
+}

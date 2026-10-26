@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "If you use this software or the accompanying data, please cite the paper below (and the works it builds on)."
+title: "symmetry-constrained-mattergen: symmetry-constrained MatterGen for Al Sigma5(210)[001] grain boundaries"
+type: software
+authors:
+  - name: "<AUTHORS>"
+repository-code: "https://github.com/nmdl-mizo/symmetry-constrained-mattergen"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Energy-conditioned generation of Al Σ5(210)[001] grain boundaries with a symmetry-constrained MatterGen"
+  authors:
+    - name: "<AUTHORS>"
+  year: 2026
+  status: in-preparation
+  doi: "<PAPER_DOI>"
+references:
+  - type: article
+    title: "A generative model for inorganic materials design"
+    authors:
+      - family-names: "Zeni"
+      - name: "et al. (first author as recorded in the paper's reference list; see the DOI for the full author list)"
+    journal: "Nature"
+    volume: 639
+    start: 624
+    end: 632
+    year: 2025
+    doi: "10.1038/s41586-025-08628-5"
+  - type: article
+    title: "Cross Learning between Electronic Structure Theories for Unifying Molecular, Surface, and Inorganic Crystal Foundation Force Fields"
+    authors:
+      - family-names: "Batatia"
+      - name: "et al. (first author as recorded in the paper's reference list; see arXiv for the full author list)"
+    year: 2025
+    url: "https://arxiv.org/abs/2510.25380"
+    notes: "MACE-MH-1 (head omat_pbe) is the machine-learning interatomic potential used for structural relaxation."
+  - type: generic
+    title: "interface_master: Python package building CSL and approximate CSL interfaces of any two lattices -- an effective tool for interface engineers"
+    authors:
+      - family-names: "Xie"
+        given-names: "Y. S."
+      - family-names: "Shibata"
+        given-names: "K."
+      - family-names: "Mizoguchi"
+        given-names: "T."
+    year: 2022
+    doi: "10.48550/arXiv.2211.15173"
+    url: "https://arxiv.org/abs/2211.15173"
+    notes: "arXiv preprint 2211.15173 (MIT License). The interface_master code bundled unmodified in structure_builder/vendor/interfacemaster/ builds the grain-boundary structures of Stage 0 of the training-data pipeline."

@@ -1,0 +1,50 @@
+{
+  "_doc": "Single definition of the layers. All scripts read only this one file via common.py. Layer names are unique throughout. main refers to the products of the existing RUN read-only (work_root_read_only=true). seed_base: generation seed = seed_base + chunk. input_run_root: the run of the generation and the evaluation of gamma_pre (it has results/gen/<model>/w<W>/ and results/eval/<model>_w<W>/ below it). work_root: the run that has the manifest/relax/novelty of stages 0/1 under results/.",
+  "version": 1,
+  "layers": {
+    "main": {
+      "arms": ["proposed", "baseline"],
+      "ws": [2.0],
+      "seed_base": 20301000,
+      "input_run_root": "${GBREL_WORK}/workspace/experiments/range_targets",
+      "work_root": "${GBREL_WORK}/workspace/experiments/relax_novelty",
+      "work_root_read_only": true
+    },
+    "baseline_regen1": {
+      "arms": ["baseline"], "ws": [2.0], "seed_base": 20311000,
+      "input_run_root": "${GBREL_DATA}/generation/baseline_regen1",
+      "work_root": "${GBREL_WORK}/workspace/experiments/verification",
+      "work_root_read_only": false
+    },
+    "baseline_regen2": {
+      "arms": ["baseline"], "ws": [2.0], "seed_base": 20312000,
+      "input_run_root": "${GBREL_DATA}/generation/baseline_regen2",
+      "work_root": "${GBREL_WORK}/workspace/experiments/verification",
+      "work_root_read_only": false
+    },
+    "baseline_regen3": {
+      "arms": ["baseline"], "ws": [2.0], "seed_base": 20313000,
+      "input_run_root": "${GBREL_DATA}/generation/baseline_regen3",
+      "work_root": "${GBREL_WORK}/workspace/experiments/verification",
+      "work_root_read_only": false
+    },
+    "proposed_regen1": {
+      "arms": ["proposed"], "ws": [2.0], "seed_base": 20311000,
+      "input_run_root": "${GBREL_DATA}/generation/proposed_regen1",
+      "work_root": "${GBREL_WORK}/workspace/experiments/verification",
+      "work_root_read_only": false
+    },
+    "proposed_regen2": {
+      "arms": ["proposed"], "ws": [2.0], "seed_base": 20312000,
+      "input_run_root": "${GBREL_DATA}/generation/proposed_regen2",
+      "work_root": "${GBREL_WORK}/workspace/experiments/verification",
+      "work_root_read_only": false
+    },
+    "proposed_w0": {
+      "arms": ["proposed"], "ws": [0.0], "seed_base": 20301000,
+      "input_run_root": "${GBREL_DATA}/generation/proposed_w0",
+      "work_root": "${GBREL_WORK}/workspace/experiments/verification",
+      "work_root_read_only": false
+    }
+  }
+}

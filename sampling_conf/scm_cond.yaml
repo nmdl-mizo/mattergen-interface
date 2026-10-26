@@ -1,0 +1,80 @@
+# M-t4c P1 (internal notes P1-1): CFG-capable sampling
+# config for the gamma-conditioned symmetry_constrained sampler.
+#
+# BASE: sampling_conf/symmetry_constrained.yaml. The predictor_partials / corrector_partials / n_steps_corrector
+# block below is copied VERBATIM from symmetry_constrained.yaml (P1-1: "predictor / corrector
+# keeps the configuration as it is. Changing it here would break the comparability with the unconditional generation") -- pos:
+# WrappedAncestralSamplingPredictor, atomic_numbers: D3PMAncestralSamplingPredictor
+# (predict_x0=True), gb_t: WrappedAncestralSamplingPredictor; corrector: pos only
+# (WrappedLangevinCorrector, max_step_size=1e6, snr=0.4); n_steps_corrector=1. symmetry_constrained.yaml has no
+# `cell` predictor/corrector at all (the cell is fixed/inpainted, never diffused) -- unchanged here.
+#
+# --- Differences from sampling_conf/gb_band3a.yaml (the CFG-wiring precedent, :7-15) ---
+#
+# Diff 1 (sampler_partial._target_): IDENTICAL to gb_band3a.yaml -- both point at
+# `classifier_free_guidance.GuidedPredictorCorrector.from_pl_module`.
+#
+# Diff 2 (guidance_scale): gb_band3a.yaml HARDCODES `guidance_scale: 0.0` as a config default
+# (that route's band-SDE mean-reversion does the conditioning work, not CFG interpolation, so CFG
+# is neutralized there by construction). This config intentionally OMITS `guidance_scale` entirely
+# -- no key, no default -- so `GuidedPredictorCorrector.__init__`'s keyword-only `guidance_scale`
+# parameter (no default in the Python signature either) makes the caller supply it explicitly at
+# `sampler_partial(pl_module=..., guidance_scale=...)` call time; omitting it raises a `TypeError`
+# rather than silently falling back to any value ("do not put a default value in the config
+# (make the caller state it explicitly, to prevent the silent use of a default value)"; the guidance_scale=2.0/1.0
+# arm-scale sealing clause depends on this -- a config default would be a silent third value).
+#
+# Diff 3 (remove_conditioning_fn / keep_conditioning_fn): IDENTICAL wiring to gb_band3a.yaml --
+# `SetUnconditionalEmbeddingType` / `SetConditionalEmbeddingType` from `mattergen.property_embeddings`
+#, no extra kwargs (single scalar condition `gb_gamma_J_m2`, no
+# decoupled always-on fields to exclude, unlike gb_band3a's grain_label use case).
+#
+# Diff 4 (predictor_partials / corrector_partials): gb_band3a.yaml diffuses `pos` with the
+# mean-reverting `WrappedBandAncestralSamplingPredictor` (mattergen.gb.band3a-specific) and ALSO
+# diffuses `cell` (LatticeAncestralSamplingPredictor / LatticeLangevinDiffCorrector); this config
+# has neither -- it keeps symmetry_constrained.yaml's plain `WrappedAncestralSamplingPredictor` for `pos` (no
+# band-SDE mean reversion; symmetry_constrained's cell is fixed/inpainted, not diffused) and additionally
+# diffuses `gb_t` (symmetry_constrained-specific rigid-translation latent, absent from gb_band3a). This is a
+# consequence of "the base is symmetry_constrained.yaml", not an oversight: swapping to the band3a predictor
+# set would break comparability with the M-t3c unconditional symmetry_constrained generation baseline.
+#
+# Diff 5 (condition_loader_partial): gb_band3a.yaml sets a `condition_loader_partial`
+# (`get_number_of_atoms_condition_loader`) because that route is DE-NOVO generation via
+# `mattergen.generator.CrystalGenerator` (the 60-atom template batch it produces is discarded --
+# gb_band3a.yaml:40-46). symmetry_constrained generation is NOT de-novo: it starts from
+# `build_template_bank_graph()`'s fixed cnid_0_0 template + `build_masks()` inpainting
+# (mattergen/scripts/generate_symmetry_constrained.py), bypassing `CrystalGenerator` entirely (same reasoning
+# `scripts/generate_scm_cond.py`'s module docstring already gives for why it does not reuse
+# an earlier driver's `CrystalGenerator`-based core). `sampling_conf/symmetry_constrained.yaml` itself has
+# no `condition_loader_partial` key; this file does not add one either, to stay a strict CFG-only
+# diff on top of the existing symmetry_constrained.yaml base.
+sampler_partial:
+  _target_: mattergen.diffusion.sampling.classifier_free_guidance.GuidedPredictorCorrector.from_pl_module
+  N: 1000
+  eps_t: ${eval:'1/${.N}'}
+  _partial_: true
+  # guidance_scale: intentionally NOT SET HERE -- see "Diff 2" above. Callers pass it explicitly,
+  # e.g. `sampler_partial(pl_module=lightning_module, guidance_scale=2.0)`. Gate-registered values
+  #: confirm arm = 2.0, diag arm = 1.0. No other value before Gate PASS.
+  remove_conditioning_fn:
+    _target_: mattergen.property_embeddings.SetUnconditionalEmbeddingType
+  keep_conditioning_fn:
+    _target_: mattergen.property_embeddings.SetConditionalEmbeddingType
+  predictor_partials:
+    pos:
+      _target_: mattergen.diffusion.wrapped.wrapped_predictors_correctors.WrappedAncestralSamplingPredictor
+      _partial_: true
+    atomic_numbers:
+      _target_: mattergen.diffusion.d3pm.d3pm_predictors_correctors.D3PMAncestralSamplingPredictor
+      predict_x0: True
+      _partial_: true
+    gb_t:
+      _target_: mattergen.diffusion.wrapped.wrapped_predictors_correctors.WrappedAncestralSamplingPredictor
+      _partial_: true
+  corrector_partials:
+    pos:
+      _target_: mattergen.diffusion.wrapped.wrapped_predictors_correctors.WrappedLangevinCorrector
+      _partial_: true
+      max_step_size: 1e6
+      snr: 0.4
+  n_steps_corrector: 1

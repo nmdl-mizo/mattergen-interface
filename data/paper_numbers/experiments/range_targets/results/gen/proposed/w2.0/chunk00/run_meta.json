@@ -1,0 +1,19 @@
+{
+  "arm": "proposed",
+  "w": 2.0,
+  "chunk": 0,
+  "target_id": 0,
+  "gamma_target": 0.7308270263660569,
+  "seed": 20301000,
+  "num_samples": 25,
+  "ckpt_sha256": "0e236655bd2454e701c2bde95db9a3f80f3aed85e217f9bdf3f9b663201c0e87",
+  "ckpt_epoch": 159,
+  "num_atoms_key": "AL_S5_210_TRAIN",
+  "host_z": 13,
+  "solute_zs": "",
+  "card_hash12": "471d507f4133",
+  "gamma_csv_path": "${GBREL_DATA}/training/gamma_dedup.csv",
+  "bulk_membership_csv_path": "${GBREL_DATA}/training/bulk_membership.csv",
+  "manifest_dir": "${GBREL_DATA}/training/manifests",
+  "reference_dir": "${GBREL_DATA}/training/structures/cnid_0_0/dx_p0.000/k0_s15000"
+}

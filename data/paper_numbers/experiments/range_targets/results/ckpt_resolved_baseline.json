@@ -1,0 +1,12 @@
+{
+  "arm": "baseline",
+  "train_dir": "${GBREL_WORK}/scm-work/experiments/baseline_train",
+  "ckpt_path": "${GBREL_DATA}/weights/baseline_epoch129.ckpt",
+  "epoch": 129,
+  "loss_val_from_metrics": 2.620039224624634,
+  "loss_val_in_filename": "2.62",
+  "sha256": "2b8b4bf24b2ba8f5d35c0c15e1068683dd983882728412fc4c43770219eee252",
+  "size_bytes": 511779849,
+  "card_hash12": "bbd1307e34eb",
+  "resolved_at": "2026-10-04T13:47:21.986948+09:00"
+}

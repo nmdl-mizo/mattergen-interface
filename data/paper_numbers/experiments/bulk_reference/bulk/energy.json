@@ -1,0 +1,9 @@
+{
+  "energy_eV": -15.027617069725906,
+  "energy_per_atom_eV": -3.7569042674314765,
+  "natoms": 4,
+  "converged": true,
+  "mode": "bulk",
+  "fmax_final": 1.0338747977142275e-15,
+  "a_len_A": 4.0365507720520695
+}

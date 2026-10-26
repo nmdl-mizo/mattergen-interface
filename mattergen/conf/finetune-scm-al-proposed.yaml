@@ -1,0 +1,50 @@
+# Final Al proposed (symmetry-constrained set, variable length) finetune config. Plan:
+# see the experiment description.
+#
+# A copy of the finetune config of the proposed of another system (not edited). Only data_module and corruption are replaced.
+# model and diffusion_module refer to those of that proposed as they are (not copied):
+#   lightning_module/diffusion_module: scm_proposed   (SymmetryConstrainedDiffusionModule, SymmetryConstrainedLoss,
+#                                                        p_unconditional 0.2, loss weights pos 0.1/atomic 1.0/d3pm lambda 0.01,
+#                                                        gb_t/gb_dx weight 1.0. There is no key for freeze_atomic_numbers)
+#   lightning_module/diffusion_module/model: scm_proposed (SymmetryConstrainedAdapter. There is no key for an extension switch)
+# Entry script: mattergen.scripts.finetune_scm_cond (see the header of the other config for the reason.
+# finetune.py overwrites the denoiser config of the pretrained model wholesale, so it cannot be used for a proposed with its own model).
+#
+# Before running, export SCM_HOST_Z=13 and SCM_SOLUTE_ZS= (empty).
+#
+# optimizer / scheduler: lightning_module: sf (AdamW + CosineAnnealing T_max=${trainer.max_epochs}, eta_min 1e-7).
+#   The same as the baseline (finetune-scm-al-baseline-dedup.yaml). lr is 5.0e-06, starting from mattergen_base.
+# The override of ModelCheckpoint (the 6 lines that keep epoch=199.ckpt) is given by COMMON_OVERRIDES on the sbatch side
+# (sbatch_train_al_proposed.sh. The same 6 lines as the baseline).
+#
+# num_atoms_distribution_key: the key of the distribution from which the number of atoms n is drawn at generation (NUM_ATOMS_DISTRIBUTIONS of mattergen/common/data/
+# num_atoms_distribution.py). A key for the record only, not referenced in training;
+# the agreement of the num_atoms keys of proposed and baseline and the same value on the training and generation sides (
+# confirmation that it was resolved) is printed in the resolved config / at run time. proposed and baseline share the same key.
+hydra:
+  run:
+    dir: ${oc.env:OUTPUT_DIR,outputs/singlerun/${now:%Y-%m-%d}/${now:%H-%M-%S}}
+
+pretrained_name: mattergen_base
+model_path: null
+load_epoch: last
+full_finetuning: true
+
+num_atoms_distribution_key: AL_S5_210_TRAIN
+
+defaults:
+  - data_module: scm_al_proposed
+  - trainer: default
+  - lightning_module: sf
+  - lightning_module/diffusion_module: scm_proposed
+  - lightning_module/diffusion_module/model: scm_proposed
+  - lightning_module/diffusion_module/corruption: scm_al_proposed
+
+trainer:
+  max_epochs: 200
+  logger:
+    job_type: train_finetune
+
+lightning_module:
+  optimizer_partial:
+    lr: 5.0e-06

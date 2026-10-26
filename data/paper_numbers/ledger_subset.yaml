@@ -1,0 +1,67 @@
+# Extract of the paper's numbers table: only the entries (and the fields) that the figure scripts F6-F9 read.
+# Generated for the release; the full ledger is not distributed.
+numbers:
+- id: B60
+  value: 74
+- id: DFTK
+  value: 13
+- id: DFTNP
+  value: 13
+- id: DFTNS
+  value: 26
+- id: DFTNSH
+  value: 14
+- id: DFTNSV
+  value: 12
+- id: DFTOFF
+  value: -0.139
+  text: −0.139 J/m²
+- id: DFTPH
+  value: 7
+- id: DFTPV
+  value: 6
+- id: DFTR
+  value: 0.989
+- id: DFTRHO
+  value: 0.979
+- id: DSDXHI
+  value: 0.6
+- id: DSDXLO
+  value: -0.75
+- id: DSDXST
+  value: 0.15
+- id: DXN
+  value: 350
+- id: DXOUT
+  value: 207
+- id: DXRIN
+  value: 48
+- id: DXROUT
+  value: 43
+- id: EQ91
+  value: 0.1927
+- id: EQ92
+  value: 0.2063
+- id: EQ93
+  value: 8.485e-06
+- id: EQ99hi
+  value: 0.1
+  text: 0.1 Å
+- id: EQ99lo
+  value: 0.0001
+  text: 1×10⁻⁴ Å
+- id: GRMG
+  value: 0.1651
+- id: GRP10
+  value: 0.080227
+- id: GRP90
+  value: 0.444568
+- id: LGHMIN
+  value: 0.535
+- id: NVNEAR
+  value: 91
+- id: P11
+  value: 0.064
+  text: 0.064 Å
+- id: P17
+  value: 0.1

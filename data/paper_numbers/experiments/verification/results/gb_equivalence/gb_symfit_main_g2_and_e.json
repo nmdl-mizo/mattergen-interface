@@ -1,0 +1,476 @@
+{
+ "layer": "main",
+ "theta": 0.064,
+ "rows": [
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "post",
+   "n_req": 350,
+   "g2": 350,
+   "e": 350,
+   "g2_wilson": {
+    "p": 1.0,
+    "lo": 0.989143559114183,
+    "hi": 1.0
+   },
+   "e_wilson": {
+    "p": 1.0,
+    "lo": 0.989143559114183,
+    "hi": 1.0
+   },
+   "status_counts": {
+    "fitted": 350,
+    "no_gb": 0,
+    "multi_gb": 0,
+    "disordered": 0,
+    "axis_mismatch": 0,
+    "non_al": 0,
+    "excluded_pre": 0,
+    "error": 0,
+    "total": 350
+   }
+  },
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "pre",
+   "n_req": 350,
+   "g2": 350,
+   "e": 350,
+   "g2_wilson": {
+    "p": 1.0,
+    "lo": 0.989143559114183,
+    "hi": 1.0
+   },
+   "e_wilson": {
+    "p": 1.0,
+    "lo": 0.989143559114183,
+    "hi": 1.0
+   },
+   "status_counts": {
+    "fitted": 350,
+    "no_gb": 0,
+    "multi_gb": 0,
+    "disordered": 0,
+    "axis_mismatch": 0,
+    "non_al": 0,
+    "excluded_pre": 0,
+    "error": 0,
+    "total": 350
+   }
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "post",
+   "n_req": 350,
+   "g2": 74,
+   "e": 0,
+   "g2_wilson": {
+    "p": 0.21142857142857144,
+    "lo": 0.17190147782161666,
+    "hi": 0.25722138234676906
+   },
+   "e_wilson": {
+    "p": 0.0,
+    "lo": 0.0,
+    "hi": 0.010856440885816897
+   },
+   "status_counts": {
+    "fitted": 74,
+    "no_gb": 256,
+    "multi_gb": 0,
+    "disordered": 0,
+    "axis_mismatch": 0,
+    "non_al": 0,
+    "excluded_pre": 20,
+    "error": 0,
+    "total": 350
+   }
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "pre",
+   "n_req": 350,
+   "g2": 74,
+   "e": 0,
+   "g2_wilson": {
+    "p": 0.21142857142857144,
+    "lo": 0.17190147782161666,
+    "hi": 0.25722138234676906
+   },
+   "e_wilson": {
+    "p": 0.0,
+    "lo": 0.0,
+    "hi": 0.010856440885816897
+   },
+   "status_counts": {
+    "fitted": 74,
+    "no_gb": 256,
+    "multi_gb": 0,
+    "disordered": 0,
+    "axis_mismatch": 0,
+    "non_al": 0,
+    "excluded_pre": 20,
+    "error": 0,
+    "total": 350
+   }
+  }
+ ],
+ "per_target": [
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "post",
+   "target_id": 0,
+   "gamma_target": "0.7308270263660569",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "post",
+   "target_id": 1,
+   "gamma_target": "1.1321329025690032",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "post",
+   "target_id": 2,
+   "gamma_target": "1.5334387787719495",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "post",
+   "target_id": 3,
+   "gamma_target": "1.934744654974896",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "post",
+   "target_id": 4,
+   "gamma_target": "2.3360505311778423",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "post",
+   "target_id": 5,
+   "gamma_target": "0.1288682120616375",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "post",
+   "target_id": 6,
+   "gamma_target": "2.9380093454822616",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "pre",
+   "target_id": 0,
+   "gamma_target": "0.7308270263660569",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "pre",
+   "target_id": 1,
+   "gamma_target": "1.1321329025690032",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "pre",
+   "target_id": 2,
+   "gamma_target": "1.5334387787719495",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "pre",
+   "target_id": 3,
+   "gamma_target": "1.934744654974896",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "pre",
+   "target_id": 4,
+   "gamma_target": "2.3360505311778423",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "pre",
+   "target_id": 5,
+   "gamma_target": "0.1288682120616375",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "2.0",
+   "stage": "pre",
+   "target_id": 6,
+   "gamma_target": "2.9380093454822616",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "post",
+   "target_id": 0,
+   "gamma_target": "0.7308270263660569",
+   "n_req": 50,
+   "g2": 3,
+   "e": 0
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "post",
+   "target_id": 1,
+   "gamma_target": "1.1321329025690032",
+   "n_req": 50,
+   "g2": 8,
+   "e": 0
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "post",
+   "target_id": 2,
+   "gamma_target": "1.5334387787719495",
+   "n_req": 50,
+   "g2": 11,
+   "e": 0
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "post",
+   "target_id": 3,
+   "gamma_target": "1.934744654974896",
+   "n_req": 50,
+   "g2": 18,
+   "e": 0
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "post",
+   "target_id": 4,
+   "gamma_target": "2.3360505311778423",
+   "n_req": 50,
+   "g2": 22,
+   "e": 0
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "post",
+   "target_id": 5,
+   "gamma_target": "0.1288682120616375",
+   "n_req": 50,
+   "g2": 1,
+   "e": 0
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "post",
+   "target_id": 6,
+   "gamma_target": "2.9380093454822616",
+   "n_req": 50,
+   "g2": 11,
+   "e": 0
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "pre",
+   "target_id": 0,
+   "gamma_target": "0.7308270263660569",
+   "n_req": 50,
+   "g2": 3,
+   "e": 0
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "pre",
+   "target_id": 1,
+   "gamma_target": "1.1321329025690032",
+   "n_req": 50,
+   "g2": 8,
+   "e": 0
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "pre",
+   "target_id": 2,
+   "gamma_target": "1.5334387787719495",
+   "n_req": 50,
+   "g2": 11,
+   "e": 0
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "pre",
+   "target_id": 3,
+   "gamma_target": "1.934744654974896",
+   "n_req": 50,
+   "g2": 18,
+   "e": 0
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "pre",
+   "target_id": 4,
+   "gamma_target": "2.3360505311778423",
+   "n_req": 50,
+   "g2": 22,
+   "e": 0
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "pre",
+   "target_id": 5,
+   "gamma_target": "0.1288682120616375",
+   "n_req": 50,
+   "g2": 1,
+   "e": 0
+  },
+  {
+   "arm": "baseline",
+   "w": "2.0",
+   "stage": "pre",
+   "target_id": 6,
+   "gamma_target": "2.9380093454822616",
+   "n_req": 50,
+   "g2": 11,
+   "e": 0
+  }
+ ],
+ "known_main_check": [
+  {
+   "item": "proposed w2.0 post n_req",
+   "expected": 350,
+   "actual": 350,
+   "pass": true
+  },
+  {
+   "item": "proposed w2.0 post G2",
+   "expected": 350,
+   "actual": 350,
+   "pass": true
+  },
+  {
+   "item": "proposed w2.0 post E",
+   "expected": 350,
+   "actual": 350,
+   "pass": true
+  },
+  {
+   "item": "baseline w2.0 post n_req",
+   "expected": 350,
+   "actual": 350,
+   "pass": true
+  },
+  {
+   "item": "baseline w2.0 post G2",
+   "expected": 74,
+   "actual": 74,
+   "pass": true
+  },
+  {
+   "item": "baseline w2.0 post E",
+   "expected": 0,
+   "actual": 0,
+   "pass": true
+  },
+  {
+   "item": "baseline w2.0 post G2 per target (target 0 to 6)",
+   "expected": [
+    3,
+    8,
+    11,
+    18,
+    22,
+    1,
+    11
+   ],
+   "actual": [
+    3,
+    8,
+    11,
+    18,
+    22,
+    1,
+    11
+   ],
+   "pass": true
+  },
+  {
+   "item": "Wilson 95% of the G2 rate of baseline target0 (3 decimals)",
+   "expected": [
+    0.021,
+    0.162
+   ],
+   "actual": [
+    0.021,
+    0.162
+   ],
+   "pass": true
+  }
+ ]
+}

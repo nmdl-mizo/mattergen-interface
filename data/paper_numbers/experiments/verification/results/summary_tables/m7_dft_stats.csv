@@ -1,0 +1,5 @@
+arm,offset_scope,n,mae_raw,offset_median_dft_minus_mace,mae_offset_removed,pearson_r,spearman_rho,ols_r2,r2_yx_raw,r2_yx_offset_removed,max_abs_err_raw,max_abs_err_offset_removed
+proposed,own,14,0.117947,-0.119107,0.057089,0.994925,0.995604,0.989876,0.855379,0.961316,0.222179,0.124052
+baseline,own,12,0.155674,-0.176918,0.072997,0.984038,0.951049,0.968330,0.737554,0.901597,0.242401,0.227764
+all,pooled_single_offset(26),26,0.135360,-0.138648,0.070648,0.989415,0.978803,0.978942,0.805845,0.939369,0.242401,0.189494
+all,armwise_offsets_proposed_and_baseline_separately,26,0.135360,,0.064431,0.989415,0.978803,0.978942,0.805845,0.936160,0.242401,0.227764

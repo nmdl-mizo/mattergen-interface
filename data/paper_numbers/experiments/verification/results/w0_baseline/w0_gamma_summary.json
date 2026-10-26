@@ -1,0 +1,109 @@
+{
+ "layer": "proposed_w0",
+ "arm": "proposed",
+ "w": 0.0,
+ "n_req": 350,
+ "near_tol_J_per_m2": 0.1,
+ "date": "2026-10-09 07:28:58",
+ "targets": [
+  0.7308270263660569,
+  1.1321329025690032,
+  1.5334387787719495,
+  1.934744654974896,
+  2.3360505311778423,
+  0.1288682120616375,
+  2.9380093454822616
+ ],
+ "w0_pre": {
+  "n": 350,
+  "quantiles": {
+   "p10": 0.6469448455586179,
+   "p25": 0.7536790814435902,
+   "p50": 0.9661492354165309,
+   "p75": 1.121263097050343,
+   "p90": 1.2989733110913255
+  },
+  "min": 0.5441258197428929,
+  "max": 2.1045092609467053,
+  "mean": 0.9658994781523037,
+  "n_excluded_pre": 0
+ },
+ "w0_post": {
+  "n": 350,
+  "quantiles": {
+   "p10": 0.6435481582354715,
+   "p25": 0.7402273350402047,
+   "p50": 0.950940850869559,
+   "p75": 1.1086259876263371,
+   "p90": 1.2761005418599383
+  },
+  "min": 0.5397641411968399,
+  "max": 1.6488156674694745,
+  "mean": 0.9476982651917663,
+  "n_unconverged": 0,
+  "n_nonfinite": 0,
+  "n_error": 0,
+  "n_excluded_pre": 0
+ },
+ "w0_status_counts": {
+  "ok_converged": 350,
+  "ok_unconverged": 0,
+  "excluded_pre": 0,
+  "nonfinite": 0,
+  "error": 0
+ },
+ "train": {
+  "n": 4419,
+  "quantiles": {
+   "p10": 0.7191837893803571,
+   "p25": 0.89078274606768,
+   "p50": 1.0799583754929754,
+   "p75": 1.3150563151687056,
+   "p90": 1.5579839687610781
+  },
+  "min": 0.5301740882645838,
+  "max": 2.536703469279315,
+  "mean": 1.1156814487620192,
+  "n_req": 4419
+ },
+ "g2_and_e_layer": {
+  "post": {
+   "n_req": 350,
+   "g2": 350,
+   "e": 350
+  },
+  "pre": {
+   "n_req": 350,
+   "g2": 350,
+   "e": 350
+  }
+ },
+ "train_known_check": {
+  "expected": [
+   714,
+   985,
+   427,
+   85,
+   0,
+   0,
+   0
+  ],
+  "actual": [
+   714,
+   985,
+   427,
+   85,
+   0,
+   0,
+   0
+  ],
+  "match": true
+ },
+ "inputs": {
+  "manifest": "${GBREL_WORK}/workspace/experiments/verification/results/inputs_manifest_proposed_w0.csv",
+  "relax_root": "${GBREL_DATA}/relaxation/verification/proposed_w0",
+  "main_per_target": "${GBREL_WORK}/workspace/experiments/relax_novelty/results/relax_novelty_per_target.csv",
+  "train_ref_manifest": "${GBREL_WORK}/workspace/experiments/relax_novelty/results/train_ref_manifest.csv",
+  "g2_and_e_json": "${GBREL_DATA}/evaluation/gb_equivalence_verification/gb_symfit_proposed_w0_g2_and_e.json"
+ }
+}

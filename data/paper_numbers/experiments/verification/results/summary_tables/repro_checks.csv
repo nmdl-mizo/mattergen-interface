@@ -1,0 +1,80 @@
+item,source,documented,recomputed,tolerance,abs_diff,match
+proposed pre inner5 TS slope,experiments/range_targets/results/tracking_report.md:15,0.638000,0.638201,0.000500,0.000201230,YES
+proposed pre inner5 TS CI lo,experiments/range_targets/results/tracking_report.md:15,0.587000,0.587093,0.000500,0.000092818,YES
+proposed pre inner5 TS CI hi,experiments/range_targets/results/tracking_report.md:15,0.688000,0.687591,0.000500,0.000409324,YES
+proposed pre all7 TS slope,experiments/range_targets/results/tracking_report.md:20,0.404000,0.403791,0.000500,0.000208751,YES
+proposed pre all7 TS CI lo,experiments/range_targets/results/tracking_report.md:20,0.367000,0.366876,0.000500,0.000124040,YES
+proposed pre all7 TS CI hi,experiments/range_targets/results/tracking_report.md:20,0.439000,0.439040,0.000500,0.000040156,YES
+proposed pre inner5 MAE,experiments/range_targets/results/tracking_report.md:15,0.273500,0.273476,0.000050,0.000023654,YES
+proposed pre inner5 mean_dev,experiments/range_targets/results/tracking_report.md:15,-0.213800,-0.213778,0.000050,0.000021797,YES
+proposed pre inner5 near_k,experiments/range_targets/results/tracking_report.md:15,97,97,0,0,YES
+proposed post inner5 MAE,experiments/relax_novelty/results/relax_novelty_report.md:33,0.288000,0.287743,0.000500,0.000256680,YES
+proposed post inner5 near_k,experiments/relax_novelty/results/relax_novelty_report.md:33,91,91,0,0,YES
+proposed pre all7 MAE,experiments/relax_novelty/results/relax_novelty_report.md:63,0.491000,0.491262,0.000500,0.000262129,YES
+proposed post all7 MAE,experiments/relax_novelty/results/relax_novelty_report.md:63,0.503000,0.503268,0.000500,0.000268020,YES
+proposed pre all7 near_k,experiments/relax_novelty/results/relax_novelty_report.md:63,97,97,0,0,YES
+proposed post all7 near_k,experiments/relax_novelty/results/relax_novelty_report.md:63,91,91,0,0,YES
+proposed pre inner5 median |gamma-target|,experiments/relax_novelty/results/relax_novelty_report.md:33,0.179000,0.179156,0.000500,0.000155657,YES
+proposed post inner5 median |gamma-target|,experiments/relax_novelty/results/relax_novelty_report.md:33,0.174000,0.173531,0.000500,0.000469099,YES
+proposed pre all7 median |gamma-target|,experiments/relax_novelty/results/relax_novelty_report.md:63,0.398000,0.397763,0.000500,0.000236843,YES
+proposed post all7 median |gamma-target|,experiments/relax_novelty/results/relax_novelty_report.md:63,0.405000,0.404735,0.000500,0.000265277,YES
+proposed pre t0 median,experiments/range_targets/results/tracking_report.md:27,0.718000,0.718030,0.000050,0.000030337,YES
+proposed pre t0 q1,experiments/range_targets/results/tracking_report.md:27,0.670000,0.669963,0.000050,0.000037108,YES
+proposed pre t0 q3,experiments/range_targets/results/tracking_report.md:27,0.861100,0.861054,0.000050,0.000046084,YES
+proposed pre t0 near_k,"experiments/relax_novelty/results/relax_novelty_per_target.csv (near_pre, main proposed w2.0; also table 9-B of an earlier check)",35,35,0,0,YES
+proposed pre t1 median,experiments/range_targets/results/tracking_report.md:28,1.053700,1.053703,0.000050,0.000003199,YES
+proposed pre t1 q1,experiments/range_targets/results/tracking_report.md:28,0.912900,0.912893,0.000050,0.000006838,YES
+proposed pre t1 q3,experiments/range_targets/results/tracking_report.md:28,1.121300,1.121347,0.000050,0.000046500,YES
+proposed pre t1 near_k,"experiments/relax_novelty/results/relax_novelty_per_target.csv (near_pre, main proposed w2.0; also table 9-B of an earlier check)",25,25,0,0,YES
+proposed pre t2 median,experiments/range_targets/results/tracking_report.md:29,1.477400,1.477356,0.000050,0.000043702,YES
+proposed pre t2 q1,experiments/range_targets/results/tracking_report.md:29,1.285700,1.285686,0.000050,0.000014169,YES
+proposed pre t2 q3,experiments/range_targets/results/tracking_report.md:29,1.569700,1.569733,0.000050,0.000032811,YES
+proposed pre t2 near_k,"experiments/relax_novelty/results/relax_novelty_per_target.csv (near_pre, main proposed w2.0; also table 9-B of an earlier check)",28,28,0,0,YES
+proposed pre t3 median,experiments/range_targets/results/tracking_report.md:30,1.684500,1.684498,0.000050,0.000002485,YES
+proposed pre t3 q1,experiments/range_targets/results/tracking_report.md:30,1.489000,1.489010,0.000050,0.000010222,YES
+proposed pre t3 q3,experiments/range_targets/results/tracking_report.md:30,1.803200,1.803194,0.000050,0.000005805,YES
+proposed pre t3 near_k,"experiments/relax_novelty/results/relax_novelty_per_target.csv (near_pre, main proposed w2.0; also table 9-B of an earlier check)",9,9,0,0,YES
+proposed pre t4 median,experiments/range_targets/results/tracking_report.md:31,1.742300,1.742273,0.000050,0.000027286,YES
+proposed pre t4 q1,experiments/range_targets/results/tracking_report.md:31,1.607900,1.607909,0.000050,0.000009314,YES
+proposed pre t4 q3,experiments/range_targets/results/tracking_report.md:31,1.855200,1.855155,0.000050,0.000044853,YES
+proposed pre t4 near_k,"experiments/relax_novelty/results/relax_novelty_per_target.csv (near_pre, main proposed w2.0; also table 9-B of an earlier check)",0,0,0,0,YES
+proposed pre t5 median,experiments/range_targets/results/tracking_report.md:32,0.675000,0.675026,0.000050,0.000026432,YES
+proposed pre t5 q1,experiments/range_targets/results/tracking_report.md:32,0.637500,0.637466,0.000050,0.000034082,YES
+proposed pre t5 q3,experiments/range_targets/results/tracking_report.md:32,0.720600,0.720649,0.000050,0.000049443,YES
+proposed pre t5 near_k,"experiments/relax_novelty/results/relax_novelty_per_target.csv (near_pre, main proposed w2.0; also table 9-B of an earlier check)",0,0,0,0,YES
+proposed pre t6 median,experiments/range_targets/results/tracking_report.md:33,1.532300,1.532301,0.000050,0.000001006,YES
+proposed pre t6 q1,experiments/range_targets/results/tracking_report.md:33,1.291000,1.291036,0.000050,0.000035825,YES
+proposed pre t6 q3,experiments/range_targets/results/tracking_report.md:33,1.619000,1.619042,0.000050,0.000041710,YES
+proposed pre t6 near_k,"experiments/relax_novelty/results/relax_novelty_per_target.csv (near_pre, main proposed w2.0; also table 9-B of an earlier check)",0,0,0,0,YES
+M1 post proposed all7 E/I/N/X,an internal note that is not included:59-60,350/0/0/0,350/0/0/0,0,,YES
+M1 post baseline all7 E/I/N/X,an internal note that is not included:59-60,0/74/256/20,0/74/256/20,0,,YES
+M1 post baseline t0 E/I/N/X,an internal note that is not included:59-60,0/3/43/4,0/3/43/4,0,,YES
+M1 post baseline t1 E/I/N/X,an internal note that is not included:59-60,0/8/41/1,0/8/41/1,0,,YES
+M1 post baseline t2 E/I/N/X,an internal note that is not included:59-60,0/11/39/0,0/11/39/0,0,,YES
+M1 post baseline t3 E/I/N/X,an internal note that is not included:59-60,0/18/30/2,0/18/30/2,0,,YES
+M1 post baseline t4 E/I/N/X,an internal note that is not included:59-60,0/22/27/1,0/22/27/1,0,,YES
+M1 post baseline t5 E/I/N/X,an internal note that is not included:59-60,0/1/38/11,0/1/38/11,0,,YES
+M1 post baseline t6 E/I/N/X,an internal note that is not included:59-60,0/11/38/1,0/11/38/1,0,,YES
+baseline main G2 membership pre vs post: n moved,an internal note that is not included:96,0,0,0,0,YES
+M3 n_train within 0.10 of 1.9347 (t3),an internal note that is not included:42,85,85,0,0,YES
+M3 n_train within 0.10 of 2.3361 (t4),an internal note that is not included:42,0,0,0,0,YES
+M3 train percentile of t3,an internal note that is not included:42,99.700000,99.705816,0.005000,0.005815795,YES
+M3 train percentile of t4,an internal note that is not included:42,99.980000,99.977370,0.005000,0.002629554,YES
+M3 train p5,an internal note that is not included:42,0.663000,0.662992,0.000050,0.000007877,YES
+M3 train p10,an internal note that is not included:42,0.719200,0.719184,0.000050,0.000016211,YES
+M3 train p25,an internal note that is not included:42,0.890800,0.890783,0.000050,0.000017254,YES
+M3 train p50,an internal note that is not included:42,1.080000,1.079958,0.000050,0.000041625,YES
+M3 train p75,an internal note that is not included:42,1.315100,1.315056,0.000050,0.000043685,YES
+M3 train p90,an internal note that is not included:42,1.558000,1.557984,0.000050,0.000016031,YES
+M3 train p95,an internal note that is not included:42,1.699400,1.699352,0.000050,0.000048070,YES
+M7 spearman all,experiments/verification/results/dft_recalc/verdict.json:381-399,0.978803,0.978803,0.000000,0.000000000,YES
+M7 spearman proposed,experiments/verification/results/dft_recalc/verdict.json:381-399,0.995604,0.995604,0.000000,0.000000000,YES
+M7 spearman baseline,experiments/verification/results/dft_recalc/verdict.json:381-399,0.951049,0.951049,0.000000,0.000000000,YES
+M7 offset proposed,experiments/verification/results/dft_recalc/verdict.json:381-399,-0.119107,-0.119107,0.000000,0.000000000,YES
+M7 offset baseline,experiments/verification/results/dft_recalc/verdict.json:381-399,-0.176918,-0.176918,0.000000,0.000000000,YES
+M7 offset-removed MAE proposed,experiments/verification/results/dft_recalc/verdict.json:381-399,0.057089,0.057089,0.000000,0.000000000,YES
+M7 offset-removed MAE baseline,experiments/verification/results/dft_recalc/verdict.json:381-399,0.072997,0.072997,0.000000,0.000000000,YES
+M7 total-energy join check: n_joined,relax_rows.csv x gamma_vasp.csv,,26,,,INFO
+M7 total-energy join check: natoms_mismatch,relax_rows.csv x gamma_vasp.csv,,0,,,INFO
+M7 total-energy join check: max_abs_gamma_mismatch,relax_rows.csv x gamma_vasp.csv,,0.000e+00,,,INFO
+M7 total-energy join check: target_mismatch,relax_rows.csv x gamma_vasp.csv,,0,,,INFO

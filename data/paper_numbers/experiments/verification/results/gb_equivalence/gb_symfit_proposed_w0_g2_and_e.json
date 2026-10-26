@@ -1,0 +1,206 @@
+{
+ "layer": "proposed_w0",
+ "theta": 0.064,
+ "rows": [
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "post",
+   "n_req": 350,
+   "g2": 350,
+   "e": 350,
+   "g2_wilson": {
+    "p": 1.0,
+    "lo": 0.989143559114183,
+    "hi": 1.0
+   },
+   "e_wilson": {
+    "p": 1.0,
+    "lo": 0.989143559114183,
+    "hi": 1.0
+   },
+   "status_counts": {
+    "fitted": 350,
+    "no_gb": 0,
+    "multi_gb": 0,
+    "disordered": 0,
+    "axis_mismatch": 0,
+    "non_al": 0,
+    "excluded_pre": 0,
+    "error": 0,
+    "total": 350
+   }
+  },
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "pre",
+   "n_req": 350,
+   "g2": 350,
+   "e": 350,
+   "g2_wilson": {
+    "p": 1.0,
+    "lo": 0.989143559114183,
+    "hi": 1.0
+   },
+   "e_wilson": {
+    "p": 1.0,
+    "lo": 0.989143559114183,
+    "hi": 1.0
+   },
+   "status_counts": {
+    "fitted": 350,
+    "no_gb": 0,
+    "multi_gb": 0,
+    "disordered": 0,
+    "axis_mismatch": 0,
+    "non_al": 0,
+    "excluded_pre": 0,
+    "error": 0,
+    "total": 350
+   }
+  }
+ ],
+ "per_target": [
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "post",
+   "target_id": 0,
+   "gamma_target": "0.7308270263660569",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "post",
+   "target_id": 1,
+   "gamma_target": "1.1321329025690032",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "post",
+   "target_id": 2,
+   "gamma_target": "1.5334387787719495",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "post",
+   "target_id": 3,
+   "gamma_target": "1.934744654974896",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "post",
+   "target_id": 4,
+   "gamma_target": "2.3360505311778423",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "post",
+   "target_id": 5,
+   "gamma_target": "0.1288682120616375",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "post",
+   "target_id": 6,
+   "gamma_target": "2.9380093454822616",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "pre",
+   "target_id": 0,
+   "gamma_target": "0.7308270263660569",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "pre",
+   "target_id": 1,
+   "gamma_target": "1.1321329025690032",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "pre",
+   "target_id": 2,
+   "gamma_target": "1.5334387787719495",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "pre",
+   "target_id": 3,
+   "gamma_target": "1.934744654974896",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "pre",
+   "target_id": 4,
+   "gamma_target": "2.3360505311778423",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "pre",
+   "target_id": 5,
+   "gamma_target": "0.1288682120616375",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  },
+  {
+   "arm": "proposed",
+   "w": "0.0",
+   "stage": "pre",
+   "target_id": 6,
+   "gamma_target": "2.9380093454822616",
+   "n_req": 50,
+   "g2": 50,
+   "e": 50
+  }
+ ]
+}

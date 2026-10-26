@@ -1,0 +1,12 @@
+{
+  "arm": "proposed",
+  "train_dir": "${GBREL_WORK}/scm-work/experiments/proposed_train",
+  "ckpt_path": "${GBREL_DATA}/weights/proposed_epoch159.ckpt",
+  "epoch": 159,
+  "loss_val_from_metrics": 0.6371127963066101,
+  "loss_val_in_filename": "0.64",
+  "sha256": "0e236655bd2454e701c2bde95db9a3f80f3aed85e217f9bdf3f9b663201c0e87",
+  "size_bytes": 511786497,
+  "card_hash12": "bbd1307e34eb",
+  "resolved_at": "2026-10-04T13:47:08.245501+09:00"
+}

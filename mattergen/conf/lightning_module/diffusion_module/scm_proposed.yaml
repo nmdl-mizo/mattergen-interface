@@ -1,0 +1,54 @@
+# diffusion_module config of the proposed (symmetry-constrained, variable length, no padding) for the other system. Plan:
+# internal notes。
+#
+# _target_/loss_fn are taken as they are from the Al proposed (diffusion_module/scm_cond.yaml, not edited)
+# unchanged: mattergen.symmetry_constrained.loss.SymmetryConstrainedLoss is written only with masks based on
+# gb_role and aggregation based on batch_idx, and does not refer to N_PAD or fixed-length slots
+# at all. A measurement confirmed that, for a variable-length, no-padding batch of two graphs
+# of different sizes (n=112, n=120), it runs forward+backward without modification and the gradient appears only on MASTER
+# (FIXED/SLAVE are exactly 0). Therefore symmetry_constrained/variable_length/loss.py is not created.
+# Measurement: ac_loss_report.json of an internal run
+#
+# freeze_atomic_numbers is not set (the key itself is not written. The default when omitted is False, in line with "return to the original MatterGen default",
+# and the acceptance check requires that the string
+# "freeze_atomic_numbers" never appear in the resolved config).
+#
+# _target_ (SymmetryConstrainedDiffusionModule) -- resolved record:
+#
+# The first version set _target_ to
+# mattergen.symmetry_constrained.diffusion_module.FixedSlotDiffusionModule (the fixed N_PAD=128 version, which unconditionally constructs
+# mattergen.symmetry_constrained.projection.FixedSlotProjector in _corrupt_batch).
+# This is incompatible with the variable-length proposed batch, and in fact a training job on the GPU partition
+# FAILED at the first validation batch of the sanity check, after 37 seconds, with the following exception (measured
+# log: train_stdout log of the run):
+#   File ".../mattergen/symmetry_constrained/diffusion_module.py", line 50, in _corrupt_batch
+#       noisy = self._scm_projector(noisy)
+#   File ".../mattergen/symmetry_constrained/projection.py", line 197, in __call__
+#       raise ValueError(
+#   ValueError: FixedSlotProjector: batch atom count 476 is not a multiple of N_PAD=128
+#
+# Fix: a training-time projector wiring that supports variable length was
+# created as mattergen/symmetry_constrained/variable_length/diffusion_module.py
+# (SymmetryConstrainedDiffusionModule), and _target_ was switched to it.
+# symmetry_constrained/diffusion_module.py (the fixed N_PAD version, used by the Al production pipeline) was not changed.
+#
+# Unlike FixedSlotDiffusionModule from which it was adapted, SymmetryConstrainedDiffusionModule has no freeze_atomic_numbers
+# kwarg (see "intentional differences" #2 in the module docstring of
+# symmetry_constrained/variable_length/diffusion_module.py). This agrees
+# with the policy of this config that "freeze_atomic_numbers is not set", which the comment above (unchanged) already states.
+_target_: mattergen.symmetry_constrained.variable_length.diffusion_module.SymmetryConstrainedDiffusionModule
+loss_fn:
+  _target_: mattergen.symmetry_constrained.loss.SymmetryConstrainedLoss
+  reduce: sum
+  d3pm_hybrid_lambda: 0.01
+  gb_t_loss_weight: 1.0
+  gb_dx_loss_weight: 1.0
+  weights:
+    pos: 0.1
+    atomic_numbers: 1.0
+model: scm_proposed
+corruption: scm_proposed
+pre_corruption_fn:
+  _target_: mattergen.property_embeddings.SetEmbeddingType
+  p_unconditional: 0.2
+  dropout_fields_iid: false

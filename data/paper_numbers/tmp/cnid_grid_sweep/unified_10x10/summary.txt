@@ -1,0 +1,68 @@
+# All-pair matching of 10x10 with the unified settings (Al Sigma5(210)[001] structures before relaxation, 100 points, 120 atoms, no removal, dx=0)
+# pymatgen 2025.6.14. Matching: the whole structure of 120 atoms with StructureMatcher({'stol': 0.025, 'primitive_cell': False, 'scale': False, 'attempt_supercell': False}, ltol/angle_tol are the pymatgen defaults = 0.2/5.0). All 4,950 pairs + union-find (transitive merging)
+
+## Control (validation)
+[PASS] (a) matching of each point with itself: 100/100 match
+[PASS] (b) pairs matching among the existing 10 points (45 pairs) with the unified settings=[] (expected: none)
+
+## Number of groups
+Unified settings: 31 groups (100 points)  number of non-clique groups: 0  (129 matching edges)
+
+## Distribution of group sizes
+size: number of groups = 4: 20, 2: 9, 1: 2
+sizes in descending order: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1]
+
+## Matches with the existing 10 points (from 4x4)
+Points of 10x10 that match any of the existing 10 points with the unified settings: 8 points -> enter 3 groups (group_id=[0, 5, 22])
+Existing points that found a partner: 3/10 (['cnid_0_0', 'cnid_0_2', 'cnid_2_0'])
+Groups with inconsistent matches with existing points (the set of matching existing points differs within the same group): 0
+Groups not matching any existing point (new): 28, representatives (i,j)=[(0, 1), (0, 2), (0, 3), (0, 4), (0, 6), (0, 9), (1, 0), (1, 2), (1, 3), (1, 4), (1, 9), (2, 0), (2, 1), (2, 4), (2, 9), (3, 0), (3, 1), (3, 2), (4, 0), (4, 1), (5, 1), (5, 2), (5, 3), (5, 4), (6, 2), (6, 3), (6, 4), (7, 4)]
+  cnid_0_0: matching points [(0, 0), (4, 8)] -> group [0]
+  cnid_0_1: matching points [] -> group []
+  cnid_0_2: matching points [(0, 5), (4, 3), (5, 5), (9, 3)] -> group [5]
+  cnid_0_3: matching points [] -> group []
+  cnid_1_0: matching points [] -> group []
+  cnid_1_2: matching points [] -> group []
+  cnid_1_3: matching points [] -> group []
+  cnid_2_0: matching points [(5, 0), (9, 8)] -> group [22]
+  cnid_2_1: matching points [] -> group []
+  cnid_3_2: matching points [] -> group []
+
+## Correspondence with the earlier grouping (number of unified groups 31)
+Earlier M-all (earlier number of groups 31): unified groups whose composition is exactly the same as an earlier M-all group=31/31, unified groups that fit in one earlier group=31/31, earlier groups split by the unification=0/31
+Earlier M-bulk (earlier number of groups 31): unified groups whose composition is exactly the same as an earlier M-bulk group=0/31, unified groups that fit in one earlier group=7/31, earlier groups split by the unification=24/31
+
+## All groups (group_id: representative (i,j) / size / members)
+  0: rep=(0, 0) size=2 members=[(0, 0), (4, 8)]
+  1: rep=(0, 1) size=4 members=[(0, 1), (1, 1), (3, 7), (4, 7)]
+  2: rep=(0, 2) size=4 members=[(0, 2), (2, 2), (2, 6), (4, 6)]
+  3: rep=(0, 3) size=4 members=[(0, 3), (1, 5), (3, 3), (4, 5)]
+  4: rep=(0, 4) size=2 members=[(0, 4), (4, 4)]
+  5: rep=(0, 5) size=4 members=[(0, 5), (4, 3), (5, 5), (9, 3)]
+  6: rep=(0, 6) size=4 members=[(0, 6), (4, 2), (6, 6), (8, 2)]
+  7: rep=(0, 9) size=4 members=[(0, 9), (4, 9), (5, 9), (9, 9)]
+  8: rep=(1, 0) size=4 members=[(1, 0), (3, 8), (5, 8), (9, 0)]
+  9: rep=(1, 2) size=2 members=[(1, 2), (3, 6)]
+  10: rep=(1, 3) size=4 members=[(1, 3), (2, 3), (2, 5), (3, 5)]
+  11: rep=(1, 4) size=2 members=[(1, 4), (3, 4)]
+  12: rep=(1, 9) size=4 members=[(1, 9), (3, 9), (6, 9), (8, 9)]
+  13: rep=(2, 0) size=4 members=[(2, 0), (2, 8), (6, 8), (8, 0)]
+  14: rep=(2, 1) size=4 members=[(2, 1), (2, 7), (5, 7), (9, 1)]
+  15: rep=(2, 4) size=1 members=[(2, 4)]
+  16: rep=(2, 9) size=2 members=[(2, 9), (7, 9)]
+  17: rep=(3, 0) size=4 members=[(1, 8), (3, 0), (7, 0), (7, 8)]
+  18: rep=(3, 1) size=4 members=[(1, 7), (3, 1), (6, 7), (8, 1)]
+  19: rep=(3, 2) size=4 members=[(1, 6), (3, 2), (5, 6), (9, 2)]
+  20: rep=(4, 0) size=4 members=[(0, 8), (4, 0), (6, 0), (8, 8)]
+  21: rep=(4, 1) size=4 members=[(0, 7), (4, 1), (7, 1), (7, 7)]
+  22: rep=(5, 0) size=2 members=[(5, 0), (9, 8)]
+  23: rep=(5, 1) size=4 members=[(5, 1), (6, 1), (8, 7), (9, 7)]
+  24: rep=(5, 2) size=4 members=[(5, 2), (7, 2), (7, 6), (9, 6)]
+  25: rep=(5, 3) size=4 members=[(5, 3), (6, 5), (8, 3), (9, 5)]
+  26: rep=(5, 4) size=2 members=[(5, 4), (9, 4)]
+  27: rep=(6, 2) size=2 members=[(6, 2), (8, 6)]
+  28: rep=(6, 3) size=4 members=[(6, 3), (7, 3), (7, 5), (8, 5)]
+  29: rep=(6, 4) size=2 members=[(6, 4), (8, 4)]
+  30: rep=(7, 4) size=1 members=[(7, 4)]
+
+files: groups_10x10_unified.csv, summary.txt, results/chunk_*.csv, unified_chunk.py, unified_aggregate.py

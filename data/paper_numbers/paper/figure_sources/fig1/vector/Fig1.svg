@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1540" width="1800" height="1540">
+<g id="bg"><rect x="0" y="0" width="1800" height="1540" fill="#ffffff"/></g>
+<g id="panel_a">
+<g id="a_frame">
+  <rect x="20" y="20" width="570" height="745" fill="none" stroke="#bbbbbb" stroke-width="1.5"/>
+  <rect x="35" y="94.5" width="540" height="326.65" fill="none" stroke="#666666" stroke-width="2"/>
+  <rect x="35" y="444.08" width="540" height="298" fill="none" stroke="#c0392b" stroke-width="3.5"/>
+</g>
+<g id="a_cells">
+  <rect x="65" y="159.83" width="480" height="80.23" fill="#ffffff" stroke="#000000" stroke-width="2.5"/>
+  <rect x="65" y="515.14" width="480" height="80.23" fill="#ffffff" stroke="#000000" stroke-width="2.5"/>
+</g>
+<g id="a_gblines">
+  <line x1="185" y1="159.83" x2="185" y2="250.29" stroke="#333333" stroke-width="5"/>
+  <line x1="425" y1="159.83" x2="425" y2="250.29" stroke="#333333" stroke-width="5" stroke-dasharray="14 8"/>
+  <line x1="185" y1="515.14" x2="185" y2="605.6" stroke="#c0392b" stroke-width="5"/>
+  <line x1="425" y1="515.14" x2="425" y2="605.6" stroke="#c0392b" stroke-width="5"/>
+</g>
+<g id="a_labels">
+  <text x="35" y="68.14" font-family="Arial" font-size="36" font-weight="bold" fill="#000000">(a) Physical problem</text>
+  <text x="50" y="136.91" font-family="Arial" font-size="28" font-weight="bold" fill="#000000">Non-equivalent GBs</text>
+  <text x="185" y="284.29" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">GB i</text>
+  <text x="425" y="284.29" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">GB j</text>
+  <text x="242.51" y="320" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000" xml:space="preserve"><tspan font-style="italic">E</tspan><tspan font-size="19.6" dy="6.16">cell</tspan><tspan dy="-6.16"> − </tspan><tspan font-style="italic">N</tspan><tspan >·</tspan><tspan font-style="italic">E</tspan><tspan font-size="19.6" dy="6.16">bulk</tspan></text>
+  <line x1="153.21" y1="334" x2="331.83" y2="334" stroke="#000000" stroke-width="2.2"/>
+  <text x="242.51" y="361" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000" xml:space="preserve">2<tspan font-style="italic">A</tspan></text>
+  <text x="352.02" y="343" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000" xml:space="preserve">=</text>
+  <text x="414.51" y="320" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000" xml:space="preserve"><tspan font-style="italic">γ</tspan><tspan font-style="italic" font-size="19.6" dy="6.16">i</tspan><tspan dy="-6.16"> + </tspan><tspan font-style="italic">γ</tspan><tspan font-style="italic" font-size="19.6" dy="6.16">j</tspan></text>
+  <line x1="372.2" y1="334" x2="456.82" y2="334" stroke="#000000" stroke-width="2.2"/>
+  <text x="414.51" y="361" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000" xml:space="preserve">2</text>
+  <text x="305" y="402" font-family="Arial" font-size="21" text-anchor="middle" fill="#000000">Only the average grain boundary energy is obtained</text>
+  <text x="50" y="486.48" font-family="Arial" font-size="28" font-weight="bold" fill="#c0392b">Equivalent GBs (this work)</text>
+  <text x="185" y="641.6" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">GB</text>
+  <text x="425" y="641.6" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">GB</text>
+  <text x="195.51" y="706" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000" xml:space="preserve"><tspan font-style="italic">γ</tspan></text>
+  <text x="222.69" y="706" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000" xml:space="preserve">=</text>
+  <text x="332.18" y="683" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000" xml:space="preserve"><tspan font-style="italic">E</tspan><tspan font-size="19.6" dy="6.16">cell</tspan><tspan dy="-6.16"> − </tspan><tspan font-style="italic">N</tspan><tspan >·</tspan><tspan font-style="italic">E</tspan><tspan font-size="19.6" dy="6.16">bulk</tspan></text>
+  <line x1="242.87" y1="697" x2="421.49" y2="697" stroke="#000000" stroke-width="2.2"/>
+  <text x="332.18" y="724" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000" xml:space="preserve">2<tspan font-style="italic">A</tspan></text>
+</g>
+</g>
+<g id="panel_b">
+<g id="b_frame">
+  <rect x="610" y="20" width="1170" height="745" fill="none" stroke="#bbbbbb" stroke-width="1.5"/>
+</g>
+<g id="b_bands">
+  <rect id="b_band_slave_l" x="685" y="255" width="102" height="170" fill="#fbe3cf" stroke="#444444" stroke-width="1.5"/>
+  <rect id="b_band_bulkA" x="787" y="255" width="306" height="170" fill="#d9d9d9" stroke="#444444" stroke-width="1.5"/>
+  <rect id="b_band_master" x="1093" y="255" width="204" height="170" fill="#d6e4f5" stroke="#444444" stroke-width="1.5"/>
+  <rect id="b_band_bulkB" x="1297" y="255" width="306" height="170" fill="#ededed" stroke="#444444" stroke-width="1.5"/>
+  <rect id="b_band_slave_r" x="1603" y="255" width="102" height="170" fill="#fbe3cf" stroke="#444444" stroke-width="1.5"/>
+</g>
+<g id="b_atoms_bulkA">
+  <circle cx="821" cy="272" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="991" cy="272" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="872" cy="289" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="1042" cy="289" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="906" cy="272" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="1076" cy="272" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="923" cy="306" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="1093" cy="306" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="787" cy="289" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="957" cy="289" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="804" cy="323" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="974" cy="323" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="838" cy="306" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="1008" cy="306" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="855" cy="340" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="1025" cy="340" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="889" cy="323" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="1059" cy="323" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="906" cy="357" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="1076" cy="357" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="940" cy="340" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="787" cy="374" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="957" cy="374" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="821" cy="357" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="991" cy="357" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="838" cy="391" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="1008" cy="391" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="872" cy="374" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="1042" cy="374" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="889" cy="408" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="1059" cy="408" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="923" cy="391" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="1093" cy="391" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="940" cy="425" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="804" cy="408" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="974" cy="408" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="855" cy="255" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+  <circle cx="1025" cy="425" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
+</g>
+<g id="b_atoms_bulkB">
+  <circle cx="1348" cy="289" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1518" cy="289" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1314" cy="272" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1484" cy="272" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1297" cy="306" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1467" cy="306" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1331" cy="323" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1501" cy="323" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1314" cy="357" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1484" cy="357" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1348" cy="374" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1518" cy="374" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1331" cy="408" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1501" cy="408" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1399" cy="272" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1569" cy="272" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1433" cy="289" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1603" cy="289" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1416" cy="323" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1586" cy="323" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1450" cy="340" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1433" cy="374" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1603" cy="374" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1297" cy="391" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1467" cy="391" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1450" cy="255" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1382" cy="306" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1552" cy="306" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1365" cy="340" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1535" cy="340" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1399" cy="357" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1569" cy="357" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1382" cy="391" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1552" cy="391" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1416" cy="408" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1586" cy="408" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1365" cy="425" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+  <circle cx="1535" cy="425" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
+</g>
+<g id="b_atoms_master">
+  <circle cx="1160.79" cy="272.16" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1124.91" cy="288.33" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1142.55" cy="323.43" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1171.57" cy="306.11" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1109.46" cy="339.94" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1124.91" cy="373.33" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1160.79" cy="357.16" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1171.57" cy="391.11" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1109.46" cy="424.94" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1142.55" cy="408.43" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1229.21" cy="272.16" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1265.09" cy="288.33" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1247.45" cy="323.43" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1280.54" cy="339.94" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1265.09" cy="373.33" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1280.54" cy="424.94" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1218.43" cy="306.11" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1195" cy="340.11" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1229.21" cy="357.16" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1218.43" cy="391.11" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1247.45" cy="408.43" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+  <circle cx="1195" cy="255.11" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
+</g>
+<g id="b_atoms_slave">
+  <circle cx="708.43" cy="288.89" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="737.45" cy="271.57" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="755.09" cy="306.67" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="685" cy="339.89" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="719.21" cy="322.84" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="737.45" cy="356.57" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="770.54" cy="340.06" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="708.43" cy="373.89" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="719.21" cy="407.84" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="755.09" cy="391.67" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="770.54" cy="255.06" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="685" cy="424.89" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="1681.57" cy="288.89" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="1652.55" cy="271.57" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="1634.91" cy="306.67" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="1670.79" cy="322.84" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="1652.55" cy="356.57" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="1681.57" cy="373.89" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="1670.79" cy="407.84" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="1619.46" cy="340.06" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="1634.91" cy="391.67" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+  <circle cx="1619.46" cy="255.06" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
+</g>
+<g id="b_gblines">
+  <line x1="685" y1="145" x2="685" y2="437" stroke="#333333" stroke-width="3" stroke-dasharray="8 8"/>
+  <line x1="1195" y1="145" x2="1195" y2="437" stroke="#333333" stroke-width="3" stroke-dasharray="8 8"/>
+  <line x1="1705" y1="145" x2="1705" y2="437" stroke="#333333" stroke-width="3" stroke-dasharray="8 8"/>
+</g>
+<g id="b_arrows_g">
+  <path d="M1220,246 Q1310,60 1589.49,237.42" fill="none" stroke="#000000" stroke-width="3"/>
+  <polygon points="1603,246 1583.52,243.11 1592.09,229.6" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <path d="M940,472 Q1195,568 1435.03,477.64" fill="none" stroke="#000000" stroke-width="3"/>
+  <polygon points="1450,472 1435.97,485.83 1430.34,470.85" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <text x="1373" y="142" font-family="Arial" font-size="28" text-anchor="middle" font-style="italic" fill="#000000">g</text>
+  <text x="1195" y="507" font-family="Arial" font-size="28" text-anchor="middle" font-style="italic" fill="#000000">g</text>
+</g>
+<g id="b_dx_shift">
+  <line x1="1297" y1="560" x2="1689" y2="560" stroke="#000000" stroke-width="3"/>
+  <polygon points="1705,560 1687,567 1687,553" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <text x="1705" y="596" font-family="Arial" font-size="26" text-anchor="end" fill="#000000" xml:space="preserve">rigid shift <tspan font-style="italic">dx</tspan><tspan > (grain B)</tspan></text>
+</g>
+<g id="b_cell_dim">
+  <line x1="701" y1="640" x2="1689" y2="640" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="685,640 703,633 703,647" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <polygon points="1705,640 1687,647 1687,633" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <line x1="685" y1="630" x2="685" y2="650" stroke="#000000" stroke-width="2.5"/>
+  <line x1="1705" y1="630" x2="1705" y2="650" stroke="#000000" stroke-width="2.5"/>
+  <text x="1195" y="678" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000" xml:space="preserve"><tspan font-style="italic">a</tspan><tspan > = </tspan><tspan font-style="italic">a</tspan><tspan font-size="19.6" dy="6.16">template</tspan><tspan dy="-6.16"> + 2·</tspan><tspan font-style="italic">dx</tspan></text>
+</g>
+<g id="b_ty_tz">
+  <line x1="1080" y1="732" x2="1080" y2="708" stroke="#444444" stroke-width="2"/>
+  <polygon points="1080,698 1085,710 1075,710" fill="#444444" stroke="#444444" stroke-width="1"/>
+  <line x1="1080" y1="732" x2="1120.72" y2="715.71" stroke="#444444" stroke-width="2"/>
+  <polygon points="1130,712 1120.72,721.1 1117,711.81" fill="#444444" stroke="#444444" stroke-width="1"/>
+  <text x="1146" y="732" font-family="Arial" font-size="24" fill="#444444" xml:space="preserve">in-plane shift (<tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="16.8" dy="5.28">y</tspan><tspan dy="-5.28">, </tspan><tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="16.8" dy="5.28">z</tspan><tspan dy="-5.28">)</tspan></text>
+</g>
+<g id="b_labels">
+  <text x="625" y="60" font-family="Arial" font-size="36" font-weight="bold" fill="#000000">(b) Symmetry-constrained structural representation</text>
+  <text x="625" y="95" font-family="Arial" font-size="24" fill="#555555">Projection along tilt axis y ([001]); horizontal x (GB normal), vertical z</text>
+  <text x="693" y="138" font-family="Arial" font-size="28" font-weight="bold" fill="#000000">GB (Slave side)</text>
+  <text x="1195" y="138" font-family="Arial" font-size="28" text-anchor="middle" font-weight="bold" fill="#000000">GB (Master side)</text>
+  <text x="1697" y="138" font-family="Arial" font-size="28" text-anchor="end" font-weight="bold" fill="#000000">GB (Slave side)</text>
+  <text x="940" y="241" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">Bulk A (fixed during generation)</text>
+  <text x="1399" y="241" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">Bulk B = g(Bulk A)</text>
+  <text x="685" y="461" font-family="Arial" font-size="28" fill="#000000">Slave = g(Master)</text>
+  <text x="1195" y="461" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">Master (generated)</text>
+  <text x="625" y="732" font-family="Arial" font-size="28" fill="#000000">g: 2₁ screw operation</text>
+</g>
+</g>
+<g id="panel_c">
+<g id="c_frame">
+  <rect x="20" y="785" width="1760" height="735" fill="none" stroke="#bbbbbb" stroke-width="1.5"/>
+  <rect x="725" y="1075" width="735" height="220" rx="14" fill="none" stroke="#444444" stroke-width="2.5" stroke-dasharray="12 8"/>
+</g>
+<g id="c_boxes">
+  <rect x="40" y="885" width="150" height="60" fill="#ffffff" stroke="#333333" stroke-width="3.5"/>
+  <rect x="225" y="880" width="180" height="70" fill="#ececec" stroke="#c0392b" stroke-width="3.5" stroke-dasharray="10 6"/>
+  <rect x="440" y="865" width="260" height="65" fill="#ececec" stroke="#888888" stroke-width="3.5"/>
+  <rect x="790" y="865" width="470" height="100" fill="#ececec" stroke="#888888" stroke-width="3.5"/>
+  <rect x="440" y="962" width="260" height="106" fill="#f5c6c1" stroke="#c0392b" stroke-width="3"/>
+  <rect x="40" y="1115" width="260" height="100" fill="#f5c6c1" stroke="#c0392b" stroke-width="3.5"/>
+  <rect x="340" y="1115" width="250" height="100" fill="#f5c6c1" stroke="#c0392b" stroke-width="3.5"/>
+  <rect x="630" y="1115" width="70" height="100" fill="#f5c6c1" stroke="#c0392b" stroke-width="3.5"/>
+  <rect x="755" y="1115" width="160" height="100" fill="#ececec" stroke="#888888" stroke-width="3.5"/>
+  <rect x="955" y="1115" width="70" height="100" fill="#f5c6c1" stroke="#c0392b" stroke-width="3.5"/>
+  <rect x="1065" y="1115" width="300" height="100" fill="#ececec" stroke="#c0392b" stroke-width="3.5" stroke-dasharray="10 6"/>
+  <rect x="1395" y="1115" width="55" height="100" fill="#f5c6c1" stroke="#c0392b" stroke-width="3.5"/>
+  <rect x="1495" y="1115" width="265" height="100" fill="#ffffff" stroke="#333333" stroke-width="3.5"/>
+  <rect x="40" y="1325" width="840" height="84" fill="#f5c6c1" stroke="#c0392b" stroke-width="3.5"/>
+  <polygon points="649,1325 681,1325 665,1215" fill="#f5c6c1" stroke="#c0392b" stroke-width="3.5"/>
+</g>
+<g id="c_box_labels">
+  <text x="115" y="925.36" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">Target γ</text>
+  <text x="315" y="910" font-family="Arial" font-size="26" text-anchor="middle" fill="#000000" xml:space="preserve">Property</text>
+  <text x="315" y="938" font-family="Arial" font-size="26" text-anchor="middle" fill="#000000" xml:space="preserve">embedding</text>
+  <text x="570" y="898" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000" xml:space="preserve">GemNet-T</text>
+  <text x="570" y="921" font-family="Arial" font-size="20" text-anchor="middle" fill="#555555" xml:space="preserve">(MatterGen)</text>
+  <text x="1025" y="900" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000" xml:space="preserve">CFG (<tspan font-style="italic">w</tspan><tspan > = 2.0)</tspan></text>
+  <text x="1025" y="929" font-family="Arial" font-size="21" text-anchor="middle" fill="#555555" xml:space="preserve">combines conditional and</text>
+  <text x="1025" y="953" font-family="Arial" font-size="21" text-anchor="middle" fill="#555555" xml:space="preserve">unconditional predictions</text>
+  <text x="745" y="869" font-family="Arial" font-size="18" text-anchor="middle" fill="#555555" xml:space="preserve">pos,</text>
+  <text x="745" y="889" font-family="Arial" font-size="18" text-anchor="middle" fill="#555555" xml:space="preserve">species</text>
+  <text x="570" y="992" font-family="Arial" font-size="25" text-anchor="middle" fill="#000000" xml:space="preserve">Readout</text>
+  <text x="570" y="1019" font-family="Arial" font-size="24" text-anchor="middle" fill="#000000" xml:space="preserve">(<tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="16.8" dy="5.28">y</tspan><tspan dy="-5.28">, </tspan><tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="16.8" dy="5.28">z</tspan><tspan dy="-5.28">), </tspan><tspan font-style="italic">dx</tspan></text>
+  <text x="570" y="1044" font-family="Arial" font-size="18" text-anchor="middle" fill="#555555" xml:space="preserve">from existing outputs</text>
+  <text x="570" y="1062" font-family="Arial" font-size="18" text-anchor="middle" fill="#555555" xml:space="preserve">(no new output layer)</text>
+  <text x="170" y="1159.24" font-family="Arial" font-size="24" text-anchor="middle" fill="#000000">Sample N;</text>
+  <text x="170" y="1188.52" font-family="Arial" font-size="24" text-anchor="middle" fill="#000000">build template graph</text>
+  <text x="465" y="1163.16" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">Initial state</text>
+  <text x="465" y="1189.48" font-family="Arial" font-size="20" text-anchor="middle" fill="#555555" xml:space="preserve">noise Master, (<tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="14" dy="4.4">y</tspan><tspan dy="-4.4">,</tspan><tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="14" dy="4.4">z</tspan><tspan dy="-4.4">), </tspan><tspan font-style="italic">dx</tspan></text>
+  <text x="665" y="1178.32" font-family="Arial" font-size="36" text-anchor="middle" fill="#000000">Π</text>
+  <text x="835" y="1175.36" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">Corrector</text>
+  <text x="835" y="1201" font-family="Arial" font-size="21" text-anchor="middle" fill="#000000">pos</text>
+  <text x="990" y="1178.32" font-family="Arial" font-size="36" text-anchor="middle" fill="#000000">Π</text>
+  <text x="1215" y="1162.55" font-family="Arial" font-size="28" text-anchor="middle" font-weight="bold" fill="#000000">Predictor</text>
+  <text x="1215" y="1189.85" font-family="Arial" font-size="21" text-anchor="middle" fill="#000000" xml:space="preserve">pos, species, (<tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="14.7" dy="4.62">y</tspan><tspan dy="-4.62">,</tspan><tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="14.7" dy="4.62">z</tspan><tspan dy="-4.62">), </tspan><tspan font-style="italic">dx</tspan></text>
+  <text x="1422.5" y="1176.84" font-family="Arial" font-size="32" text-anchor="middle" fill="#000000">Π</text>
+  <text x="1627.5" y="1158.76" font-family="Arial" font-size="26" text-anchor="middle" fill="#000000">Generated bicrystal</text>
+  <text x="1627.5" y="1190.48" font-family="Arial" font-size="26" text-anchor="middle" fill="#000000">structure</text>
+  <text x="56" y="1363.5" font-family="Arial" font-size="24" fill="#000000">Symmetry projection Π: reconstruct Slave, Bulk B, and cell</text>
+  <text x="56" y="1389.5" font-family="Arial" font-size="20" fill="#555555" xml:space="preserve">Master, (<tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="14" dy="4.4">y</tspan><tspan dy="-4.4">,</tspan><tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="14" dy="4.4">z</tspan><tspan dy="-4.4">), </tspan><tspan font-style="italic">dx</tspan><tspan > unchanged</tspan></text>
+</g>
+<g id="c_arrows">
+  <line x1="190" y1="915" x2="210" y2="915" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="225,915 211,922 211,908" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <line x1="405" y1="915" x2="425" y2="915" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="440,915 426,922 426,908" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <line x1="300" y1="1165" x2="324" y2="1165" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="340,1165 322,1172 322,1158" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <line x1="590" y1="1165" x2="614" y2="1165" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="630,1165 612,1172 612,1158" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <line x1="700" y1="1165" x2="739" y2="1165" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="755,1165 737,1172 737,1158" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <line x1="915" y1="1165" x2="939" y2="1165" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="955,1165 937,1172 937,1158" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <line x1="1025" y1="1165" x2="1049" y2="1165" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="1065,1165 1047,1172 1047,1158" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <line x1="1365" y1="1165" x2="1379" y2="1165" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="1395,1165 1377,1172 1377,1158" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <line x1="1450" y1="1165" x2="1479" y2="1165" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="1495,1165 1477,1172 1477,1158" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <line x1="835" y1="965" x2="835" y2="1099" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="835,1115 828,1097 842,1097" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <line x1="1215" y1="965" x2="1215" y2="1099" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="1215,1115 1208,1097 1222,1097" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <polyline points="1422,1115 1422,838 570,838 570,849" fill="none" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="570,865 563,847 577,847" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <line x1="700" y1="905" x2="775" y2="905" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="790,905 772,912 772,898" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <line x1="570" y1="930" x2="570" y2="946" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="570,962 563,944 577,944" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <polyline points="700,1015 745,1015 745,945 774,945" fill="none" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="790,945 772,952 772,938" fill="#000000" stroke="#000000" stroke-width="1"/>
+  <polyline points="1422,1215 1422,1270 835,1270 835,1231" fill="none" stroke="#000000" stroke-width="2.5"/>
+  <polygon points="835,1215 842,1233 828,1233" fill="#000000" stroke="#000000" stroke-width="1"/>
+</g>
+<g id="c_labels">
+  <text x="35" y="827" font-family="Arial" font-size="36" font-weight="bold" fill="#000000">(c) Generation workflow</text>
+  <text x="847" y="1047" font-family="Arial" font-size="24" fill="#000000">score</text>
+  <text x="1227" y="1047" font-family="Arial" font-size="24" fill="#000000">score</text>
+</g>
+<g id="c_legend">
+  <rect x="40" y="1430" width="56" height="32" fill="#ececec" stroke="#888888" stroke-width="3.5"/>
+  <text x="110" y="1456" font-family="Arial" font-size="24" fill="#000000">MatterGen, unchanged</text>
+  <rect x="480" y="1430" width="56" height="32" fill="#ececec" stroke="#c0392b" stroke-width="3.5" stroke-dasharray="10 6"/>
+  <text x="550" y="1456" font-family="Arial" font-size="24" fill="#000000">MatterGen-derived, modified</text>
+  <rect x="920" y="1430" width="56" height="32" fill="#f5c6c1" stroke="#c0392b" stroke-width="3.5"/>
+  <text x="990" y="1456" font-family="Arial" font-size="24" fill="#000000">This work (added)</text>
+  <text x="40" y="1502" font-family="Arial" font-size="22" fill="#555555">modified = new conditioning key or added update rule</text>
+</g>
+</g>
+</svg>

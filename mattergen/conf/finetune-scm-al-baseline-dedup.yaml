@@ -1,0 +1,32 @@
+# Tilt-version baseline (deduplicated Al, the same split as proposed) finetune config. Plan:
+# see the experiment description.
+#
+# A copy of the finetune config of the older baseline (not edited). Only data_module (the cache path) and the
+# record key num_atoms_distribution_key are replaced. lightning_module: sf (AdamW + CosineAnnealing T_max=${trainer.max_epochs}, eta_min 1e-7),
+# adapter: scm_al_baseline (the standard GemNetTAdapter. It does not refer to any GB mechanism), lr 5.0e-06, max_epochs 200, the starting point mattergen_base is
+# that of the older baseline. p_unconditional, the loss weights and the d3pm lambda do not appear in this yaml (finetune.py takes them from the pretrained ckpt at run time), so
+# see the effective values in the run-time print right after the start of training (run_with_hparam_dump.py -> hparam_runtime_baseline*.json).
+# The override of ModelCheckpoint (the 6 lines that keep epoch=199.ckpt) is on the sbatch side (the same as proposed).
+#
+# num_atoms_distribution_key: the key of the distribution from which the number of atoms n is drawn at generation. A key for the record only, not referenced in training; it shares the same value as proposed (finetune-scm-al-proposed.yaml)
+# (see the experiment description).
+hydra:
+  run:
+    dir: ${oc.env:OUTPUT_DIR,outputs/singlerun/${now:%Y-%m-%d}/${now:%H-%M-%S}}
+
+num_atoms_distribution_key: AL_S5_210_TRAIN
+
+defaults:
+  - data_module: scm_al_baseline
+  - trainer: default
+  - lightning_module: sf
+  - adapter: scm_al_baseline
+
+trainer:
+  max_epochs: 200
+  logger:
+    job_type: train_finetune
+
+lightning_module:
+  optimizer_partial:
+    lr: 5.0e-06

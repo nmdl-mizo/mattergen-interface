@@ -1,0 +1,58 @@
+T1 bottleneck re-aggregation summary  (theta = 0.064 A, the decision is max <= theta)
+Input CSV: 9 files -> ${GBREL_WORK}/workspace/experiments/count_recheck/results/bottleneck_vs_sum.csv (848 rows)
+
+[Target and definition of the decision]
+  Target = structures that are judged two_gb (two grain boundaries) by the recomputation of stage 0 and have status=fitted in the original gb_symfit_main.csv (per arm x stage).
+  pre : the decision is stage 1 only (maximum deviation of the best operation of gb_symfit <= theta).
+  post: the decision is eq12 = stage 1 or stage 2 (stage 2 only for structures with status=ok in gb_stage2_main.csv; thin_grain is not judged at stage 2).
+  old = assignment minimizing the sum (value of the original script; reproduction confirmed with ASSIGN_MODE=sum in the copy). new = the same flow with the assignment replaced by the bottleneck assignment.
+
+[Number of equivalent structures per arm x stage (theta=0.064)] old / new / number of targets
+  baseline  pre : 0 / 0 / 74    (stage 1 only: old 0 / new 0;  reference: stage 1 with only the assignment replaced by bottleneck on the old translation = 0)
+  baseline  post: 0 / 0 / 74    (stage 1 only: old 0 / new 0;  reference: stage 1 with only the assignment replaced by bottleneck on the old translation = 0)
+  proposed     pre : 350 / 350 / 350    (stage 1 only: old 350 / new 350;  reference: stage 1 with only the assignment replaced by bottleneck on the old translation = 350)
+  proposed     post: 350 / 350 / 350    (stage 1 only: old 350 / new 350;  reference: stage 1 with only the assignment replaced by bottleneck on the old translation = 350)
+
+[Structures that became equivalent (old INEQUIV -> new EQUIV)]
+  None (0 structures; also 0 structures with the values where only the assignment was replaced on the old translation)
+
+[Minimum of the maximum deviation [A] (old / new)]
+  baseline  pre  stage 1: old 0.374712277 / new 0.374712277  (old translation, only the assignment replaced: 0.374712277)
+  baseline  post stage 1: old 0.206318409 / new 0.206318409  (old translation, only the assignment replaced: 0.206318409)
+  baseline  post stage 2: old 0.192662373 / new 0.192662373  (N=73)
+  proposed     pre  stage 1: old 3.0872989e-06 / new 3.0872989e-06  (old translation, only the assignment replaced: 3.0872989e-06)
+  proposed     post stage 1: old 1.68183568e-06 / new 1.68183568e-06  (old translation, only the assignment replaced: 1.68183568e-06)
+  proposed     post stage 2: old 4.24796183e-07 / new 4.24796183e-07  (N=350)
+
+[Diagnosis: number of structures whose value moved when the assignment was changed (whole pipeline. The choice of the translation also depends on the assignment, so there can be structures with new > old)]
+  baseline  pre  stage 1: N=74, moved 62, new>old 0
+  baseline  post stage 1: N=74, moved 61, new>old 2 | stage 2: N=73, moved 46, new>old 4
+  proposed     pre  stage 1: N=350, moved 0, new>old 0
+  proposed     post stage 1: N=350, moved 0, new>old 0 | stage 2: N=350, moved 0, new>old 0
+
+[Sources of the reproduction and checks (raw output in each file)]
+  ${GBREL_WORK}/workspace/experiments/count_recheck/results/self_check_a.txt
+  ${GBREL_WORK}/workspace/experiments/count_recheck/results/repro_and_check_b_proposed_pre-post_chunk0-1.txt
+  ${GBREL_WORK}/workspace/experiments/count_recheck/results/repro_and_check_b_proposed_pre-post_chunk10-11.txt
+  ${GBREL_WORK}/workspace/experiments/count_recheck/results/repro_and_check_b_proposed_pre-post_chunk12-13.txt
+  ${GBREL_WORK}/workspace/experiments/count_recheck/results/repro_and_check_b_proposed_pre-post_chunk2-3.txt
+  ${GBREL_WORK}/workspace/experiments/count_recheck/results/repro_and_check_b_proposed_pre-post_chunk4-5.txt
+  ${GBREL_WORK}/workspace/experiments/count_recheck/results/repro_and_check_b_proposed_pre-post_chunk6-7.txt
+  ${GBREL_WORK}/workspace/experiments/count_recheck/results/repro_and_check_b_proposed_pre-post_chunk8-9.txt
+  ${GBREL_WORK}/workspace/experiments/count_recheck/results/repro_and_check_b_baseline_post.txt
+  ${GBREL_WORK}/workspace/experiments/count_recheck/results/repro_and_check_b_baseline_pre.txt
+
+[Total of the checks (sum over the files above)]
+  Reproduction of the old values (sum mode in the copy vs gb_symfit_main.csv / gb_stage2_main.csv, tolerance 1e-9 A): 0 structures failed to reproduce (the maximum difference is given in each file. For baseline 0.000e+00)
+  Check (b) the bottleneck maximum distance on the same distance matrix <= the maximum distance of the assignment minimizing the sum: of 527849 assign calls, 0 violations, 421416 strictly smaller (PASS files 9/9)
+
+[Recomputation of stage 0 (all manifest rows)]
+  stage0_check_proposed_pre-post_chunk0-1.json: manifest rows=50 excluded_pre=0 stage-0 recomputation=100 two_gb={'proposed/pre': 50, 'proposed/post': 50} mismatches with the old csv=0
+  stage0_check_proposed_pre-post_chunk10-11.json: manifest rows=50 excluded_pre=0 stage-0 recomputation=100 two_gb={'proposed/pre': 50, 'proposed/post': 50} mismatches with the old csv=0
+  stage0_check_proposed_pre-post_chunk12-13.json: manifest rows=50 excluded_pre=0 stage-0 recomputation=100 two_gb={'proposed/pre': 50, 'proposed/post': 50} mismatches with the old csv=0
+  stage0_check_proposed_pre-post_chunk2-3.json: manifest rows=50 excluded_pre=0 stage-0 recomputation=100 two_gb={'proposed/pre': 50, 'proposed/post': 50} mismatches with the old csv=0
+  stage0_check_proposed_pre-post_chunk4-5.json: manifest rows=50 excluded_pre=0 stage-0 recomputation=100 two_gb={'proposed/pre': 50, 'proposed/post': 50} mismatches with the old csv=0
+  stage0_check_proposed_pre-post_chunk6-7.json: manifest rows=50 excluded_pre=0 stage-0 recomputation=100 two_gb={'proposed/pre': 50, 'proposed/post': 50} mismatches with the old csv=0
+  stage0_check_proposed_pre-post_chunk8-9.json: manifest rows=50 excluded_pre=0 stage-0 recomputation=100 two_gb={'proposed/pre': 50, 'proposed/post': 50} mismatches with the old csv=0
+  stage0_check_baseline_post.json: manifest rows=350 excluded_pre=20 stage-0 recomputation=330 two_gb={'baseline/post': 74} mismatches with the old csv=0
+  stage0_check_baseline_pre.json: manifest rows=350 excluded_pre=20 stage-0 recomputation=330 two_gb={'baseline/pre': 74} mismatches with the old csv=0

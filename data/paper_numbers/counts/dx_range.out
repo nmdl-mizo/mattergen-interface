@@ -1,0 +1,13 @@
+n_structures=350
+n_outside_range=207
+n_below_lo=51
+n_above_hi=156
+n_inside_range=143
+dx_min_A=-1.5344
+dx_max_A=1.9112
+dx_median_A=0.4684
+train_dx_lo_A=-0.75
+train_dx_hi_A=0.6
+a_template_A=54.15601152562611
+n_within_1e-6_of_bound=0
+cell_b_unique=['4.036550999999999']

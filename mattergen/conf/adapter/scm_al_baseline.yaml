@@ -1,0 +1,26 @@
+# Adapter of the tilt-version reference model (baseline). The standard GemNetTAdapter
+# (it does not refer to mattergen.symmetry_constrained.* at all. It is not GBGemNetTAdapterV2).
+# It follows adapter/sf_epa.yaml (the native full-finetune recipe) of the earlier generation of the lab
+# as it is except for the key of property_embeddings_adapt. use_configured_diffusion_module is not
+# set (not needed because p_unconditional is not overridden).
+#
+# Source: internal start-up brief.
+# (internal notes).
+#
+# [Author's choice, a fix within the scope] For the reason the conditioning property name was changed to gb_gamma_J_m2,
+# see the header comment of data_module/scm_al_baseline.yaml (the problem that PROPERTY_SOURCE_IDS was not registered).
+# The existing property_embeddings/gb_gamma_J_m2.yaml is referred to as it is (no new file is needed).
+pretrained_name: mattergen_base
+model_path: null
+load_epoch: last
+full_finetuning: true
+
+adapter:
+  _target_: mattergen.adapter.GemNetTAdapter
+  property_embeddings: {}
+  property_embeddings_adapt: {}
+  site_property_embeddings: {}
+  site_property_embeddings_adapt: {}
+
+defaults:
+  - /lightning_module/diffusion_module/model/property_embeddings@adapter.property_embeddings_adapt.gb_gamma_J_m2: gb_gamma_J_m2
