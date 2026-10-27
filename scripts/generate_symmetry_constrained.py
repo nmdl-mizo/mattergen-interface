@@ -45,14 +45,14 @@ imported, never re-derived, via ``mattergen.symmetry_constrained.variable_length
   - **FIXED_A** (38 atoms/grain, Cartesian anchor) is READ from a single REFERENCE structure (``REFERENCE_CNID`` =
     ``cnid_0_0``, ``k=0``, the unique converged row without a ``/dx_`` path component) for EVERY generated graph,
     whatever its target atom count ``n``. This is valid because ``N_BULK_PER_GRAIN`` (76 atoms in total, 38/38) is
-    constant across all ``k``: the bulk region does not depend on how many MASTER/SLAVE atoms a level has.
-  - **MASTER/SLAVE** (``m`` atoms per grain each, ``m = (n - 2*N_BULK_PER_GRAIN) / 2``) are FULLY DIFFUSED (``pos``
+    constant across all ``k``: the bulk region does not depend on how many PRIMARY/REPLICA atoms a level has.
+  - **PRIMARY/REPLICA** (``m`` atoms per grain each, ``m = (n - 2*N_BULK_PER_GRAIN) / 2``) are FULLY DIFFUSED (``pos``
     mask = 0). They are seeded with finite fractional coordinates in [0, 1) taken from the reference structure's own
-    MASTER/SLAVE atoms (truncated to the first ``m`` in canonical sub_lo -> sub_hi order). These values are
+    PRIMARY/REPLICA atoms (truncated to the first ``m`` in canonical sub_lo -> sub_hi order). These values are
     placeholders only: ``_sample_prior`` overwrites them from the SDE prior before the first denoiser call. Finite
     values (not NaN) are used to avoid a ``0 * NaN`` hazard in mask-multiply code paths.
-  - **``gb_pair_rank``** of MASTER/SLAVE is ``arange(m)`` for both blocks (the k-th MASTER <-> k-th SLAVE
-    convention); at generation time there is no real SLAVE atom set against which a correspondence could be fitted.
+  - **``gb_pair_rank``** of PRIMARY/REPLICA is ``arange(m)`` for both blocks (the k-th PRIMARY <-> k-th REPLICA
+    convention); at generation time there is no real REPLICA atom set against which a correspondence could be fitted.
   - **``gb_a_template`` / ``gb_b_template`` / ``gb_c_template``** are read from the ``cell`` of the reference
     structure's dx=0 manifest (``{manifest_dir}/{REFERENCE_CNID}.json``, or the dx-tagged name
     ``{REFERENCE_CNID}_dx_p0.000.json``; exactly one of the two must exist), the same source
@@ -67,13 +67,13 @@ imported, never re-derived, via ``mattergen.symmetry_constrained.variable_length
 **Not done here.** There is no vector / per-structure-target mode (only a scalar ``--gamma_target`` that applies to
 the whole batch), no ``--dx`` override, and no padding-reduction step (this architecture has no padding tokens).
 
-**Imports refused on principle.** The fixed-length slot-count constant, the SLAVE array-position slice constant, the
+**Imports refused on principle.** The fixed-length slot-count constant, the REPLICA array-position slice constant, the
 padding sentinel-species constant (all three named in ``mattergen.symmetry_constrained.layout``) and the removed
 fixed-length projector are not imported. Only ``mattergen.symmetry_constrained.symmetry_ops`` (layout-agnostic pure
 functions), ``mattergen.symmetry_constrained.variable_length.*``, the host-agnostic I/O helpers
 ``mattergen.symmetry_constrained.layout.{GB_GAMMA_PROPERTY_KEY, build_canonical_layout, load_bulk_membership,
 load_gamma_csv, read_poscar_frac_species}`` and the symmetry operation's own constants
-``mattergen.symmetry_constrained.projection.{_R_SLAVE_MATRIX, _B0_CONST}`` are used.
+``mattergen.symmetry_constrained.projection.{_R_REPLICA_MATRIX, _B0_CONST}`` are used.
 
 Usage (on a GPU node; SCM_HOST_Z and SCM_SOLUTE_ZS must be exported before the call, see the check at the top of the file):
     export SCM_HOST_Z=13
@@ -116,14 +116,14 @@ from mattergen.symmetry_constrained.layout import (
     load_gamma_csv,
     read_poscar_frac_species,
 )
-from mattergen.symmetry_constrained.projection import _B0_CONST, _R_SLAVE_MATRIX
+from mattergen.symmetry_constrained.projection import _B0_CONST, _R_REPLICA_MATRIX
 from mattergen.symmetry_constrained.variable_length.dataset import resolve_view
 from mattergen.symmetry_constrained.variable_length.layout import (
     GB_BLOCK_FIELD,
     GB_BLOCK_FIXED_A,
     GB_BLOCK_FIXED_B,
-    GB_BLOCK_MASTER,
-    GB_BLOCK_SLAVE,
+    GB_BLOCK_PRIMARY,
+    GB_BLOCK_REPLICA,
     GB_PAIR_RANK_FIELD,
     assert_graph_invariants,
     derive_gb_role,
@@ -162,17 +162,17 @@ class ReferenceTemplate:
         a_template: float,
         b_template: float,
         c_template: float,
-        master_frac_ref: np.ndarray,
-        slave_frac_ref: np.ndarray,
+        primary_frac_ref: np.ndarray,
+        replica_frac_ref: np.ndarray,
         reference_dir: str,
     ):
         self.fixed_a_cart = fixed_a_cart  # (N_BULK_PER_GRAIN, 3) Cartesian, Angstrom
         self.a_template = a_template
         self.b_template = b_template
         self.c_template = c_template
-        self.master_frac_ref = master_frac_ref  # (m_ref, 3) fractional, [0,1)
-        self.slave_frac_ref = slave_frac_ref  # (m_ref, 3) fractional, [0,1)
-        self.m_ref = master_frac_ref.shape[0]
+        self.primary_frac_ref = primary_frac_ref  # (m_ref, 3) fractional, [0,1)
+        self.replica_frac_ref = replica_frac_ref  # (m_ref, 3) fractional, [0,1)
+        self.m_ref = primary_frac_ref.shape[0]
         self.reference_dir = reference_dir
 
 
@@ -180,7 +180,7 @@ def build_reference_template(
     gamma_csv_path: str, bulk_membership_csv_path: str, manifest_dir: str
 ) -> ReferenceTemplate:
     """Locate the unique converged (``REFERENCE_CNID``, ``k=REFERENCE_K``, ``dx_p0.000``) row and
-    build the FIXED_A Cartesian template + a/b/c template axes + MASTER/SLAVE placeholder-source
+    build the FIXED_A Cartesian template + a/b/c template axes + PRIMARY/REPLICA placeholder-source
     fractional coordinates from it (module docstring above)."""
     rows = load_gamma_csv(gamma_csv_path)
     dx0_marker = f"/{_DX0_TAG}/k{REFERENCE_K}_s"
@@ -249,11 +249,11 @@ def build_reference_template(
             f"build_reference_template: reference FIXED_A count {fa_idx.shape[0]} != "
             f"N_BULK_PER_GRAIN={N_BULK_PER_GRAIN}"
         )
-    m_idx = layout.source_master_local_idx  # (m_ref,) canonical sub_lo->sub_hi order
-    s_idx = layout.source_slave_local_idx  # (m_ref,)
+    m_idx = layout.source_primary_local_idx  # (m_ref,) canonical sub_lo->sub_hi order
+    s_idx = layout.source_replica_local_idx  # (m_ref,)
     if m_idx.shape[0] != s_idx.shape[0]:
         raise ValueError(
-            f"build_reference_template: reference MASTER count {m_idx.shape[0]} != SLAVE count "
+            f"build_reference_template: reference PRIMARY count {m_idx.shape[0]} != REPLICA count "
             f"{s_idx.shape[0]}"
         )
 
@@ -264,8 +264,8 @@ def build_reference_template(
         a_template=a_t,
         b_template=b_t,
         c_template=c_t,
-        master_frac_ref=frac[m_idx],
-        slave_frac_ref=frac[s_idx],
+        primary_frac_ref=frac[m_idx],
+        replica_frac_ref=frac[s_idx],
         reference_dir=row.dir,
     )
 
@@ -316,8 +316,8 @@ def build_generation_graph(
     if m > template.m_ref:
         raise ValueError(
             f"build_generation_graph: n_target={n_target} implies m={m}, which exceeds the "
-            f"reference template's own MASTER/SLAVE count m_ref={template.m_ref} (cannot source "
-            "placeholder MASTER/SLAVE fractional coordinates)."
+            f"reference template's own PRIMARY/REPLICA count m_ref={template.m_ref} (cannot source "
+            "placeholder PRIMARY/REPLICA fractional coordinates)."
         )
 
     n_bulk = N_BULK_PER_GRAIN
@@ -325,8 +325,8 @@ def build_generation_graph(
         [
             torch.full((n_bulk,), GB_BLOCK_FIXED_A, dtype=torch.long),
             torch.full((n_bulk,), GB_BLOCK_FIXED_B, dtype=torch.long),
-            torch.full((m,), GB_BLOCK_MASTER, dtype=torch.long),
-            torch.full((m,), GB_BLOCK_SLAVE, dtype=torch.long),
+            torch.full((m,), GB_BLOCK_PRIMARY, dtype=torch.long),
+            torch.full((m,), GB_BLOCK_REPLICA, dtype=torch.long),
         ]
     )
     gb_pair_rank = torch.cat(
@@ -350,7 +350,7 @@ def build_generation_graph(
     fixed_a_cart_t = torch.as_tensor(template.fixed_a_cart, dtype=dtype)  # (N_BULK_PER_GRAIN, 3)
     frac_a0 = torch.remainder(torch.einsum("kj,ji->ki", fixed_a_cart_t, cell_inv0), 1.0)
 
-    rotation = torch.tensor(_R_SLAVE_MATRIX, dtype=dtype)
+    rotation = torch.tensor(_R_REPLICA_MATRIX, dtype=dtype)
     gb_t0 = torch.zeros(1, 3, dtype=dtype)
     cart_b0 = symmetry_ops.reconstruct_fixed_b_cart(
         fixed_a_cart_t.unsqueeze(0),
@@ -363,10 +363,10 @@ def build_generation_graph(
     )[0]
     frac_b0 = torch.remainder(torch.einsum("kj,ji->ki", cart_b0, cell_inv0), 1.0)
 
-    master_frac0 = torch.as_tensor(np.asarray(template.master_frac_ref[:m]), dtype=dtype)
-    slave_frac0 = torch.as_tensor(np.asarray(template.slave_frac_ref[:m]), dtype=dtype)
+    primary_frac0 = torch.as_tensor(np.asarray(template.primary_frac_ref[:m]), dtype=dtype)
+    replica_frac0 = torch.as_tensor(np.asarray(template.replica_frac_ref[:m]), dtype=dtype)
 
-    pos = torch.cat([frac_a0, frac_b0, master_frac0, slave_frac0], dim=0)
+    pos = torch.cat([frac_a0, frac_b0, primary_frac0, replica_frac0], dim=0)
     n = pos.shape[0]
     if n != n_target:
         raise RuntimeError(
@@ -399,15 +399,15 @@ def build_generation_graph(
 
 
 def build_masks_variable_length(batch: ChemGraph) -> dict[str, torch.Tensor]:
-    """``pos``: FIXED_A fixed (1, reference anchor), FIXED_B/MASTER/SLAVE all free (0) -- same
+    """``pos``: FIXED_A fixed (1, reference anchor), FIXED_B/PRIMARY/REPLICA all free (0) -- same
     convention as ``mattergen.scripts.generate_symmetry_constrained.build_masks`` (:
-    ``SymmetryProjector`` reconstructs FIXED_B/SLAVE from FIXED_A_template/MASTER every step,
+    ``SymmetryProjector`` reconstructs FIXED_B/REPLICA from FIXED_A_template/PRIMARY every step,
     so masking them here would only let stale prior values leak into the reconstruction). ``gb_t``:
     fully free (0). ``gb_dx``/``cell``: no mask entry at all (both are fully diffused by the
     injected ``gb_dx`` predictor / left untouched respectively, module docstring above --
     ``atomic_numbers`` likewise has no mask entry, same reasoning as the fixed-length
     ``build_masks``: it is a long-dtype field that cannot go through ``_sample_prior``'s ``lerp_``,
-    and the projector re-unifies SLAVE=MASTER/FIXED=HOST_Z every step regardless)."""
+    and the projector re-unifies REPLICA=PRIMARY/FIXED=HOST_Z every step regardless)."""
     gb_block = getattr(batch, GB_BLOCK_FIELD)
     pos_mask = (gb_block == GB_BLOCK_FIXED_A).to(batch.pos.dtype).unsqueeze(-1)
     return {"pos": pos_mask, GB_T_KEY: torch.zeros_like(batch.gb_t)}
@@ -561,16 +561,16 @@ def main():
         sample, mean = sampler.sample(batch, mask=mask)
 
     # Gate c2-style symmetry residual: compare the RAW sampler output against the projector's own
-    # prediction from MASTER, index-preserving (do not use a
+    # prediction from PRIMARY, index-preserving (do not use a
     # threshold-based classification here -- gb_pair_rank already fixes the correspondence, no
     # nearest-neighbor/Hungarian step is needed at generation time since there is no independent
-    # "true" SLAVE to match against).
+    # "true" REPLICA to match against).
     projected = sampler.state_projector(sample)
     d = projected.pos.to(torch.float64) - sample.pos.to(torch.float64)
     dmod = ((d + 0.5) % 1.0) - 0.5
-    slave_mask = (getattr(sample, GB_BLOCK_FIELD) == GB_BLOCK_SLAVE).cpu()
+    replica_mask = (getattr(sample, GB_BLOCK_FIELD) == GB_BLOCK_REPLICA).cpu()
     sym_resid_frac_per_node = dmod.abs().max(dim=-1).values.cpu()
-    sym_resid_frac_slave = float(sym_resid_frac_per_node[slave_mask].max().item()) if slave_mask.any() else 0.0
+    sym_resid_frac_replica = float(sym_resid_frac_per_node[replica_mask].max().item()) if replica_mask.any() else 0.0
     sym_resid_frac_all = float(sym_resid_frac_per_node.max().item())
 
     n_atoms_per_sample = sample.num_atoms.detach().cpu().tolist()
@@ -592,7 +592,7 @@ def main():
                 "reference_dir": template.reference_dir,
                 "resolved_host_z": int(HOST_Z),
                 "num_atoms_distribution_key": args.num_atoms_distribution_key,
-                "symmetry_residual_frac_max_slave": sym_resid_frac_slave,
+                "symmetry_residual_frac_max_replica": sym_resid_frac_replica,
                 "symmetry_residual_frac_max_all": sym_resid_frac_all,
             },
             f,
@@ -605,7 +605,7 @@ def main():
     print("gamma_target_J_m2:", args.gamma_target)
     print("gamma_scaler_means:", scaler_stats["means"], "gamma_scaler_stds:", scaler_stats["stds"])
     print("n_atoms_per_sample:", n_atoms_per_sample)
-    print("symmetry_residual_frac_max_slave:", sym_resid_frac_slave)
+    print("symmetry_residual_frac_max_replica:", sym_resid_frac_replica)
 
     lengths, angles = lattice_matrix_to_params_torch(sample.cell)
     structures = structure_from_model_output(

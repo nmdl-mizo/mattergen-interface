@@ -6,11 +6,11 @@ _gb_t_inplane_loss and _masked_wrapped_pos_loss logic mirrored here from matterg
 is a straight port, not an import.
 
 Masking policy:
-    pos              -> MASTER block real (non-padding) slots only
-    atomic_numbers   -> MASTER block ALL 26 slots (padding included)
+    pos              -> PRIMARY block real (non-padding) slots only
+    atomic_numbers   -> PRIMARY block ALL 26 slots (padding included)
     gb_t             -> in-plane axes [1, 2] only (axis 0 pinned at 0.0)
     cell             -> NOT SCORED (Step1 cell-fixed)
-    FIXED / SLAVE    -> never scored
+    FIXED / REPLICA    -> never scored
 
 E2 fixed-N baseline (internal notes W-1, 2026-08-10):
 ``SymmetryConstrainedLoss`` gained an optional ``freeze_atomic_numbers`` kwarg, default False
@@ -223,11 +223,11 @@ class SymmetryConstrainedLoss(MaterialsLoss):
             )
         batch_size = batch.get_batch_size()
         role = noisy_batch.gb_role
-        master_mask = (role == int(GBRole.MASTER)).long()
+        primary_mask = (role == int(GBRole.PRIMARY)).long()
         from mattergen.symmetry_constrained.layout import PAD_Z_TILT
 
         is_real = (batch.atomic_numbers != PAD_Z_TILT).long()
-        pos_mask = master_mask
+        pos_mask = primary_mask
 
         pos_idx = batch.get_batch_idx("pos")
         atomic_numbers_idx = batch.get_batch_idx("atomic_numbers")
@@ -295,7 +295,7 @@ class SymmetryConstrainedLoss(MaterialsLoss):
                 batch_size=batch_size,
                 x=batch[ATOMIC_NUMBERS_FIELD],
                 noisy_x=noisy_batch[ATOMIC_NUMBERS_FIELD],
-                node_is_unmasked=master_mask,
+                node_is_unmasked=primary_mask,
                 reduce=self.reduce,
                 d3pm_hybrid_lambda=self.d3pm_hybrid_lambda,
             )

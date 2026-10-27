@@ -45,11 +45,11 @@
   <rect x="610" y="20" width="1170" height="745" fill="none" stroke="#bbbbbb" stroke-width="1.5"/>
 </g>
 <g id="b_bands">
-  <rect id="b_band_slave_l" x="685" y="255" width="102" height="170" fill="#fbe3cf" stroke="#444444" stroke-width="1.5"/>
+  <rect id="b_band_replica_l" x="685" y="255" width="102" height="170" fill="#fbe3cf" stroke="#444444" stroke-width="1.5"/>
   <rect id="b_band_bulkA" x="787" y="255" width="306" height="170" fill="#d9d9d9" stroke="#444444" stroke-width="1.5"/>
-  <rect id="b_band_master" x="1093" y="255" width="204" height="170" fill="#d6e4f5" stroke="#444444" stroke-width="1.5"/>
+  <rect id="b_band_primary" x="1093" y="255" width="204" height="170" fill="#d6e4f5" stroke="#444444" stroke-width="1.5"/>
   <rect id="b_band_bulkB" x="1297" y="255" width="306" height="170" fill="#ededed" stroke="#444444" stroke-width="1.5"/>
-  <rect id="b_band_slave_r" x="1603" y="255" width="102" height="170" fill="#fbe3cf" stroke="#444444" stroke-width="1.5"/>
+  <rect id="b_band_replica_r" x="1603" y="255" width="102" height="170" fill="#fbe3cf" stroke="#444444" stroke-width="1.5"/>
 </g>
 <g id="b_atoms_bulkA">
   <circle cx="821" cy="272" r="9" fill="#595959" stroke="#333333" stroke-width="1"/>
@@ -131,7 +131,7 @@
   <circle cx="1365" cy="425" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
   <circle cx="1535" cy="425" r="9" fill="#b8b8b8" stroke="#333333" stroke-width="1"/>
 </g>
-<g id="b_atoms_master">
+<g id="b_atoms_primary">
   <circle cx="1160.79" cy="272.16" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
   <circle cx="1124.91" cy="288.33" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
   <circle cx="1142.55" cy="323.43" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
@@ -155,7 +155,7 @@
   <circle cx="1247.45" cy="408.43" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
   <circle cx="1195" cy="255.11" r="9" fill="#2b6cb0" stroke="#333333" stroke-width="1"/>
 </g>
-<g id="b_atoms_slave">
+<g id="b_atoms_replica">
   <circle cx="708.43" cy="288.89" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
   <circle cx="737.45" cy="271.57" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
   <circle cx="755.09" cy="306.67" r="9" fill="#e67e22" stroke="#333333" stroke-width="1"/>
@@ -215,13 +215,13 @@
 <g id="b_labels">
   <text x="625" y="60" font-family="Arial" font-size="36" font-weight="bold" fill="#000000">(b) Symmetry-constrained structural representation</text>
   <text x="625" y="95" font-family="Arial" font-size="24" fill="#555555">Projection along tilt axis y ([001]); horizontal x (GB normal), vertical z</text>
-  <text x="693" y="138" font-family="Arial" font-size="28" font-weight="bold" fill="#000000">GB (Slave side)</text>
-  <text x="1195" y="138" font-family="Arial" font-size="28" text-anchor="middle" font-weight="bold" fill="#000000">GB (Master side)</text>
-  <text x="1697" y="138" font-family="Arial" font-size="28" text-anchor="end" font-weight="bold" fill="#000000">GB (Slave side)</text>
+  <text x="693" y="138" font-family="Arial" font-size="28" font-weight="bold" fill="#000000">GB (Replica side)</text>
+  <text x="1195" y="138" font-family="Arial" font-size="28" text-anchor="middle" font-weight="bold" fill="#000000">GB (Primary side)</text>
+  <text x="1697" y="138" font-family="Arial" font-size="28" text-anchor="end" font-weight="bold" fill="#000000">GB (Replica side)</text>
   <text x="940" y="241" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">Bulk A (fixed during generation)</text>
   <text x="1399" y="241" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">Bulk B = g(Bulk A)</text>
-  <text x="685" y="461" font-family="Arial" font-size="28" fill="#000000">Slave = g(Master)</text>
-  <text x="1195" y="461" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">Master (generated)</text>
+  <text x="685" y="461" font-family="Arial" font-size="28" fill="#000000">Replica = g(Primary)</text>
+  <text x="1195" y="461" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">Primary (generated)</text>
   <text x="625" y="732" font-family="Arial" font-size="28" fill="#000000">g: 2₁ screw operation</text>
 </g>
 </g>
@@ -265,7 +265,7 @@
   <text x="170" y="1159.24" font-family="Arial" font-size="24" text-anchor="middle" fill="#000000">Sample N;</text>
   <text x="170" y="1188.52" font-family="Arial" font-size="24" text-anchor="middle" fill="#000000">build template graph</text>
   <text x="465" y="1163.16" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">Initial state</text>
-  <text x="465" y="1189.48" font-family="Arial" font-size="20" text-anchor="middle" fill="#555555" xml:space="preserve">noise Master, (<tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="14" dy="4.4">y</tspan><tspan dy="-4.4">,</tspan><tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="14" dy="4.4">z</tspan><tspan dy="-4.4">), </tspan><tspan font-style="italic">dx</tspan></text>
+  <text x="465" y="1189.48" font-family="Arial" font-size="20" text-anchor="middle" fill="#555555" xml:space="preserve">noise Primary, (<tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="14" dy="4.4">y</tspan><tspan dy="-4.4">,</tspan><tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="14" dy="4.4">z</tspan><tspan dy="-4.4">), </tspan><tspan font-style="italic">dx</tspan></text>
   <text x="665" y="1178.32" font-family="Arial" font-size="36" text-anchor="middle" fill="#000000">Π</text>
   <text x="835" y="1175.36" font-family="Arial" font-size="28" text-anchor="middle" fill="#000000">Corrector</text>
   <text x="835" y="1201" font-family="Arial" font-size="21" text-anchor="middle" fill="#000000">pos</text>
@@ -275,8 +275,8 @@
   <text x="1422.5" y="1176.84" font-family="Arial" font-size="32" text-anchor="middle" fill="#000000">Π</text>
   <text x="1627.5" y="1158.76" font-family="Arial" font-size="26" text-anchor="middle" fill="#000000">Generated bicrystal</text>
   <text x="1627.5" y="1190.48" font-family="Arial" font-size="26" text-anchor="middle" fill="#000000">structure</text>
-  <text x="56" y="1363.5" font-family="Arial" font-size="24" fill="#000000">Symmetry projection Π: reconstruct Slave, Bulk B, and cell</text>
-  <text x="56" y="1389.5" font-family="Arial" font-size="20" fill="#555555" xml:space="preserve">Master, (<tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="14" dy="4.4">y</tspan><tspan dy="-4.4">,</tspan><tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="14" dy="4.4">z</tspan><tspan dy="-4.4">), </tspan><tspan font-style="italic">dx</tspan><tspan > unchanged</tspan></text>
+  <text x="56" y="1363.5" font-family="Arial" font-size="24" fill="#000000">Symmetry projection Π: reconstruct Replica, Bulk B, and cell</text>
+  <text x="56" y="1389.5" font-family="Arial" font-size="20" fill="#555555" xml:space="preserve">Primary, (<tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="14" dy="4.4">y</tspan><tspan dy="-4.4">,</tspan><tspan font-style="italic">t</tspan><tspan font-style="italic" font-size="14" dy="4.4">z</tspan><tspan dy="-4.4">), </tspan><tspan font-style="italic">dx</tspan><tspan > unchanged</tspan></text>
 </g>
 <g id="c_arrows">
   <line x1="190" y1="915" x2="210" y2="915" stroke="#000000" stroke-width="2.5"/>

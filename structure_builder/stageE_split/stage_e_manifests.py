@@ -11,7 +11,7 @@ Differences (only what the plan requires):
   (4) gb_t_dydz_seed_frac_yz (previously the argument value of the 4x4 grid of interface_master. A reference value for traceability that the projection, the checks and the proposed model do not use) is
       not computed on the 10x10 grid (the source of the computation is not used), so null is written. The key is the same as before.
 The key set is the same as the old manifests/cnid_0_0.json (cnid, natoms, cnid_ij, cell, gb_t_effective_frac_yz, gb_t_dydz_seed_frac_yz,
-fixed_indices, master_indices, slave_indices, master_sub_{lo,hi}_indices, slave_sub_{lo,hi}_indices, recon, t0_inplane,
+fixed_indices, primary_indices, replica_indices, primary_sub_{lo,hi}_indices, replica_sub_{lo,hi}_indices, recon, t0_inplane,
 reference_cnid, recon_residual_A). What the proposed model uses is only cell (dataset.py:521-549).
 
   <python> stage_e_manifests.py [--results-dir DIR] [--cnids a,b] [--structures-dir DIR] [--bulk-membership CSV]
@@ -45,7 +45,7 @@ from mattergen.symmetry_constrained.manifest import (  # noqa: E402
     SymmetricTiltGeometryError,
     build_tilt_template_manifest,
     read_gb_t_inplane,
-    reconstruct_slave,
+    reconstruct_replica,
 )
 
 C = E.C
@@ -56,8 +56,8 @@ DX0_IDX = C.DX10.index(0.0)
 K0_SEED = C.seed_of(DX0_IDX, 0, 0)          # 15000
 MANIFEST_KEYS = [
     "cnid", "natoms", "cnid_ij", "cell", "gb_t_effective_frac_yz", "gb_t_dydz_seed_frac_yz", "fixed_indices",
-    "master_indices", "slave_indices", "master_sub_lo_indices", "master_sub_hi_indices", "slave_sub_lo_indices",
-    "slave_sub_hi_indices", "recon", "t0_inplane", "reference_cnid", "recon_residual_A",
+    "primary_indices", "replica_indices", "primary_sub_lo_indices", "primary_sub_hi_indices", "replica_sub_lo_indices",
+    "replica_sub_hi_indices", "recon", "t0_inplane", "reference_cnid", "recon_residual_A",
 ]
 
 
@@ -122,13 +122,13 @@ def main() -> int:
             raise SystemExit(f"FATAL: {cnid}: cell differs from the reference template cell")
         frac = np.array(atoms.get_scaled_positions(wrap=True))
         fixed_idx = np.array(frozen[cnid], dtype=np.int64)
-        gb_t_eff = read_gb_t_inplane(frac, ref_frac, ref_m.roles.master_sub_hi_idx)
+        gb_t_eff = read_gb_t_inplane(frac, ref_frac, ref_m.roles.primary_sub_hi_idx)
         try:
             m = build_tilt_template_manifest(frac, cell, fixed_idx, cnid, gb_t_eff, (i, j), symmetry_tolerance=FIT_TOL_A)
         except SymmetricTiltGeometryError as e:
             raise SystemExit(f"FATAL: {cnid}: manifest fit failed: {e}")
-        recon_slave = reconstruct_slave(frac, ref_m.roles, ref_m.recon, gb_t_eff, t0_inplane=np.zeros(2))
-        diff = recon_slave - frac[ref_m.recon.slave_atom_indices]
+        recon_replica = reconstruct_replica(frac, ref_m.roles, ref_m.recon, gb_t_eff, t0_inplane=np.zeros(2))
+        diff = recon_replica - frac[ref_m.recon.replica_atom_indices]
         diff = diff - np.round(diff)
         resid = float(np.linalg.norm(diff @ cell, axis=1).max())
         if resid >= GATE_TOL_A:
@@ -136,15 +136,15 @@ def main() -> int:
         payload = {
             "cnid": m.cnid, "natoms": m.natoms, "cnid_ij": list(m.gb_t_cnid_ij), "cell": m.cell.tolist(),
             "gb_t_effective_frac_yz": gb_t_eff.tolist(), "gb_t_dydz_seed_frac_yz": None,
-            "fixed_indices": m.roles.fixed_idx.tolist(), "master_indices": m.roles.master_idx.tolist(),
-            "slave_indices": m.roles.slave_idx.tolist(),
-            "master_sub_lo_indices": m.roles.master_sub_lo_idx.tolist(),
-            "master_sub_hi_indices": m.roles.master_sub_hi_idx.tolist(),
-            "slave_sub_lo_indices": m.roles.slave_sub_lo_idx.tolist(),
-            "slave_sub_hi_indices": m.roles.slave_sub_hi_idx.tolist(),
+            "fixed_indices": m.roles.fixed_idx.tolist(), "primary_indices": m.roles.primary_idx.tolist(),
+            "replica_indices": m.roles.replica_idx.tolist(),
+            "primary_sub_lo_indices": m.roles.primary_sub_lo_idx.tolist(),
+            "primary_sub_hi_indices": m.roles.primary_sub_hi_idx.tolist(),
+            "replica_sub_lo_indices": m.roles.replica_sub_lo_idx.tolist(),
+            "replica_sub_hi_indices": m.roles.replica_sub_hi_idx.tolist(),
             "recon": {
-                "slave_atom_indices": m.recon.slave_atom_indices.tolist(),
-                "slave_master_indices": m.recon.slave_master_indices.tolist(),
+                "replica_atom_indices": m.recon.replica_atom_indices.tolist(),
+                "replica_primary_indices": m.recon.replica_primary_indices.tolist(),
                 "rotation": m.recon.rotation.tolist(), "b0": m.recon.b0.tolist(),
                 "t_coeff_inplane": m.recon.t_coeff_inplane.tolist(), "sub_block": m.recon.sub_block.tolist(),
                 "fit_residual_A": m.recon.fit_residual_A,

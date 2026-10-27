@@ -92,7 +92,7 @@ class AxisMismatch(ValueError):
 # verbatim copy from manifest.py
 # source: mattergen/symmetry_constrained/manifest.py
 # ---------------------------------------------------------------------------
-# R_SLAVE = np.diag([1.0, -1.0, -1.0])  # manifest.py:46 (fractional; grain-boundary normal = a axis = index 0). It corresponds to the operation C2n of this module. Use OPS_NTP["C2n"].
+# R_REPLICA = np.diag([1.0, -1.0, -1.0])  # manifest.py:46 (fractional; grain-boundary normal = a axis = index 0). It corresponds to the operation C2n of this module. Use OPS_NTP["C2n"].
 def _mic(delta: np.ndarray) -> np.ndarray:  # manifest.py:71-73
     """Fold a fractional coordinate delta into the minimum image [-0.5, 0.5)."""
     return delta - np.round(delta)

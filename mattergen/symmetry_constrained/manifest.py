@@ -1,21 +1,21 @@
 """Tilt-STGB Sigma5(210)[001] template manifest: role assignment + rigid projection fit.
 
 Pure ``numpy``/``scipy``/``ase`` geometry helpers (no ``torch``). Geometry facts (screw operation R,
-atom-count role convention, MASTER/SLAVE cross-block correspondence) were established empirically for the
-Sigma5(210)[001] template bank; the tilt role/projection topology (two cross-mapped MASTER/SLAVE sub-blocks,
+atom-count role convention, PRIMARY/REPLICA cross-block correspondence) were established empirically for the
+Sigma5(210)[001] template bank; the tilt role/projection topology (two cross-mapped PRIMARY/REPLICA sub-blocks,
 atom-count-based FIXED/bulk membership) is specific to this layout.
 
 Role convention:
     FIXED  = bulk_membership.csv frozen_indices (76 atoms: 38/grain, both grain images)
     core   = all remaining atoms (GB1+GB2 core, padding-eligible zone)
-    MASTER = core atoms with frac-x closer to 0.5 than to round(x)   (GB2 side, x~0.5)
-    SLAVE  = core atoms with frac-x closer to round(x) than to 0.5  (GB1 side, x~0 or 1)
+    PRIMARY = core atoms with frac-x closer to 0.5 than to round(x)   (GB2 side, x~0.5)
+    REPLICA  = core atoms with frac-x closer to round(x) than to 0.5  (GB1 side, x~0 or 1)
 
 Cross-block projection (established by ``recon_smoke*.py`` probes, residual ~1e-14A on all 10
 P1 pilot CNID templates): applying the self-symmetry operation R=diag(+1,-1,-1), t=(0.5,0.5,0.5)
-maps MASTER's *low-x sub-block* (x in (0.4,0.5], adjacent to grain-A) onto SLAVE's *high-x
-sub-block* (x>0.9, the grain-B image wrapped near the PBC seam), and MASTER's *high-x sub-block*
-(x in (0.5,0.6), adjacent to grain-B) onto SLAVE's *low-x sub-block* (x in [0,0.1), grain-A) --
+maps PRIMARY's *low-x sub-block* (x in (0.4,0.5], adjacent to grain-A) onto REPLICA's *high-x
+sub-block* (x>0.9, the grain-B image wrapped near the PBC seam), and PRIMARY's *high-x sub-block*
+(x in (0.5,0.6), adjacent to grain-B) onto REPLICA's *low-x sub-block* (x in [0,0.1), grain-A) --
 the correspondence is a genuine x+0.5 (mod 1) periodic shift, not a same-grain self-mirror. Both
 sub-blocks share T_coeff = I_2 (2x2 identity, in-plane [y,z] fractional axes): the grain-B
 in-plane rigid displacement (the CNID probe's ``dydz``, i.e. ``gb_t``) is applied verbatim
@@ -33,7 +33,7 @@ from scipy.optimize import linear_sum_assignment
 
 from mattergen.symmetry_constrained.constants import ATOMS_PER_PLANE, N_BULK_PER_GRAIN, N_PLANES
 
-R_SLAVE = np.diag([1.0, -1.0, -1.0])  # fractional, GB-normal axis = a-axis = index 0
+R_REPLICA = np.diag([1.0, -1.0, -1.0])  # fractional, GB-normal axis = a-axis = index 0
 # In-plane (axis [1,2]) response of the additive translation term to gb_t; identical for both
 # cross-mapped sub-blocks (see module docstring / recon probes).
 T_COEFF_INPLANE = np.eye(2)
@@ -43,7 +43,7 @@ COARSE_GRID_STEP = 0.05  # fractional grid step for the mandatory coarse t-searc
 N_REFINE_ITERS = 8
 
 # internal notes A-2: half-width of the
-# MASTER/SLAVE sub-block x-bands around x=0.5 (MASTER) / x=0,1 (SLAVE), generalized from the
+# PRIMARY/REPLICA sub-block x-bands around x=0.5 (PRIMARY) / x=0,1 (REPLICA), generalized from the
 # n_bulk=38 hardcoded 0.10 so that the core (non-FIXED) region always splits evenly into the two
 # cross-mapped sub-blocks regardless of N_BULK_PER_GRAIN. n_bulk=38 -> 0.25 - 18/120 = 0.10
 # (unchanged); n_bulk=26 -> 0.25 - 12/120 = 0.15.
@@ -146,36 +146,36 @@ class RoleAssignment:
     """Per-template role/index bookkeeping (indices are into the template's own atom array)."""
 
     fixed_idx: np.ndarray  # (76,) sorted ascending, from bulk_membership.csv frozen_indices
-    master_idx: np.ndarray  # (n_core/2,) sorted ascending; GB2 core (x~0.5)
-    slave_idx: np.ndarray  # (n_core/2,) sorted ascending; GB1 core (x~0 or 1)
-    master_sub_lo_idx: np.ndarray  # subset of master_idx with x in (0.4, 0.5] (grain-A side)
-    master_sub_hi_idx: np.ndarray  # subset of master_idx with x in (0.5, 0.6) (grain-B side)
-    slave_sub_lo_idx: np.ndarray  # subset of slave_idx with x in [0.0, 0.1) (grain-A side)
-    slave_sub_hi_idx: np.ndarray  # subset of slave_idx with x > 0.9 (grain-B side)
+    primary_idx: np.ndarray  # (n_core/2,) sorted ascending; GB2 core (x~0.5)
+    replica_idx: np.ndarray  # (n_core/2,) sorted ascending; GB1 core (x~0 or 1)
+    primary_sub_lo_idx: np.ndarray  # subset of primary_idx with x in (0.4, 0.5] (grain-A side)
+    primary_sub_hi_idx: np.ndarray  # subset of primary_idx with x in (0.5, 0.6) (grain-B side)
+    replica_sub_lo_idx: np.ndarray  # subset of replica_idx with x in [0.0, 0.1) (grain-A side)
+    replica_sub_hi_idx: np.ndarray  # subset of replica_idx with x > 0.9 (grain-B side)
 
 
 def assign_roles(frac: np.ndarray, cell: np.ndarray, fixed_idx: np.ndarray) -> RoleAssignment:
-    """Split the non-fixed ("core") atoms into MASTER/SLAVE (note (ii)):
-    ``|x-0.5| < |x-round(x)|`` -> MASTER (GB2 side), else SLAVE (GB1 side). Further splits each
+    """Split the non-fixed ("core") atoms into PRIMARY/REPLICA (note (ii)):
+    ``|x-0.5| < |x-round(x)|`` -> PRIMARY (GB2 side), else REPLICA (GB1 side). Further splits each
     into the two cross-mapped sub-blocks used by the projection (module docstring).
 
     **Sub-block assignment (internal notes
-    r3 Step G-2, 2026-09-21):** MASTER's lo/hi split uses the same ``x <= 0.5`` seam threshold as
-    before (unchanged, bit-identical for every atom that is not exactly on the seam). SLAVE's
-    lo/hi split is **no longer computed independently from SLAVE's own raw x** (r1/r2 both did
-    this and it broke for boundary atoms: a SLAVE atom whose true position is the periodic image
+    r3 Step G-2, 2026-09-21):** PRIMARY's lo/hi split uses the same ``x <= 0.5`` seam threshold as
+    before (unchanged, bit-identical for every atom that is not exactly on the seam). REPLICA's
+    lo/hi split is **no longer computed independently from REPLICA's own raw x** (r1/r2 both did
+    this and it broke for boundary atoms: a REPLICA atom whose true position is the periodic image
     of the seam can be stored as x=0.0 exactly, which an independent raw-x threshold always
-    classifies "lo" even when its MASTER partner is "hi" -- r2's own investigation,
+    classifies "lo" even when its PRIMARY partner is "hi" -- r2's own investigation,
     ``results/ _crossmap_semantics.md`` SS2-3/2-5, traced the r1 failures and the r2
-    regression to exactly this asymmetry). Instead, the master<->slave correspondence (pairing) is
+    regression to exactly this asymmetry). Instead, the primary<->replica correspondence (pairing) is
     established FIRST via one block-independent Hungarian match over the *entire* core atom set
-    (``R_SLAVE`` + a jointly-fit in-plane translation, using the same ``_coarse_search_b0``/
+    (``R_REPLICA`` + a jointly-fit in-plane translation, using the same ``_coarse_search_b0``/
     ``_refine_b0`` machinery ``fit_projection`` uses per sub-block -- Step F-1's measured margin,
     3.3e-16A correct vs 0.151A wrong, is >>14 orders of magnitude, so this is unambiguous), and
-    each SLAVE atom then simply inherits its bucket from its matched MASTER partner's bucket
-    (MASTER lo -> SLAVE hi, MASTER hi -> SLAVE lo). This guarantees I-1 (completeness, both sides)
+    each REPLICA atom then simply inherits its bucket from its matched PRIMARY partner's bucket
+    (PRIMARY lo -> REPLICA hi, PRIMARY hi -> REPLICA lo). This guarantees I-1 (completeness, both sides)
     and I-2 (bucket sizes match) *by construction* rather than by hoping two independent
-    measurements agree, and I-3 (correspondence integrity) trivially holds since SLAVE's bucket
+    measurements agree, and I-3 (correspondence integrity) trivially holds since REPLICA's bucket
     literally *is* its partner's bucket. This correspondence-only fit does not feed into the
     actual reconstruction geometry (``fit_projection`` below still fits its own per-block b0/
     residual from the resulting index sets, unchanged) -- it exists solely to resolve the
@@ -187,124 +187,124 @@ def assign_roles(frac: np.ndarray, cell: np.ndarray, fixed_idx: np.ndarray) -> R
     x = frac[core_idx, 0]
     dist_half = np.abs(x - 0.5)
     dist_zero = np.abs(x - np.round(x))
-    is_master = dist_half < dist_zero
-    master_idx = np.sort(core_idx[is_master])
-    slave_idx = np.sort(core_idx[~is_master])
+    is_primary = dist_half < dist_zero
+    primary_idx = np.sort(core_idx[is_primary])
+    replica_idx = np.sort(core_idx[~is_primary])
 
-    xm = frac[master_idx, 0]
+    xm = frac[primary_idx, 0]
     if not np.all((xm > 0.5 - BAND_HALF) & (xm < 0.5 + BAND_HALF)):
         raise SymmetricTiltGeometryError(
-            f"master core atom(s) outside expected band ({0.5 - BAND_HALF},{0.5 + BAND_HALF}): "
-            f"x range=[{xm.min():.6f},{xm.max():.6f}] n_master={len(master_idx)}"
+            f"primary core atom(s) outside expected band ({0.5 - BAND_HALF},{0.5 + BAND_HALF}): "
+            f"x range=[{xm.min():.6f},{xm.max():.6f}] n_primary={len(primary_idx)}"
         )
-    xs = frac[slave_idx, 0]
+    xs = frac[replica_idx, 0]
     if not np.all((xs < BAND_HALF) | (xs > 1.0 - BAND_HALF)):
         raise SymmetricTiltGeometryError(
-            f"slave core atom(s) outside expected band [0,{BAND_HALF})u({1.0 - BAND_HALF},1]: "
-            f"x range=[{xs.min():.6f},{xs.max():.6f}] n_slave={len(slave_idx)}"
+            f"replica core atom(s) outside expected band [0,{BAND_HALF})u({1.0 - BAND_HALF},1]: "
+            f"x range=[{xs.min():.6f},{xs.max():.6f}] n_replica={len(replica_idx)}"
         )
 
-    # Establish the master<->slave correspondence (block-independent; see docstring above). Raises
+    # Establish the primary<->replica correspondence (block-independent; see docstring above). Raises
     # SymmetricTiltGeometryError (via _coarse_search_b0) if the two core sets have unequal atom counts.
-    f_master = frac[master_idx]
-    f_slave = frac[slave_idx]
-    b0_corr_coarse = _coarse_search_b0(cell, f_master, f_slave, R_SLAVE)
-    _b0_corr, row, col, residuals = _refine_b0(cell, f_master, f_slave, R_SLAVE, b0_corr_coarse)
+    f_primary = frac[primary_idx]
+    f_replica = frac[replica_idx]
+    b0_corr_coarse = _coarse_search_b0(cell, f_primary, f_replica, R_REPLICA)
+    _b0_corr, row, col, residuals = _refine_b0(cell, f_primary, f_replica, R_REPLICA, b0_corr_coarse)
     if residuals is None:
         raise SymmetricTiltGeometryError(
-            "master<->slave correspondence fit failed (atom count mismatch after band checks)"
+            "primary<->replica correspondence fit failed (atom count mismatch after band checks)"
         )
-    partner_local = np.empty(len(master_idx), dtype=np.int64)
+    partner_local = np.empty(len(primary_idx), dtype=np.int64)
     partner_local[row] = col
-    slave_partner_of_master = slave_idx[partner_local]  # aligned with master_idx order
+    replica_partner_of_primary = replica_idx[partner_local]  # aligned with primary_idx order
 
-    is_master_lo = xm <= 0.5
-    master_sub_lo = master_idx[is_master_lo]
-    master_sub_hi = master_idx[~is_master_lo]
-    # Block A: master_sub_lo -> slave_sub_hi ; Block B: master_sub_hi -> slave_sub_lo (module
-    # docstring). SLAVE bucket = partner's opposite-of-MASTER-bucket, not an independent threshold.
-    slave_sub_hi = np.sort(slave_partner_of_master[is_master_lo])
-    slave_sub_lo = np.sort(slave_partner_of_master[~is_master_lo])
+    is_primary_lo = xm <= 0.5
+    primary_sub_lo = primary_idx[is_primary_lo]
+    primary_sub_hi = primary_idx[~is_primary_lo]
+    # Block A: primary_sub_lo -> replica_sub_hi ; Block B: primary_sub_hi -> replica_sub_lo (module
+    # docstring). REPLICA bucket = partner's opposite-of-PRIMARY-bucket, not an independent threshold.
+    replica_sub_hi = np.sort(replica_partner_of_primary[is_primary_lo])
+    replica_sub_lo = np.sort(replica_partner_of_primary[~is_primary_lo])
 
     return RoleAssignment(
         fixed_idx=np.sort(np.asarray(fixed_idx, dtype=np.int64)),
-        master_idx=master_idx,
-        slave_idx=slave_idx,
-        master_sub_lo_idx=master_sub_lo,
-        master_sub_hi_idx=master_sub_hi,
-        slave_sub_lo_idx=slave_sub_lo,
-        slave_sub_hi_idx=slave_sub_hi,
+        primary_idx=primary_idx,
+        replica_idx=replica_idx,
+        primary_sub_lo_idx=primary_sub_lo,
+        primary_sub_hi_idx=primary_sub_hi,
+        replica_sub_lo_idx=replica_sub_lo,
+        replica_sub_hi_idx=replica_sub_hi,
     )
 
 
 @dataclass
 class ReconstructionParams:
-    """Slave reconstruction parameters, one row per SLAVE atom.
+    """Replica reconstruction parameters, one row per REPLICA atom.
 
-    ``slave = master[slave_master_indices[k]] @ R.T + b0[k] + T_coeff[k] @ gb_t_inplane``
+    ``replica = primary[replica_primary_indices[k]] @ R.T + b0[k] + T_coeff[k] @ gb_t_inplane``
     (``gb_t_inplane`` = the 2-vector diffused/read latent, in-plane [axis1, axis2] only; axis 0
     of the translation is pinned at 0.5, not diffused).
     """
 
-    slave_atom_indices: np.ndarray  # (n_slave,) ascending, template-local index (into full atom array)
-    slave_master_indices: np.ndarray  # (n_slave,) master atom global index each slave maps from
-    rotation: np.ndarray  # (n_slave, 3, 3) = R_SLAVE broadcast (uniform)
-    b0: np.ndarray  # (n_slave, 3) per-atom translation constant (uniform per sub-block: (0.5,0.5,0.5))
-    t_coeff_inplane: np.ndarray  # (n_slave, 2, 2) = identity broadcast (uniform)
-    sub_block: np.ndarray  # (n_slave,) 0 = master_sub_lo -> slave_sub_hi, 1 = master_sub_hi -> slave_sub_lo
+    replica_atom_indices: np.ndarray  # (n_replica,) ascending, template-local index (into full atom array)
+    replica_primary_indices: np.ndarray  # (n_replica,) primary atom global index each replica maps from
+    rotation: np.ndarray  # (n_replica, 3, 3) = R_REPLICA broadcast (uniform)
+    b0: np.ndarray  # (n_replica, 3) per-atom translation constant (uniform per sub-block: (0.5,0.5,0.5))
+    t_coeff_inplane: np.ndarray  # (n_replica, 2, 2) = identity broadcast (uniform)
+    sub_block: np.ndarray  # (n_replica,) 0 = primary_sub_lo -> replica_sub_hi, 1 = primary_sub_hi -> replica_sub_lo
     fit_residual_A: float  # max Hungarian-matched residual across both sub-blocks (template frame)
 
 
 def fit_projection(frac: np.ndarray, cell: np.ndarray, roles: RoleAssignment) -> ReconstructionParams:
-    """Fit b0 (per sub-block, mandatory coarse grid search then refine) and build the per-slave
+    """Fit b0 (per sub-block, mandatory coarse grid search then refine) and build the per-replica
     reconstruction table. R and T_coeff are architectural constants (not fit per-template; the
     fixed R=diag(1,-1,-1) has been verified to give ~1e-14A residual with the fit b0 on all 10
     P1 pilot CNID templates -- if a template deviates, this raises so the caller can escalate).
     """
-    # Block A: master_sub_lo -> slave_sub_hi
-    f_msrc_a = frac[roles.master_sub_lo_idx]
-    f_dst_a = frac[roles.slave_sub_hi_idx]
-    b0_a_coarse = _coarse_search_b0(cell, f_msrc_a, f_dst_a, R_SLAVE)
-    b0_a, row_a, col_a, res_a = _refine_b0(cell, f_msrc_a, f_dst_a, R_SLAVE, b0_a_coarse)
+    # Block A: primary_sub_lo -> replica_sub_hi
+    f_msrc_a = frac[roles.primary_sub_lo_idx]
+    f_dst_a = frac[roles.replica_sub_hi_idx]
+    b0_a_coarse = _coarse_search_b0(cell, f_msrc_a, f_dst_a, R_REPLICA)
+    b0_a, row_a, col_a, res_a = _refine_b0(cell, f_msrc_a, f_dst_a, R_REPLICA, b0_a_coarse)
 
-    # Block B: master_sub_hi -> slave_sub_lo
-    f_msrc_b = frac[roles.master_sub_hi_idx]
-    f_dst_b = frac[roles.slave_sub_lo_idx]
-    b0_b_coarse = _coarse_search_b0(cell, f_msrc_b, f_dst_b, R_SLAVE)
-    b0_b, row_b, col_b, res_b = _refine_b0(cell, f_msrc_b, f_dst_b, R_SLAVE, b0_b_coarse)
+    # Block B: primary_sub_hi -> replica_sub_lo
+    f_msrc_b = frac[roles.primary_sub_hi_idx]
+    f_dst_b = frac[roles.replica_sub_lo_idx]
+    b0_b_coarse = _coarse_search_b0(cell, f_msrc_b, f_dst_b, R_REPLICA)
+    b0_b, row_b, col_b, res_b = _refine_b0(cell, f_msrc_b, f_dst_b, R_REPLICA, b0_b_coarse)
 
     fit_residual = float(max(res_a.max(), res_b.max()))
 
-    n_slave = len(roles.slave_idx)
-    slave_master_indices = np.zeros(n_slave, dtype=np.int64)
-    b0_full = np.zeros((n_slave, 3))
-    sub_block = np.zeros(n_slave, dtype=np.int64)
+    n_replica = len(roles.replica_idx)
+    replica_primary_indices = np.zeros(n_replica, dtype=np.int64)
+    b0_full = np.zeros((n_replica, 3))
+    sub_block = np.zeros(n_replica, dtype=np.int64)
 
-    slave_pos = {int(a): i for i, a in enumerate(roles.slave_idx)}
+    replica_pos = {int(a): i for i, a in enumerate(roles.replica_idx)}
 
-    # Block A fills slave_sub_hi entries; row_a indexes master_sub_lo, col_a indexes slave_sub_hi
-    for k in range(len(roles.master_sub_lo_idx)):
-        master_atom = roles.master_sub_lo_idx[row_a[k]]
-        slave_atom = roles.slave_sub_hi_idx[col_a[k]]
-        i = slave_pos[int(slave_atom)]
-        slave_master_indices[i] = master_atom
+    # Block A fills replica_sub_hi entries; row_a indexes primary_sub_lo, col_a indexes replica_sub_hi
+    for k in range(len(roles.primary_sub_lo_idx)):
+        primary_atom = roles.primary_sub_lo_idx[row_a[k]]
+        replica_atom = roles.replica_sub_hi_idx[col_a[k]]
+        i = replica_pos[int(replica_atom)]
+        replica_primary_indices[i] = primary_atom
         b0_full[i] = b0_a
         sub_block[i] = 0
 
-    for k in range(len(roles.master_sub_hi_idx)):
-        master_atom = roles.master_sub_hi_idx[row_b[k]]
-        slave_atom = roles.slave_sub_lo_idx[col_b[k]]
-        i = slave_pos[int(slave_atom)]
-        slave_master_indices[i] = master_atom
+    for k in range(len(roles.primary_sub_hi_idx)):
+        primary_atom = roles.primary_sub_hi_idx[row_b[k]]
+        replica_atom = roles.replica_sub_lo_idx[col_b[k]]
+        i = replica_pos[int(replica_atom)]
+        replica_primary_indices[i] = primary_atom
         b0_full[i] = b0_b
         sub_block[i] = 1
 
-    rotation = np.broadcast_to(R_SLAVE, (n_slave, 3, 3)).copy()
-    t_coeff = np.broadcast_to(T_COEFF_INPLANE, (n_slave, 2, 2)).copy()
+    rotation = np.broadcast_to(R_REPLICA, (n_replica, 3, 3)).copy()
+    t_coeff = np.broadcast_to(T_COEFF_INPLANE, (n_replica, 2, 2)).copy()
 
     return ReconstructionParams(
-        slave_atom_indices=roles.slave_idx.copy(),
-        slave_master_indices=slave_master_indices,
+        replica_atom_indices=roles.replica_idx.copy(),
+        replica_primary_indices=replica_primary_indices,
         rotation=rotation,
         b0=b0_full,
         t_coeff_inplane=t_coeff,
@@ -314,39 +314,39 @@ def fit_projection(frac: np.ndarray, cell: np.ndarray, roles: RoleAssignment) ->
 
 
 def read_gb_t_inplane(
-    frac: np.ndarray, frac_template: np.ndarray, master_sub_hi_idx: np.ndarray
+    frac: np.ndarray, frac_template: np.ndarray, primary_sub_hi_idx: np.ndarray
 ) -> np.ndarray:
     """Read out the effective in-plane gb_t (fractional [y,z]) of a structure relative to its
-    own k=0 template, from the master_sub_hi (grain-B) sub-block displacement (the sub-block
-    that actually carries the CNID/relaxation in-plane shift; master_sub_lo is invariant, design
+    own k=0 template, from the primary_sub_hi (grain-B) sub-block displacement (the sub-block
+    that actually carries the CNID/relaxation in-plane shift; primary_sub_lo is invariant, design
     : canonicalization must re-fit from the relaxed structure, not reuse the as-built
     seed). Uses a circular mean to avoid the +-0.5 wrap cancellation failure mode (verified: naive
     ``.mean()`` collapses cnid_2_0's true dydz=(0,0.5) to a spurious near-zero value).
     """
-    raw = _mic(frac[master_sub_hi_idx] - frac_template[master_sub_hi_idx])
+    raw = _mic(frac[primary_sub_hi_idx] - frac_template[primary_sub_hi_idx])
     return _circular_mean(raw[:, 1:3], axis=0)
 
 
-def reconstruct_slave(
-    frac_master: np.ndarray,
+def reconstruct_replica(
+    frac_primary: np.ndarray,
     roles: RoleAssignment,
     recon: ReconstructionParams,
     gb_t_inplane: np.ndarray,
     t0_inplane: np.ndarray = np.zeros(2),
 ) -> np.ndarray:
-    """Deterministic slave reconstruction: for each slave atom,
-    ``slave = master[src] @ R.T + b0 + [0, T_coeff @ (gb_t - t0)]`` (axis 0 of the additive term
+    """Deterministic replica reconstruction: for each replica atom,
+    ``replica = primary[src] @ R.T + b0 + [0, T_coeff @ (gb_t - t0)]`` (axis 0 of the additive term
     is always 0 here since b0 already carries the fixed 0.5 normal-axis offset).
 
-    ``frac_master`` must be indexable by the *global* master atom indices in
-    ``recon.slave_master_indices`` (i.e. the full per-template fractional coordinate array, not
-    a pre-sliced master-only array).
+    ``frac_primary`` must be indexable by the *global* primary atom indices in
+    ``recon.replica_primary_indices`` (i.e. the full per-template fractional coordinate array, not
+    a pre-sliced primary-only array).
     """
-    n_slave = len(recon.slave_atom_indices)
-    src = frac_master[recon.slave_master_indices]  # (n_slave, 3)
-    rotated = np.einsum("kij,kj->ki", recon.rotation, src)  # slave = src @ R.T i.e. R @ src (R diag)
-    inplane_term = np.einsum("kij,j->ki", recon.t_coeff_inplane, gb_t_inplane - t0_inplane)  # (n_slave,2)
-    add = np.zeros((n_slave, 3))
+    n_replica = len(recon.replica_atom_indices)
+    src = frac_primary[recon.replica_primary_indices]  # (n_replica, 3)
+    rotated = np.einsum("kij,kj->ki", recon.rotation, src)  # replica = src @ R.T i.e. R @ src (R diag)
+    inplane_term = np.einsum("kij,j->ki", recon.t_coeff_inplane, gb_t_inplane - t0_inplane)  # (n_replica,2)
+    add = np.zeros((n_replica, 3))
     add[:, 1:3] = inplane_term
     return _mic(rotated + recon.b0 + add)
 

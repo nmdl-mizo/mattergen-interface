@@ -3,7 +3,7 @@
 ``mattergen.symmetry_constrained.adapter``'s ``gb_t_readout`` does a fixed ``pos_output.reshape(n_graphs,
 N_PAD, 3)`` (``adapter.py:33``), which is meaningless for a padding-free, variable-length batch --
 there is no single ``N_PAD`` every graph shares. This module replaces it with a ``ptr``-based
-segment mean over SLAVE nodes, using the SAME selection semantics (mean of the SLAVE-role node
+segment mean over REPLICA nodes, using the SAME selection semantics (mean of the REPLICA-role node
 positions, per graph) but grouping by graph index instead of by a fixed reshape.
 
 ``gb_dx_readout`` is UNCHANGED by the variable_length/padding-free distinction (it reads
@@ -11,7 +11,7 @@ positions, per graph) but grouping by graph index instead of by a fixed reshape.
 dependency at all) -- it is imported directly from ``mattergen.symmetry_constrained.adapter``, not
 re-implemented (the same function, not a duplicate).
 
-``gb_role`` (needed to select SLAVE nodes) is assumed MATERIALIZED on the input batch
+``gb_role`` (needed to select REPLICA nodes) is assumed MATERIALIZED on the input batch
 requirement ("``gb_role`` must be materialized at the dataset stage ... `loss.py:225` and
 `adapter.py:53,78` read `gb_role` by name, so lazy derivation is too late") -- this module reads
 ``x.gb_role`` directly, exactly as ``mattergen.symmetry_constrained.adapter``'s two ``forward`` methods do
@@ -59,33 +59,33 @@ def resolve_batch_vec(x) -> torch.Tensor:
 
 
 def gb_t_readout_variable_length(
-    pos_output: torch.Tensor, slave_mask: torch.Tensor, batch_vec: torch.Tensor, n_graphs: int
+    pos_output: torch.Tensor, replica_mask: torch.Tensor, batch_vec: torch.Tensor, n_graphs: int
 ) -> torch.Tensor:
-    """Per-graph mean of ``pos_output`` over nodes where ``slave_mask`` is True (:
+    """Per-graph mean of ``pos_output`` over nodes where ``replica_mask`` is True (:
     ``ptr``-based segment mean, replacing ``mattergen.symmetry_constrained.adapter.gb_t_readout``'s fixed
     ``reshape(n_graphs, N_PAD, 3)``). No padding/real-atom mask is needed here (unlike
-    ``mattergen.symmetry_constrained.adapter.gb_t_readout``'s ``slave_real_mask``): every node in a
+    ``mattergen.symmetry_constrained.adapter.gb_t_readout``'s ``replica_real_mask``): every node in a
     ``variable_length`` batch is a real atom by construction.
 
     Args:
         pos_output: ``(N_total, 3)`` -- the denoiser's raw position-score output over the WHOLE
             (collated) batch.
-        slave_mask: ``(N_total,)`` bool -- True where the node's role is SLAVE
-            (``x.gb_role == GBRole.SLAVE``).
+        replica_mask: ``(N_total,)`` bool -- True where the node's role is REPLICA
+            (``x.gb_role == GBRole.REPLICA``).
         batch_vec: ``(N_total,)`` long, values in ``[0, n_graphs)`` (see :func:`resolve_batch_vec`).
         n_graphs: number of graphs in the batch.
 
     Returns:
-        ``(n_graphs, 3)``. A graph with zero SLAVE nodes would divide by zero; that is a
+        ``(n_graphs, 3)``. A graph with zero REPLICA nodes would divide by zero; that is a
         Step-31-invariant violation (``m >= 1`` is required for every graph) and is therefore not
         silently guarded against here -- ``assert_graph_invariants`` (Step 31) is the place that
         catches it, before this function is ever reached in the intended call order (
         Step 32 -> Step 32b).
     """
     device, dtype = pos_output.device, pos_output.dtype
-    idx = batch_vec[slave_mask]
+    idx = batch_vec[replica_mask]
     sums = torch.zeros(n_graphs, 3, device=device, dtype=dtype)
-    sums.index_add_(0, idx, pos_output[slave_mask])
+    sums.index_add_(0, idx, pos_output[replica_mask])
     counts = torch.zeros(n_graphs, 1, device=device, dtype=dtype)
     counts.index_add_(
         0, idx, torch.ones(idx.shape[0], 1, device=device, dtype=dtype)
@@ -96,10 +96,10 @@ def gb_t_readout_variable_length(
 def _gb_t_from_forward_output(x, out) -> "torch.Tensor | None":
     if "gb_role" not in x or "gb_t" not in x:
         return None
-    slave_mask = x.gb_role == int(GBRole.SLAVE)
+    replica_mask = x.gb_role == int(GBRole.REPLICA)
     batch_vec = resolve_batch_vec(x)
     n_graphs = int(batch_vec.max().item()) + 1 if batch_vec.numel() > 0 else 0
-    return gb_t_readout_variable_length(out.pos, slave_mask, batch_vec, n_graphs)
+    return gb_t_readout_variable_length(out.pos, replica_mask, batch_vec, n_graphs)
 
 
 

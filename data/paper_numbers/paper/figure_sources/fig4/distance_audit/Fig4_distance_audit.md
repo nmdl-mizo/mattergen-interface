@@ -22,7 +22,7 @@ The calculator is `StructureMatcher(**UNI, stol=0.6).get_rms_dist(q, t)` (G.py:3
 - Periodic boundaries: pbc_shortest_vectors (minimum image, SM:544), wrapping of fractional coordinates (SM:488, 496).
 - Translation: coarse candidate translations (each site of s1 to a reference site of s2, SM:785-788) -> removal of the mean translation after the assignment (SM:548). No rotation optimization. The lattice correspondence is find_all_mappings (re-taking lattice vectors within ltol/angle_tol, SM:460-468). The list of symmetry operations is not used. No alignment with the 76 bulk atoms (76 appears only in the self-test, G.py:741-744).
 - Lattice: Niggli reduction only (SM:980-983), no scaling (SM:699). The distance is the Cartesian distance on the average lattice av_lat of both lattices (SM:478-480), normalized by (V_avg/N)^(1/3) (SM:781). The conversion to Angstrom multiplies by v of the q side (difference of the a axis <= 1.5%, G.py:22-24).
-- Compared region: the whole cell, all atoms (not restricted to Master/Slave). The statement that "the 76 bulk atoms are common with the training set, so the difference is decided at the grain boundary" is a claim of the plan; there is no verification with actual data.
+- Compared region: the whole cell, all atoms (not restricted to primary/replica). The statement that "the 76 bulk atoms are common with the training set, so the difference is decided at the grain boundary" is a claim of the plan; there is no verification with actual data.
 
 ## 2. Relation to StructureMatcher (why there is no contradiction)
 - The condition for fit() = True is "the **maximum** site distance (normalized) after the assignment and after removing the mean translation <= stol" (SM:622, 626, 792 `max(dist)`). It is not the RMS.

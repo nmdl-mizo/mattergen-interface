@@ -1,10 +1,10 @@
 """Per-node block/pair-rank field design for the variable-length tilt-STGB layout (internal notes).
 
 **Why this module exists **: ``mattergen.symmetry_constrained.constants.GBRole`` (FIXED=0,
-MASTER=1, SLAVE=2) cannot distinguish FIXED_A from FIXED_B. In the fixed N_PAD=128 slot layout
+PRIMARY=1, REPLICA=2) cannot distinguish FIXED_A from FIXED_B. In the fixed N_PAD=128 slot layout
 (``mattergen.symmetry_constrained.layout``), array *position* carried that distinction (``FIXED_A_SLICE`` vs
 ``FIXED_B_SLICE``); a variable-length layout has no fixed positions, so the distinction (and
-the within-block MASTER<->SLAVE / FIXED_A<->FIXED_B correspondence order) must be carried as an
+the within-block PRIMARY<->REPLICA / FIXED_A<->FIXED_B correspondence order) must be carried as an
 explicit per-node integer field instead. This module defines that field (``gb_block``), the
 companion ordering field (``gb_pair_rank``), the derivation of the existing coarser ``gb_role``
 field from ``gb_block``, and the per-graph invariant checks that a correctly-built graph must
@@ -33,19 +33,19 @@ import torch
 
 from mattergen.symmetry_constrained.constants import N_BULK_PER_GRAIN, GBRole
 
-# --- gb_block: the single source of truth for FIXED_A/FIXED_B/MASTER/SLAVE membership (
+# --- gb_block: the single source of truth for FIXED_A/FIXED_B/PRIMARY/REPLICA membership (
 # SS3 Step 31 table). Values are plain ints (not an IntEnum instance) so they compare directly
 # against a ``torch.long`` tensor without a dtype/enum boxing mismatch.
 GB_BLOCK_FIXED_A: int = 0
 GB_BLOCK_FIXED_B: int = 1
-GB_BLOCK_MASTER: int = 2
-GB_BLOCK_SLAVE: int = 3
+GB_BLOCK_PRIMARY: int = 2
+GB_BLOCK_REPLICA: int = 3
 
 _ALL_BLOCKS: tuple[int, ...] = (
     GB_BLOCK_FIXED_A,
     GB_BLOCK_FIXED_B,
-    GB_BLOCK_MASTER,
-    GB_BLOCK_SLAVE,
+    GB_BLOCK_PRIMARY,
+    GB_BLOCK_REPLICA,
 )
 
 #: gb_role (mattergen.symmetry_constrained.constants.GBRole) is derived FROM gb_block, never
@@ -56,8 +56,8 @@ _ALL_BLOCKS: tuple[int, ...] = (
 _BLOCK_TO_ROLE: dict[int, GBRole] = {
     GB_BLOCK_FIXED_A: GBRole.FIXED,
     GB_BLOCK_FIXED_B: GBRole.FIXED,
-    GB_BLOCK_MASTER: GBRole.MASTER,
-    GB_BLOCK_SLAVE: GBRole.SLAVE,
+    GB_BLOCK_PRIMARY: GBRole.PRIMARY,
+    GB_BLOCK_REPLICA: GBRole.REPLICA,
 }
 
 # Field name constants.
@@ -74,7 +74,7 @@ class GbBlockInvariantViolation(RuntimeError):
 def derive_gb_role(
     gb_block: torch.Tensor, existing_gb_role: torch.Tensor | None = None
 ) -> torch.Tensor:
-    """Derive the ``gb_role`` (``GBRole`` values: FIXED=0, MASTER=1, SLAVE=2) field from
+    """Derive the ``gb_role`` (``GBRole`` values: FIXED=0, PRIMARY=1, REPLICA=2) field from
     ``gb_block``.
 
     Args:
@@ -153,7 +153,7 @@ def assert_graph_invariants(gb_block: torch.Tensor, gb_pair_rank: torch.Tensor) 
 
     Invariants checked:
         1. ``n_fixed_a == n_fixed_b == N_BULK_PER_GRAIN``
-        2. ``n_master == n_slave`` (call the common value ``m``)
+        2. ``n_primary == n_replica`` (call the common value ``m``)
         3. ``n == 2*N_BULK_PER_GRAIN + 2*m``
         4. ``n % 2 == 0`` and ``m >= 1``
         5. within each block, ``gb_pair_rank`` is a permutation of ``0..(size-1)`` (no
@@ -187,8 +187,8 @@ def assert_graph_invariants(gb_block: torch.Tensor, gb_pair_rank: torch.Tensor) 
     counts = _block_counts(gb_block)
     n_fixed_a = counts[GB_BLOCK_FIXED_A]
     n_fixed_b = counts[GB_BLOCK_FIXED_B]
-    n_master = counts[GB_BLOCK_MASTER]
-    n_slave = counts[GB_BLOCK_SLAVE]
+    n_primary = counts[GB_BLOCK_PRIMARY]
+    n_replica = counts[GB_BLOCK_REPLICA]
 
     # Invariant 1
     if n_fixed_a != N_BULK_PER_GRAIN or n_fixed_b != N_BULK_PER_GRAIN:
@@ -197,9 +197,9 @@ def assert_graph_invariants(gb_block: torch.Tensor, gb_pair_rank: torch.Tensor) 
             "(both required)."
         )
     # Invariant 2
-    if n_master != n_slave:
-        raise GbBlockInvariantViolation(f"n_master={n_master} != n_slave={n_slave}.")
-    m = n_master
+    if n_primary != n_replica:
+        raise GbBlockInvariantViolation(f"n_primary={n_primary} != n_replica={n_replica}.")
+    m = n_primary
     # Invariant 3
     expected_n = 2 * N_BULK_PER_GRAIN + 2 * m
     if n != expected_n:
@@ -215,7 +215,7 @@ def assert_graph_invariants(gb_block: torch.Tensor, gb_pair_rank: torch.Tensor) 
     # Invariant 5: gb_pair_rank is a within-block permutation of 0..(size-1).
     _check_block_is_permutation(gb_block, gb_pair_rank, GB_BLOCK_FIXED_A, n_fixed_a)
     _check_block_is_permutation(gb_block, gb_pair_rank, GB_BLOCK_FIXED_B, n_fixed_b)
-    _check_block_is_permutation(gb_block, gb_pair_rank, GB_BLOCK_MASTER, m)
-    _check_block_is_permutation(gb_block, gb_pair_rank, GB_BLOCK_SLAVE, m)
+    _check_block_is_permutation(gb_block, gb_pair_rank, GB_BLOCK_PRIMARY, m)
+    _check_block_is_permutation(gb_block, gb_pair_rank, GB_BLOCK_REPLICA, m)
 
 

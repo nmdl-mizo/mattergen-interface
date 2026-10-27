@@ -5,8 +5,8 @@
 # unchanged: mattergen.symmetry_constrained.loss.SymmetryConstrainedLoss is written only with masks based on
 # gb_role and aggregation based on batch_idx, and does not refer to N_PAD or fixed-length slots
 # at all. A measurement confirmed that, for a variable-length, no-padding batch of two graphs
-# of different sizes (n=112, n=120), it runs forward+backward without modification and the gradient appears only on MASTER
-# (FIXED/SLAVE are exactly 0). Therefore symmetry_constrained/variable_length/loss.py is not created.
+# of different sizes (n=112, n=120), it runs forward+backward without modification and the gradient appears only on PRIMARY
+# (FIXED/REPLICA are exactly 0). Therefore symmetry_constrained/variable_length/loss.py is not created.
 # Measurement: ac_loss_report.json of an internal run
 #
 # freeze_atomic_numbers is not set (the key itself is not written. The default when omitted is False, in line with "return to the original MatterGen default",

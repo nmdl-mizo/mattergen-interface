@@ -20,7 +20,7 @@ security reporting process and trademark permissions do not apply to this reposi
    - an option of the generator whose default is False (--record_trajectories) and a num_atoms distribution table
      (AL_S5_210_TRAIN, a key that training does not read);
    - a later commit (2026-10-05, after the training run ended), which also changed the layout module and the dataset module of the extension
-     (a `test_indices` key of the split file and an additional Master/Slave species check).
+     (a `test_indices` key of the split file and an additional primary/replica species check).
    The effect of these differences on reproducing the training has not been verified.
    In the sbatch scripts under gb_eval/, a call of an internal model-specification check (an approval check of the model
    specification card) was removed for this release; the checks it performs are not needed to run the scripts.

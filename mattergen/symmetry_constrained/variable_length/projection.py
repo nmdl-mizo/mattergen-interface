@@ -1,4 +1,4 @@
-"""Variable-length MASTER<->SLAVE / FIXED_A<->FIXED_B deterministic projector for tilt-STGB
+"""Variable-length PRIMARY<->REPLICA / FIXED_A<->FIXED_B deterministic projector for tilt-STGB
 Sigma5(210)[001] (internal notes).
 
 This is the ``variable_length`` counterpart of ``mattergen.symmetry_constrained.projection.FixedSlotProjector``: it
@@ -13,7 +13,7 @@ that ``FixedSlotProjector`` relies on.
 a projector class of another module (reference only -- never imported for its formula, only
 its ``ptr``-based graph-loop *shape*, per "the reason a similar module must not be copied as it is"), this projector DOES restore FIXED_A/FIXED_B every call (the deterministic
 (see the above).
-``reconstruct_fixed_b_cart``/cell-anchor formula), not just SLAVE.
+``reconstruct_fixed_b_cart``/cell-anchor formula), not just REPLICA.
 
 **Lattice constants are never hardcoded here **: ``a_template``/``b_template``/
 ``c_template`` are read per-graph off ``batch.gb_a_template``/``gb_b_template``/``gb_c_template``
@@ -29,7 +29,7 @@ CNID templates, so the two call patterns are numerically identical here); this i
 once (/C13: the operation sequence is unchanged, only the batching of the *call site*
 differs).
 
-The rotation matrix ``_R_SLAVE_MATRIX`` and additive-translation gauge ``_B0_CONST`` are
+The rotation matrix ``_R_REPLICA_MATRIX`` and additive-translation gauge ``_B0_CONST`` are
 architectural constants of the symmetry operation itself, not host-system-specific
 lattice values -- they are imported directly from ``mattergen.symmetry_constrained.projection`` (the single
 source of truth names), not redefined here.
@@ -42,14 +42,14 @@ import torch
 from mattergen.common.data.chemgraph import ChemGraph
 from mattergen.symmetry_constrained import symmetry_ops
 from mattergen.symmetry_constrained.constants import SCM_HOST_Z as HOST_Z
-from mattergen.symmetry_constrained.projection import _B0_CONST, _R_SLAVE_MATRIX
+from mattergen.symmetry_constrained.projection import _B0_CONST, _R_REPLICA_MATRIX
 from mattergen.symmetry_constrained.symmetry_ops import _periodic_wrap
 from mattergen.symmetry_constrained.variable_length.layout import (
     GB_BLOCK_FIELD,
     GB_BLOCK_FIXED_A,
     GB_BLOCK_FIXED_B,
-    GB_BLOCK_MASTER,
-    GB_BLOCK_SLAVE,
+    GB_BLOCK_PRIMARY,
+    GB_BLOCK_REPLICA,
     GB_PAIR_RANK_FIELD,
     assert_graph_invariants,
 )
@@ -81,7 +81,7 @@ def _sorted_block_indices(
 
 
 class SymmetryProjector:
-    """Deterministic FIXED_A/FIXED_B restore + MASTER->SLAVE projection for a variable-length,
+    """Deterministic FIXED_A/FIXED_B restore + PRIMARY->REPLICA projection for a variable-length,
     padding-free batch. Correspondence is read from the per-node ``gb_block``/
     ``gb_pair_rank`` fields (Step 31), never inferred from array position.
     """
@@ -134,7 +134,7 @@ class SymmetryProjector:
         b_tmpl = torch.as_tensor(batch.gb_b_template, device=device, dtype=dtype).reshape(n_graphs)
         c_tmpl = torch.as_tensor(batch.gb_c_template, device=device, dtype=dtype).reshape(n_graphs)
 
-        rotation = torch.tensor(_R_SLAVE_MATRIX, device=device, dtype=dtype)
+        rotation = torch.tensor(_R_REPLICA_MATRIX, device=device, dtype=dtype)
         b0 = torch.tensor(_B0_CONST, device=device, dtype=dtype)
 
         out_pos = pos.clone()
@@ -148,11 +148,11 @@ class SymmetryProjector:
 
             idx_fa = _sorted_block_indices(block, rank, GB_BLOCK_FIXED_A, s)
             idx_fb = _sorted_block_indices(block, rank, GB_BLOCK_FIXED_B, s)
-            idx_m = _sorted_block_indices(block, rank, GB_BLOCK_MASTER, s)
-            idx_s = _sorted_block_indices(block, rank, GB_BLOCK_SLAVE, s)
+            idx_m = _sorted_block_indices(block, rank, GB_BLOCK_PRIMARY, s)
+            idx_s = _sorted_block_indices(block, rank, GB_BLOCK_REPLICA, s)
 
             # per-graph invariants (n_fixed_a==n_fixed_b==N_BULK_PER_GRAIN,
-            # n_master==n_slave, n==2*N_BULK_PER_GRAIN+2*m, gb_pair_rank a within-block
+            # n_primary==n_replica, n==2*N_BULK_PER_GRAIN+2*m, gb_pair_rank a within-block
             # permutation). Raises GbBlockInvariantViolation on any violation -- never caught here
             # (no silent continuation on a malformed graph).
             assert_graph_invariants(block, rank)
@@ -194,18 +194,18 @@ class SymmetryProjector:
             frac_b_new = torch.einsum("kj,ji->ki", cart_b, cell_inv_g)
             out_pos[idx_fb] = _periodic_wrap(frac_b_new)
 
-            # MASTER->SLAVE: MASTER's fractional coordinate is left UNCHANGED (it is already a
+            # PRIMARY->REPLICA: PRIMARY's fractional coordinate is left UNCHANGED (it is already a
             # valid fractional coordinate in the current cell, diffused live --
             # pseudocode / mattergen.symmetry_constrained.projection.py module docstring
-            # item 9). SLAVE is the deterministic function of MASTER via symmetry_ops
+            # item 9). REPLICA is the deterministic function of PRIMARY via symmetry_ops
             #.
-            master_pos_g = out_pos[idx_m].unsqueeze(0)  # (1, m, 3)
-            slave_pos_g = symmetry_ops.reconstruct_slave_pos(
-                master_pos_g, gb_t_ip_g, rotation=rotation, b0=b0
+            primary_pos_g = out_pos[idx_m].unsqueeze(0)  # (1, m, 3)
+            replica_pos_g = symmetry_ops.reconstruct_replica_pos(
+                primary_pos_g, gb_t_ip_g, rotation=rotation, b0=b0
             )[0]  # (m, 3)
-            out_pos[idx_s] = slave_pos_g
+            out_pos[idx_s] = replica_pos_g
 
-            # Species: SLAVE mirrors MASTER (solute decorates both mirror-image atoms together,
+            # Species: REPLICA mirrors PRIMARY (solute decorates both mirror-image atoms together,
             # mattergen.symmetry_constrained.layout._validate_species_frac docstring item d); FIXED_A/FIXED_B
             # are always the pure host species (mattergen.symmetry_constrained.projection.py:322-323).
             out_z[idx_s] = out_z[idx_m]

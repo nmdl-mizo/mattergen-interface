@@ -2,9 +2,9 @@
 
 internal notes
 
-MASTER-slot expansion (internal notes Stage
-A): ``N_BULK_PER_GRAIN`` is the single source of truth for the FIXED/MASTER/SLAVE slot counts
-(``MASTER_ATOMS_K0``/``N_MASTER_MAX`` here, ``N_FIXED_A``/``N_FIXED_B`` in ``layout.py``, the
+PRIMARY-slot expansion (internal notes Stage
+A): ``N_BULK_PER_GRAIN`` is the single source of truth for the FIXED/PRIMARY/REPLICA slot counts
+(``PRIMARY_ATOMS_K0``/``N_PRIMARY_MAX`` here, ``N_FIXED_A``/``N_FIXED_B`` in ``layout.py``, the
 ``BAND_HALF`` role-split band in ``manifest.py``). It is overridable via the
 ``SCM_N_BULK_PER_GRAIN`` environment variable; the default (38, this repo's other users'
 existing behavior) is unchanged unless that variable is set (no silent fallback --
@@ -26,8 +26,8 @@ class GBRole(IntEnum):
     rationale in ``mattergen.symmetry_constrained.manifest`` module docstring."""
 
     FIXED = 0
-    MASTER = 1
-    SLAVE = 2
+    PRIMARY = 1
+    REPLICA = 2
 
 
 # (4): A_TEMPLATE = 6*C_TEMPLATE spans the bicrystal's full stacking axis and
@@ -75,16 +75,16 @@ def _resolve_n_bulk_per_grain() -> int:
 # runtime). See module docstring for the override mechanism.
 N_BULK_PER_GRAIN = _resolve_n_bulk_per_grain()
 
-# (2026-08-05 user-confirmed, reviewer R2-3): N_master_max = core atom
-# count (i.e. the GB2/MASTER-side atom count, design doc SS3.2's "max(template GB2 core atom
+# (2026-08-05 user-confirmed, reviewer R2-3): N_primary_max = core atom
+# count (i.e. the GB2/PRIMARY-side atom count, design doc SS3.2's "max(template GB2 core atom
 # count)") + 4 margin atoms (leaves room for future insertion, not just removal).
-# Measured MASTER-side atom count at k=0 (no removal) for n_bulk=38 across all 10 P1 pilot CNID
-# templates: 22 atoms (bulk_membership.csv core=44 total per template, split 22/22 master/slave).
+# Measured PRIMARY-side atom count at k=0 (no removal) for n_bulk=38 across all 10 P1 pilot CNID
+# templates: 22 atoms (bulk_membership.csv core=44 total per template, split 22/22 primary/replica).
 # A-1: generalized to N_PLANES - N_BULK_PER_GRAIN (n_bulk=38 -> 22 ✓ unchanged;
 # n_bulk=26 -> 34).
-MASTER_ATOMS_K0 = N_PLANES - N_BULK_PER_GRAIN
-N_MASTER_MARGIN = 4
-N_MASTER_MAX = MASTER_ATOMS_K0 + N_MASTER_MARGIN  # n_bulk=38 -> 26 (unchanged); n_bulk=26 -> 38
+PRIMARY_ATOMS_K0 = N_PLANES - N_BULK_PER_GRAIN
+N_PRIMARY_MARGIN = 4
+N_PRIMARY_MAX = PRIMARY_ATOMS_K0 + N_PRIMARY_MARGIN  # n_bulk=38 -> 26 (unchanged); n_bulk=26 -> 38
 
 
 

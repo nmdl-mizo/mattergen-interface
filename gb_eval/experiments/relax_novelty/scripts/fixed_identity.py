@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """fixed_identity.py -- identity check of the fixed atoms of the generated structures of the proposed model: P2-A (FIXED_A) and P2-B (FIXED_B), and the FAIL validation.
 
-Background: the atom order of proposed is pos = cat[frac_a0, frac_b0, master, slave] (generate_symmetry_constrained.py:429).
+Background: the atom order of proposed is pos = cat[frac_a0, frac_b0, primary, replica] (generate_symmetry_constrained.py:429).
   FIXED_A = indices 0..37 are the Cartesian anchors of the reference template (common to all structures), FIXED_B = indices 38..75 are reconstructed from gb_dx and gb_t of each structure
   (symmetry_ops.reconstruct_fixed_b_cart: R.FIXED_A + b0 + (gb_dx,0,0) + (0, t_y*b, t_z*c). R is applied to Cartesian coordinates).
   Therefore "the first 76 atoms agree with the template index by index" does not hold, and P2 is split into the following two.
   P2-A: Cartesian coordinates of indices 0..37 = fixed_a_cart of the template (minimum image, threshold max <= 1e-4 A)
-  P2-B: for d_i = r_B[i] - R.r_A[i] (i=0..37, r_B[i] is index 38+i, R = _R_SLAVE_MATRIX applied to **Cartesian** coordinates)
+  P2-B: for d_i = r_B[i] - R.r_A[i] (i=0..37, r_B[i] is index 38+i, R = _R_REPLICA_MATRIX applied to **Cartesian** coordinates)
         e_i = minimum image(d_i - d_0), max_i |e_i| <= 1e-4 A (the translation is common to the 38 atoms)
   The deviation is the Euclidean norm of the 3-component vector of each atom. The minimum image is taken with the cell of the structure itself (rounding of fractional coordinates).
 
@@ -44,11 +44,11 @@ def _mg():
         sys.path.insert(0, pth)
     from mattergen.symmetry_constrained.constants import N_BULK_PER_GRAIN
     from mattergen.symmetry_constrained.layout import build_canonical_layout, load_bulk_membership, load_gamma_csv, read_poscar_frac_species
-    from mattergen.symmetry_constrained.projection import _R_SLAVE_MATRIX
+    from mattergen.symmetry_constrained.projection import _R_REPLICA_MATRIX
     from mattergen.symmetry_constrained.variable_length.dataset import resolve_view
     _loaded.update(N_BULK_PER_GRAIN=N_BULK_PER_GRAIN, build_canonical_layout=build_canonical_layout,
                    load_bulk_membership=load_bulk_membership, load_gamma_csv=load_gamma_csv,
-                   read_poscar_frac_species=read_poscar_frac_species, R=np.array(_R_SLAVE_MATRIX, dtype=float),
+                   read_poscar_frac_species=read_poscar_frac_species, R=np.array(_R_REPLICA_MATRIX, dtype=float),
                    resolve_view=resolve_view)
     return _loaded
 
@@ -70,17 +70,17 @@ class ReferenceTemplate:
         a_template: float,
         b_template: float,
         c_template: float,
-        master_frac_ref: np.ndarray,
-        slave_frac_ref: np.ndarray,
+        primary_frac_ref: np.ndarray,
+        replica_frac_ref: np.ndarray,
         reference_dir: str,
     ):
         self.fixed_a_cart = fixed_a_cart  # (N_BULK_PER_GRAIN, 3) Cartesian, Angstrom
         self.a_template = a_template
         self.b_template = b_template
         self.c_template = c_template
-        self.master_frac_ref = master_frac_ref  # (m_ref, 3) fractional, [0,1)
-        self.slave_frac_ref = slave_frac_ref  # (m_ref, 3) fractional, [0,1)
-        self.m_ref = master_frac_ref.shape[0]
+        self.primary_frac_ref = primary_frac_ref  # (m_ref, 3) fractional, [0,1)
+        self.replica_frac_ref = replica_frac_ref  # (m_ref, 3) fractional, [0,1)
+        self.m_ref = primary_frac_ref.shape[0]
         self.reference_dir = reference_dir
 
 
@@ -90,7 +90,7 @@ def build_reference_template(
     gamma_csv_path: str, bulk_membership_csv_path: str, manifest_dir: str
 ) -> ReferenceTemplate:
     """Locate the unique converged (``REFERENCE_CNID``, ``k=REFERENCE_K``, ``dx_p0.000``) row and
-    build the FIXED_A Cartesian template + a/b/c template axes + MASTER/SLAVE placeholder-source
+    build the FIXED_A Cartesian template + a/b/c template axes + PRIMARY/REPLICA placeholder-source
     fractional coordinates from it (module docstring above)."""
     mg = _mg()
     load_gamma_csv = mg["load_gamma_csv"]
@@ -167,11 +167,11 @@ def build_reference_template(
             f"build_reference_template: reference FIXED_A count {fa_idx.shape[0]} != "
             f"N_BULK_PER_GRAIN={N_BULK_PER_GRAIN}"
         )
-    m_idx = layout.source_master_local_idx  # (m_ref,) canonical sub_lo->sub_hi order
-    s_idx = layout.source_slave_local_idx  # (m_ref,)
+    m_idx = layout.source_primary_local_idx  # (m_ref,) canonical sub_lo->sub_hi order
+    s_idx = layout.source_replica_local_idx  # (m_ref,)
     if m_idx.shape[0] != s_idx.shape[0]:
         raise ValueError(
-            f"build_reference_template: reference MASTER count {m_idx.shape[0]} != SLAVE count "
+            f"build_reference_template: reference PRIMARY count {m_idx.shape[0]} != REPLICA count "
             f"{s_idx.shape[0]}"
         )
 
@@ -182,8 +182,8 @@ def build_reference_template(
         a_template=a_t,
         b_template=b_t,
         c_template=c_t,
-        master_frac_ref=frac[m_idx],
-        slave_frac_ref=frac[s_idx],
+        primary_frac_ref=frac[m_idx],
+        replica_frac_ref=frac[s_idx],
         reference_dir=row.dir,
     )
 

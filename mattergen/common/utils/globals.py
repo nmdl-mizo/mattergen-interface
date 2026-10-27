@@ -73,8 +73,8 @@ SITE_PROPERTY_SOURCE_IDS = [
     "intercalant_origin",
     "surface",
     "interface",
-    "gb_role",                         # grain-boundary role: fixed/master/slave
-    "surface_role",                    # bulk-fixed surface role: FIXED(0)/MASTER(1)
+    "gb_role",                         # grain-boundary role: fixed/primary/replica
+    "surface_role",                    # bulk-fixed surface role: FIXED(0)/PRIMARY(1)
     "grain_label",                     # GB grain membership: grain-1(0)/grain-2(1) per-atom
 ]
 

@@ -1,4 +1,4 @@
-"""Pure symmetry-operation functions for the tilt-STGB Sigma5(210)[001] MASTER<->SLAVE /
+"""Pure symmetry-operation functions for the tilt-STGB Sigma5(210)[001] PRIMARY<->REPLICA /
 FIXED_A<->FIXED_B reconstruction (internal notes).
 
 **Purpose **: the same formula was at risk of being duplicated across
@@ -14,13 +14,13 @@ require a new hardcoded constant here).
 operand order, same einsum subscripts, same intermediate tensor construction) from
 ``mattergen.symmetry_constrained.projection`` as it stood at commit ``4f14c2f``, specifically:
 
-- ``reconstruct_slave_pos``          <- ``projection.py:316-322`` (MASTER->SLAVE, both branches)
+- ``reconstruct_replica_pos``          <- ``projection.py:316-322`` (PRIMARY->REPLICA, both branches)
 - ``reconstruct_fixed_b_cart``       <- ``projection.py:262-282`` (FIXED_B, gb_dx-present branch)
 - ``reconstruct_fixed_b_cart_legacy``<- ``projection.py:293-300`` (FIXED_B, gb_dx-absent branch)
 - ``reconstruct_cell``               <- ``projection.py:249-252`` (cell, gb_dx-present branch)
 - ``_periodic_wrap``                 <- ``projection.py:124-131`` (shared wrap helper)
 
-The MASTER->SLAVE in-plane coefficient ``T_coeff`` is **not** parameterized here:
+The PRIMARY->REPLICA in-plane coefficient ``T_coeff`` is **not** parameterized here:
 records it as part of the symmetry operation's own definition (``T_COEFF_INPLANE = np.eye(2)``,
 ``mattergen.symmetry_constrained.manifest.py:49``), not a system-dependent quantity, so it is kept as a
 module-level identity constant exactly as ``projection.py`` had it (``_T_COEFF_INPLANE_MATRIX``),
@@ -46,30 +46,30 @@ def _periodic_wrap(x: torch.Tensor) -> torch.Tensor:
     return torch.remainder(x, 1.0)
 
 
-def reconstruct_slave_pos(
-    master_frac: torch.Tensor,
+def reconstruct_replica_pos(
+    primary_frac: torch.Tensor,
     gb_t_ip: torch.Tensor,
     *,
     rotation: torch.Tensor,
     b0: torch.Tensor,
 ) -> torch.Tensor:
-    """MASTER -> SLAVE fractional-coordinate reconstruction (``projection.py:316-322``).
+    """PRIMARY -> REPLICA fractional-coordinate reconstruction (``projection.py:316-322``).
 
     Args:
-        master_frac: ``(G, M, 3)`` fractional coordinates.
+        primary_frac: ``(G, M, 3)`` fractional coordinates.
         gb_t_ip: ``(G, 2)`` in-plane component of ``gb_t`` (y, z).
-        rotation: ``(3, 3)`` -- ``_R_SLAVE_MATRIX`` (``diag(+1,-1,-1)``).
+        rotation: ``(3, 3)`` -- ``_R_REPLICA_MATRIX`` (``diag(+1,-1,-1)``).
         b0: ``(3,)`` -- ``_B0_CONST`` (``(0.5, 0.5, 0.5)``).
 
     Returns:
         ``(G, M, 3)`` fractional coordinates, periodic-wrapped into ``[0, 1)``. Identical in both
         the legacy (gb_dx-absent) and gb_dx-present branches of ``FixedSlotProjector.__call__``
-        ("do not touch the fractional coordinates of MASTER/SLAVE").
+        ("do not touch the fractional coordinates of PRIMARY/REPLICA").
     """
-    device, dtype = master_frac.device, master_frac.dtype
-    n_graphs = master_frac.shape[0]
+    device, dtype = primary_frac.device, primary_frac.dtype
+    n_graphs = primary_frac.shape[0]
     t_coeff = torch.tensor(_T_COEFF_INPLANE_MATRIX, device=device, dtype=dtype)
-    rotated = torch.einsum("ij,gkj->gki", rotation, master_frac)
+    rotated = torch.einsum("ij,gkj->gki", rotation, primary_frac)
     inplane_term = torch.einsum("ij,gj->gi", t_coeff, gb_t_ip)
     add = torch.zeros(n_graphs, 3, device=device, dtype=dtype)
     add[:, 1:3] = inplane_term
@@ -96,7 +96,7 @@ def reconstruct_fixed_b_cart(
         fixed_a_cart: ``(G, N_FIXED, 3)`` Cartesian FIXED_A template (Angstrom).
         gb_t_ip: ``(G, 2)`` in-plane component of ``gb_t`` (y, z), fractional.
         gb_dx: ``(G,)`` per-graph dx shift (Angstrom), already flattened to 1-D.
-        rotation: ``(3, 3)`` -- ``_R_SLAVE_MATRIX``.
+        rotation: ``(3, 3)`` -- ``_R_REPLICA_MATRIX``.
         a_template / b_template / c_template: template cell axis lengths (Angstrom). **System
         specific -- always pass the value appropriate to the host system being processed
         . Never hardcode Al's value here.**

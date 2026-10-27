@@ -2,30 +2,30 @@
 Sigma5(210)[001] data (internal notes).
 
 **Geometry/correspondence layer is REUSED, not re-derived **: role assignment
-(``assign_roles``), the MASTER<->SLAVE correspondence fit (``fit_projection``), and the canonical
-sub_lo->sub_hi MASTER order (``_master_slave_order``) are exactly
+(``assign_roles``), the PRIMARY<->REPLICA correspondence fit (``fit_projection``), and the canonical
+sub_lo->sub_hi PRIMARY order (``_primary_replica_order``) are exactly
 ``mattergen.symmetry_constrained.layout.build_canonical_layout``'s own machinery -- this module calls that
 function directly (its ``manifest`` argument is unused by the function body, verified by grep at
 implementation time; this module passes ``None``, see :func:`_UNUSED_MANIFEST_ARG` docstring
-below) and only reads off its ``source_*_local_idx``/``effective_gb_t_yz``/``n_real_master``
+below) and only reads off its ``source_*_local_idx``/``effective_gb_t_yz``/``n_real_primary``
 outputs, discarding the N_PAD=128/padding-padded ``pos``/``atomic_numbers``/``gb_role`` fields that
 function also builds (this module builds its OWN padding-free, variable-length equivalents of
 those three from the same ``source_*_local_idx`` arrays).
 
-**SLAVE correspondence is RE-DERIVED from the applied gauge, not read off
-``layout.source_slave_local_idx`` directly**: the fitted
+**REPLICA correspondence is RE-DERIVED from the applied gauge, not read off
+``layout.source_replica_local_idx`` directly**: the fitted
 per-sub-block correspondence table (``mattergen.symmetry_constrained.manifest.fit_projection``'s
-``master_to_slave``, which underlies ``layout.source_slave_local_idx``) is confirmed correct for
+``primary_to_replica``, which underlies ``layout.source_replica_local_idx``) is confirmed correct for
 sub-block A but is fit against sub-block B's OWN ``b0`` -- for 103/2,136 (4.82%) rows where
 sub-block A's and B's fitted in-plane gauge differ by exactly the (0.5, 0.5) fractional
 degeneracy, applying the single graph-level ``gb_t`` (= sub-block A's gauge, ``layout.
-effective_gb_t_yz``) to ALL MASTER atoms and comparing against that stale sub-block-B-gauge
-correspondence produces a 4.4498 A per-atom residual on the sub-block-B half of SLAVE (
+effective_gb_t_yz``) to ALL PRIMARY atoms and comparing against that stale sub-block-B-gauge
+correspondence produces a 4.4498 A per-atom residual on the sub-block-B half of REPLICA (
 "what was happening"), even though the reconstructed ATOM SET is still exactly correct
 (same 1.7e-14 A precision) -- only the atom-to-atom PAIRING for that half is wrong.
-:func:`_derive_slave_correspondence` (below) re-derives the pairing by applying the single
-graph-level gauge and finding each reconstructed SLAVE position's periodic nearest neighbor
-within ``layout.source_slave_local_idx``'s ATOM SET (which is correct as a set regardless of the
+:func:`_derive_replica_correspondence` (below) re-derives the pairing by applying the single
+graph-level gauge and finding each reconstructed REPLICA position's periodic nearest neighbor
+within ``layout.source_replica_local_idx``'s ATOM SET (which is correct as a set regardless of the
 gauge mismatch), then verifies **(main judgment, integer)** that mapping is a
 bijection and that it agrees with the independent Hungarian-optimal assignment on the same
 distance matrix -- these two integer checks together make the derived pairing unambiguous (
@@ -38,20 +38,20 @@ This shared bijection/Hungarian/sanity logic lives in
 :func:`_derive_correspondence_from_reconstruction` and is also used by
 :func:`_derive_fixed_b_correspondence` for the independently
 discovered FIXED_A<->FIXED_B analogue of this same gauge/correspondence mismatch. It reuses
-``mattergen.symmetry_constrained.symmetry_ops.reconstruct_slave_pos`` (the SAME formula the production
+``mattergen.symmetry_constrained.symmetry_ops.reconstruct_replica_pos`` (the SAME formula the production
 projector runs, -- not re-derived) and ``mattergen.symmetry_constrained.manifest._pairwise_mic_dist``/
 ``_hungarian_match`` (the SAME nearest-neighbor/Hungarian primitives already used by
 ``fit_projection`` itself and by this project's own diagnosis scripts, ``experiments/earlier_experiment
 variable_length_t5b/scripts/d2_per_atom_vs_setwise_residual.py``).
 
-**MASTER<->SLAVE species check is done on the op_A correspondence **:
-``build_canonical_layout``'s own check d (``layout._validate_species_frac``) pairs MASTER and SLAVE with
-the per-sub-block-gauge ``slave_order``, whereas this loader orders its output with the single-gauge op_A
-correspondence (:func:`_derive_slave_correspondence`). For a gauge-degenerate ("degenerate") parent -- sub-blocks A and B
+**PRIMARY<->REPLICA species check is done on the op_A correspondence **:
+``build_canonical_layout``'s own check d (``layout._validate_species_frac``) pairs PRIMARY and REPLICA with
+the per-sub-block-gauge ``replica_order``, whereas this loader orders its output with the single-gauge op_A
+correspondence (:func:`_derive_replica_correspondence`). For a gauge-degenerate ("degenerate") parent -- sub-blocks A and B
 differ by the (0, 1/2, 1/2) gauge -- the two correspondences pair the same atom SET differently, so a solute
 decoration placed correctly on the op_A correspondence failed layout's check d (4,050 as-built solute decorations in
 ), and, conversely, a structure that passes check d but not op_A would be emitted with a broken species
-pairing. This loader therefore calls ``build_canonical_layout(..., check_master_slave_species=False)`` (checks a-c
+pairing. This loader therefore calls ``build_canonical_layout(..., check_primary_replica_species=False)`` (checks a-c
 still run) and checks ``species[m_idx] == species[s_idx]`` on the SAME ``s_idx`` that builds the output order
 (``LayoutError`` naming "op_A" on mismatch). The output order and the correspondence functions are unchanged,
 so tensors of rows that were readable before are bit-identical.
@@ -77,7 +77,7 @@ manifest file is ``{manifest_dir}/{cnid}_dx_p0.000.json`` (dx-tagged name) OR ``
     ``gamma_csv_path`` (the same space ``mattergen.symmetry_constrained.dataset.TiltGBDataset(indices=...)`` uses).
     ``split`` in {train, val, val_dx, test }. Rows are looked up by CSV row POSITION, because Al parents
     ``(cnid, k, seed)`` carry several dx-sweep rows each (the key is not unique). The bulk membership
-    and the FIXED_B/SLAVE correspondence are still keyed by the PARENT ``(cnid, k, seed)``.
+    and the FIXED_B/REPLICA correspondence are still keyed by the PARENT ``(cnid, k, seed)``.
 Exactly one of the two must be given.
 """
 
@@ -103,12 +103,12 @@ from mattergen.symmetry_constrained.layout import (
     read_poscar_frac_species,
 )
 from mattergen.symmetry_constrained.manifest import _hungarian_match, _pairwise_mic_dist
-from mattergen.symmetry_constrained.projection import _B0_CONST, _R_SLAVE_MATRIX
+from mattergen.symmetry_constrained.projection import _B0_CONST, _R_REPLICA_MATRIX
 from mattergen.symmetry_constrained.variable_length.layout import (
     GB_BLOCK_FIXED_A,
     GB_BLOCK_FIXED_B,
-    GB_BLOCK_MASTER,
-    GB_BLOCK_SLAVE,
+    GB_BLOCK_PRIMARY,
+    GB_BLOCK_REPLICA,
     derive_gb_role,
 )
 
@@ -136,7 +136,7 @@ def _derive_correspondence_from_reconstruction(
 ) -> tuple[np.ndarray, dict]:
     """Common logic that applies implementation conventions 3-5 (revision r2) to the already reconstructed positions ``recon_frac`` (``(m,3)``
     fractional, wrapped into ``[0,1)``) and the true atom set ``true_idx`` (POSCAR-local index, ``(m,)``).
-    **Called from both the SLAVE and the FIXED_B paths** (the bijection, the Hungarian agreement and the sanity check are not copied to two places.
+    **Called from both the REPLICA and the FIXED_B paths** (the bijection, the Hungarian agreement and the sanity check are not copied to two places.
     "apply conventions 1 to 6 in the same form to the correspondence FIXED_A -> FIXED_B").
     (see the above).
 
@@ -212,11 +212,11 @@ def _derive_correspondence_from_reconstruction(
     return np.asarray(true_idx)[nn_col], diag
 
 
-def _derive_slave_correspondence(
+def _derive_replica_correspondence(
     frac: np.ndarray,
     cell: np.ndarray,
-    master_order: np.ndarray,
-    true_slave_idx: np.ndarray,
+    primary_order: np.ndarray,
+    true_replica_idx: np.ndarray,
     gb_t_yz: np.ndarray,
     *,
     max_residual_A: float = GAUGE_CORRESPONDENCE_MAX_RESIDUAL_A,
@@ -224,35 +224,35 @@ def _derive_slave_correspondence(
 ) -> tuple[np.ndarray, dict]:
     """Implementation conventions 1-6 (option A): apply the single graph-level ``gb_t`` (``gb_t_yz`` -- the
     caller passes ``layout.effective_gb_t_yz``, sub-block A's gauge point 1) to
-    every MASTER atom in ``master_order`` via ``symmetry_ops.reconstruct_slave_pos`` (the SAME
+    every PRIMARY atom in ``primary_order`` via ``symmetry_ops.reconstruct_replica_pos`` (the SAME
     formula the production projector runs -- not re-derived here), then hands the
     reconstructed positions to :func:`_derive_correspondence_from_reconstruction` to find each
-    one's periodic (MIC) nearest neighbor within the TRUE SLAVE atom SET ``true_slave_idx`` (the
-    caller passes ``layout.source_slave_local_idx`` -- correct as a SET even for the 103/2,136
+    one's periodic (MIC) nearest neighbor within the TRUE REPLICA atom SET ``true_replica_idx`` (the
+    caller passes ``layout.source_replica_local_idx`` -- correct as a SET even for the 103/2,136
     sub-block-gauge-degenerate rows where its per-sub-block ORDER is wrong, "the atom set
-    is exactly reproduced in both gauges"). Returns ``(slave_order, diag)`` where ``slave_order[i]``
-    is ``true_slave_idx``'s entry paired with ``master_order[i]``, and ``diag`` carries the validation
-    quantities (``max_nn_residual_A``, ``n_master`` (alias of ``n_atoms``), ``n_distinct_images``,
+    is exactly reproduced in both gauges"). Returns ``(replica_order, diag)`` where ``replica_order[i]``
+    is ``true_replica_idx``'s entry paired with ``primary_order[i]``, and ``diag`` carries the validation
+    quantities (``max_nn_residual_A``, ``n_primary`` (alias of ``n_atoms``), ``n_distinct_images``,
     ``hungarian_agrees``) for reporting.
     """
-    m = int(master_order.shape[0])
+    m = int(primary_order.shape[0])
 
-    master_frac_t = torch.as_tensor(frac[master_order], dtype=torch.float64).unsqueeze(0)
+    primary_frac_t = torch.as_tensor(frac[primary_order], dtype=torch.float64).unsqueeze(0)
     gb_t_ip_t = torch.as_tensor(np.asarray(gb_t_yz, dtype=np.float64)).unsqueeze(0)
-    rotation_t = torch.tensor(_R_SLAVE_MATRIX, dtype=torch.float64)
+    rotation_t = torch.tensor(_R_REPLICA_MATRIX, dtype=torch.float64)
     b0_t = torch.tensor(_B0_CONST, dtype=torch.float64)
-    recon_slave_frac = (
-        symmetry_ops.reconstruct_slave_pos(master_frac_t, gb_t_ip_t, rotation=rotation_t, b0=b0_t)[0]
+    recon_replica_frac = (
+        symmetry_ops.reconstruct_replica_pos(primary_frac_t, gb_t_ip_t, rotation=rotation_t, b0=b0_t)[0]
         .numpy()
     )  # (m, 3) fractional, wrapped into [0, 1)
 
     matched_idx, diag = _derive_correspondence_from_reconstruction(
-        recon_slave_frac, true_slave_idx, frac, cell,
+        recon_replica_frac, true_replica_idx, frac, cell,
         max_residual_A=max_residual_A,
         context=context,
-        label="SLAVE",
+        label="REPLICA",
     )
-    diag["n_master"] = diag["n_atoms"]  # back-compat alias (diagnosis scripts key on n_master)
+    diag["n_primary"] = diag["n_atoms"]  # back-compat alias (diagnosis scripts key on n_primary)
     assert diag["n_atoms"] == m
     return matched_idx, diag
 
@@ -276,7 +276,7 @@ def _derive_fixed_b_correspondence(
     formula the production projector runs -- not re-derived here), convert to
     fractional coordinates via this row's own cell, then hand the result to
     :func:`_derive_correspondence_from_reconstruction` to re-derive the FIXED_A<->FIXED_B
-    correspondence the same way :func:`_derive_slave_correspondence` re-derives MASTER<->SLAVE
+    correspondence the same way :func:`_derive_replica_correspondence` re-derives PRIMARY<->REPLICA
     ("apply conventions 1 to 6 in the same form to the correspondence FIXED_A -> FIXED_B").
 
     ``true_fixed_b_idx`` (the caller passes ``layout.source_fixed_b_local_idx``, i.e.
@@ -293,7 +293,7 @@ def _derive_fixed_b_correspondence(
     fixed_a_cart_t = torch.as_tensor(fixed_a_cart, dtype=torch.float64).unsqueeze(0)
     gb_t_ip_t = torch.as_tensor(np.asarray(gb_t_yz, dtype=np.float64)).unsqueeze(0)
     gb_dx_t = torch.tensor([float(gb_dx)], dtype=torch.float64)
-    rotation_t = torch.tensor(_R_SLAVE_MATRIX, dtype=torch.float64)
+    rotation_t = torch.tensor(_R_REPLICA_MATRIX, dtype=torch.float64)
 
     recon_fixed_b_cart = symmetry_ops.reconstruct_fixed_b_cart(
         fixed_a_cart_t, gb_t_ip_t, gb_dx_t,
@@ -438,11 +438,11 @@ def load_split_indices(json_path: str | Path, split: str) -> list[int]:
 
 class SymmetricTiltGBDataset(Dataset):
     """One padding-free, variable-length ChemGraph per (cnid,k,seed) proposed training structure
-    . Node layout is ``[FIXED_A(38) | FIXED_B(38) | MASTER(m) | SLAVE(m)]``
+    . Node layout is ``[FIXED_A(38) | FIXED_B(38) | PRIMARY(m) | REPLICA(m)]``
     (``gb_block``/``gb_pair_rank`` carry block membership and within-block correspondence order,
     -- NOT array position; the concatenation order here is a convenience, not a
     correctness requirement, mirroring the dataset of another package, whose own
-    ``order = np.concatenate((fixed, master, slave))`` convention, "reference only" shape).
+    ``order = np.concatenate((fixed, primary, replica))`` convention, "reference only" shape).
     """
 
     def __init__(
@@ -580,18 +580,18 @@ class SymmetricTiltGBDataset(Dataset):
         a_t, b_t, c_t = self._template_axes(row.cnid)
         gb_dx_val = (float(cell[0, 0]) - a_t) / 2.0
 
-        # Role assignment + MASTER<->SLAVE correspondence: REUSE build_canonical_layout entirely
+        # Role assignment + PRIMARY<->REPLICA correspondence: REUSE build_canonical_layout entirely
         # (module docstring above). `manifest` is unused by the function body (verified by grep at
         # implementation time -- "a case whose manifest lacks gb_t_effective_frac_yz also raises an exception without filling in a default value": passing None here never triggers a silent default
         # (see the above).
         # for that field because the field is never read for this call path at all).
         rng = np.random.default_rng()
-        # L-b: layout's own MASTER<->SLAVE species check (d, per-sub-block gauge) is
+        # L-b: layout's own PRIMARY<->REPLICA species check (d, per-sub-block gauge) is
         # skipped here; the species are checked below on the SAME op_A correspondence (s_idx)
         # that orders the output. Checks a-c (length / allowed Z / FIXED pure host) still run.
         layout = build_canonical_layout(
             frac=frac, cell=cell, membership=membership, manifest=None, rng=rng,
-            species_frac=species, check_master_slave_species=False,
+            species_frac=species, check_primary_replica_species=False,
         )
 
         fa_idx = layout.source_fixed_a_local_idx  # (N_BULK,) POSCAR-local index
@@ -604,7 +604,7 @@ class SymmetricTiltGBDataset(Dataset):
         # gauge-degenerate mismatch occurs (r2 K6 census: experiments/earlier_experiment
         # k6_fixedb/results/k6_fixedb_census.json, set-wise residual machine-precision (max
         # 2.30e-14 A) and fully bijective/Hungarian-agreeing across all 2,136 rows -- confirms this
-        # is the SAME ordering-only bug as SLAVE, not a set-reproduction failure).
+        # is the SAME ordering-only bug as REPLICA, not a set-reproduction failure).
         fb_idx, _fixed_b_correspondence_diag = _derive_fixed_b_correspondence(
             frac=frac,
             cell=cell,
@@ -615,31 +615,31 @@ class SymmetricTiltGBDataset(Dataset):
             a_template=a_t, b_template=b_t, c_template=c_t,
             context=f" ({row.cnid} k={row.k} seed={row.seed})",
         )
-        m_idx = layout.source_master_local_idx  # (m,) sub_lo->sub_hi order
+        m_idx = layout.source_primary_local_idx  # (m,) sub_lo->sub_hi order
         # s_idx: RE-DERIVED from the single graph-level gauge ("option A"), not read off
-        # layout.source_slave_local_idx directly -- see module docstring and
-        # _derive_slave_correspondence. layout.source_slave_local_idx is still the correct TRUE
-        # SLAVE atom SET (passed in as true_slave_idx); only its per-sub-block PAIRING is stale
+        # layout.source_replica_local_idx directly -- see module docstring and
+        # _derive_replica_correspondence. layout.source_replica_local_idx is still the correct TRUE
+        # REPLICA atom SET (passed in as true_replica_idx); only its per-sub-block PAIRING is stale
         # for the 103/2,136 gauge-degenerate rows.
-        s_idx, _slave_correspondence_diag = _derive_slave_correspondence(
+        s_idx, _replica_correspondence_diag = _derive_replica_correspondence(
             frac=frac,
             cell=cell,
-            master_order=m_idx,
-            true_slave_idx=layout.source_slave_local_idx,
+            primary_order=m_idx,
+            true_replica_idx=layout.source_replica_local_idx,
             gb_t_yz=layout.effective_gb_t_yz,
             context=f" ({row.cnid} k={row.k} seed={row.seed})",
         )
-        # L-b: MASTER<->SLAVE species check on the op_A correspondence (m_idx, s_idx),
-        # i.e. the SAME pairing the output order below uses (not layout's per-sub-block slave_order).
+        # L-b: PRIMARY<->REPLICA species check on the op_A correspondence (m_idx, s_idx),
+        # i.e. the SAME pairing the output order below uses (not layout's per-sub-block replica_order).
         context = f" ({row.cnid} k={row.k} seed={row.seed})"
         ms = species[m_idx]
         ss = species[s_idx]
         bad = np.nonzero(ms != ss)[0]
         if bad.size:
             raise LayoutError(
-                f"op_A MASTER<->SLAVE species mismatch at slot(s) {bad.tolist()}: "
-                f"MASTER rows {m_idx[bad].tolist()} species {ms[bad].tolist()} != "
-                f"SLAVE rows {s_idx[bad].tolist()} species {ss[bad].tolist()}{context}"
+                f"op_A PRIMARY<->REPLICA species mismatch at slot(s) {bad.tolist()}: "
+                f"PRIMARY rows {m_idx[bad].tolist()} species {ms[bad].tolist()} != "
+                f"REPLICA rows {s_idx[bad].tolist()} species {ss[bad].tolist()}{context}"
                 " ")
         n_bulk = len(fa_idx)
         m = len(m_idx)
@@ -651,8 +651,8 @@ class SymmetricTiltGBDataset(Dataset):
             [
                 torch.full((n_bulk,), GB_BLOCK_FIXED_A, dtype=torch.long),
                 torch.full((n_bulk,), GB_BLOCK_FIXED_B, dtype=torch.long),
-                torch.full((m,), GB_BLOCK_MASTER, dtype=torch.long),
-                torch.full((m,), GB_BLOCK_SLAVE, dtype=torch.long),
+                torch.full((m,), GB_BLOCK_PRIMARY, dtype=torch.long),
+                torch.full((m,), GB_BLOCK_REPLICA, dtype=torch.long),
             ]
         )
         gb_pair_rank = torch.cat(

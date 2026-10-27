@@ -10,12 +10,12 @@ Transcribed from (read only): GC/runs/generation_hooks/scripts/precheck_al_varia
 For all rows of gamma_dedup.csv it goes through ``__getitem__`` of the dataset of the variable-length proposed model (SymmetricTiltGBDataset of MN/mattergen/symmetry_constrained/variable_length/dataset.py,
 the row-position indices JSON form), and measures the following for each row. Failing rows are not discarded; the results of all rows are given (it does not stop).
 
-  - success of the derivation of the FIXED_B and SLAVE correspondences (``_derive_fixed_b_correspondence`` / ``_derive_slave_correspondence``.
-    The same functions as in __getitem__ are called individually with the same inputs and decided independently, so that SLAVE can be decided even if FIXED_B fails)
+  - success of the derivation of the FIXED_B and REPLICA correspondences (``_derive_fixed_b_correspondence`` / ``_derive_replica_correspondence``.
+    The same functions as in __getitem__ are called individually with the same inputs and decided independently, so that REPLICA can be decided even if FIXED_B fails)
   - reconstruction residual of the projection (A): the production SymmetryProjector is applied to the ChemGraph (float64, CPU) produced by the dataset, and
-    the maximum distance in the minimum image when each atom of FIXED_A, FIXED_B and SLAVE is compared "with the atom at the same position" (per-atom index agreement,
+    the maximum distance in the minimum image when each atom of FIXED_A, FIXED_B and REPLICA is compared "with the atom at the same position" (per-atom index agreement,
     not set matching) and the maximum of the cell difference. `proj_resid_max_A` = the maximum of these.
-    In addition, the nearest-neighbor residual of the set-matching side returned by the correspondence derivation (fixed_b_nn_resid_A / slave_nn_resid_A) is also recorded.
+    In addition, the nearest-neighbor residual of the set-matching side returned by the correspondence derivation (fixed_b_nn_resid_A / replica_nn_resid_A) is also recorded.
   - success of ds[i] (the production route itself). If there is an exception, its type and string.
 
 The dataset is built with dtype=torch.float64 and on CPU (the default float32 does not reach 1e-9 A).
@@ -107,14 +107,14 @@ def main() -> int:
     from mattergen.symmetry_constrained.variable_length.dataset import (
         SymmetricTiltGBDataset,
         _derive_fixed_b_correspondence,
-        _derive_slave_correspondence,
+        _derive_replica_correspondence,
         resolve_view,
     )
     from mattergen.symmetry_constrained.variable_length.layout import (
         GB_BLOCK_FIXED_A,
         GB_BLOCK_FIXED_B,
-        GB_BLOCK_MASTER,
-        GB_BLOCK_SLAVE,
+        GB_BLOCK_PRIMARY,
+        GB_BLOCK_REPLICA,
     )
     from mattergen.symmetry_constrained.variable_length.projection import SymmetryProjector
 
@@ -137,15 +137,15 @@ def main() -> int:
             rec = {
                 "row_pos": ds.row_positions[i], "split": split, "cnid": row.cnid, "k": row.k, "seed": row.seed,
                 "natoms_csv": row.natoms, "n": "", "m": "",
-                "fixed_b_ok": "", "slave_ok": "", "fixed_b_nn_resid_A": "", "slave_nn_resid_A": "",
-                "fixed_b_error": "", "slave_error": "",
+                "fixed_b_ok": "", "replica_ok": "", "fixed_b_nn_resid_A": "", "replica_nn_resid_A": "",
+                "fixed_b_error": "", "replica_error": "",
                 "getitem_ok": False, "proj_resid_max_A": "",
-                "resid_fixed_a_A": "", "resid_fixed_b_A": "", "resid_slave_A": "", "resid_cell_A": "",
+                "resid_fixed_a_A": "", "resid_fixed_b_A": "", "resid_replica_A": "", "resid_cell_A": "",
                 "error_type": "", "error": "",
             }
             ctx = f" ({row.cnid} k={row.k} seed={row.seed})"
 
-            # --- individual probes (FIXED_B / SLAVE are decided independently with the same functions and inputs as __getitem__) ---
+            # --- individual probes (FIXED_B / REPLICA are decided independently with the same functions and inputs as __getitem__) ---
             try:
                 poscar_path = Path(resolve_view(str(Path(row.dir) / "POSCAR_relaxed")))
                 frac, cell, species = read_poscar_frac_species(poscar_path)
@@ -157,16 +157,16 @@ def main() -> int:
                     rng=np.random.default_rng(), species_frac=species,
                 )
                 fa_idx = layout.source_fixed_a_local_idx
-                m_idx = layout.source_master_local_idx
+                m_idx = layout.source_primary_local_idx
                 rec["m"] = int(len(m_idx))
                 rec["n"] = int(len(fa_idx) + len(layout.source_fixed_b_local_idx) + len(m_idx)
-                               + len(layout.source_slave_local_idx))
+                               + len(layout.source_replica_local_idx))
                 geom_ok = True
             except Exception as e:  # noqa: BLE001 -- record and continue (not discarded)
                 geom_ok = False
                 msg = f"geometry/layout: {type(e).__name__}: {e}"
-                rec["fixed_b_ok"] = rec["slave_ok"] = False
-                rec["fixed_b_error"] = rec["slave_error"] = msg
+                rec["fixed_b_ok"] = rec["replica_ok"] = False
+                rec["fixed_b_error"] = rec["replica_error"] = msg
 
             if geom_ok:
                 try:
@@ -182,16 +182,16 @@ def main() -> int:
                     rec["fixed_b_ok"] = False
                     rec["fixed_b_error"] = f"{type(e).__name__}: {e}"
                 try:
-                    _, diag = _derive_slave_correspondence(
-                        frac=frac, cell=cell, master_order=m_idx,
-                        true_slave_idx=layout.source_slave_local_idx,
+                    _, diag = _derive_replica_correspondence(
+                        frac=frac, cell=cell, primary_order=m_idx,
+                        true_replica_idx=layout.source_replica_local_idx,
                         gb_t_yz=layout.effective_gb_t_yz, context=ctx,
                     )
-                    rec["slave_ok"] = True
-                    rec["slave_nn_resid_A"] = diag["max_nn_residual_A"]
+                    rec["replica_ok"] = True
+                    rec["replica_nn_resid_A"] = diag["max_nn_residual_A"]
                 except Exception as e:  # noqa: BLE001
-                    rec["slave_ok"] = False
-                    rec["slave_error"] = f"{type(e).__name__}: {e}"
+                    rec["replica_ok"] = False
+                    rec["replica_error"] = f"{type(e).__name__}: {e}"
 
             # --- production route: ds[i] and the reconstruction residual with the production projector ---
             try:
@@ -206,16 +206,16 @@ def main() -> int:
                 block = g.gb_block
                 per_block = {}
                 for bid, name in ((GB_BLOCK_FIXED_A, "fixed_a"), (GB_BLOCK_FIXED_B, "fixed_b"),
-                                  (GB_BLOCK_MASTER, "master"), (GB_BLOCK_SLAVE, "slave")):
+                                  (GB_BLOCK_PRIMARY, "primary"), (GB_BLOCK_REPLICA, "replica")):
                     mask = block == bid
                     per_block[name] = float(dist[mask].max()) if bool(mask.any()) else float("nan")
                 resid_cell = float((out.cell[0] - g.cell[0]).abs().max())
                 rec["resid_fixed_a_A"] = per_block["fixed_a"]
                 rec["resid_fixed_b_A"] = per_block["fixed_b"]
-                rec["resid_slave_A"] = per_block["slave"]
+                rec["resid_replica_A"] = per_block["replica"]
                 rec["resid_cell_A"] = resid_cell
                 rec["proj_resid_max_A"] = max(per_block["fixed_a"], per_block["fixed_b"],
-                                              per_block["master"], per_block["slave"], resid_cell)
+                                              per_block["primary"], per_block["replica"], resid_cell)
                 rec["getitem_ok"] = True
                 if rec["n"] == "":
                     rec["n"] = int(g.pos.shape[0])
@@ -233,7 +233,7 @@ def main() -> int:
         w.writeheader()
         for r in records:
             r2 = dict(r)
-            for k in ("fixed_b_error", "slave_error"):
+            for k in ("fixed_b_error", "replica_error"):
                 r2[k] = str(r2[k]).replace("\n", " ")[:2000]
             w.writerow(r2)
 
@@ -249,11 +249,11 @@ def main() -> int:
             "n_failed": len(failed),
             "failed_by_exception_type": dict(collections.Counter(r["error_type"] for r in failed)),
             "n_fixed_b_probe_failed": sum(1 for r in rs if r["fixed_b_ok"] is False),
-            "n_slave_probe_failed": sum(1 for r in rs if r["slave_ok"] is False),
+            "n_replica_probe_failed": sum(1 for r in rs if r["replica_ok"] is False),
             "proj_resid_max_A_over_successful_rows": max(resid) if resid else None,
             "n_successful_rows_above_1e-9": sum(1 for x in resid if x > CHECK2_THRESHOLD_A),
             "fixed_b_nn_resid_max_A": max([r["fixed_b_nn_resid_A"] for r in rs if r["fixed_b_nn_resid_A"] != ""] or [None]),
-            "slave_nn_resid_max_A": max([r["slave_nn_resid_A"] for r in rs if r["slave_nn_resid_A"] != ""] or [None]),
+            "replica_nn_resid_max_A": max([r["replica_nn_resid_A"] for r in rs if r["replica_nn_resid_A"] != ""] or [None]),
             "n_distribution": dict(sorted(collections.Counter(r["n"] for r in rs).items(), key=lambda kv: str(kv[0]))),
             "m_distribution": dict(sorted(collections.Counter(r["m"] for r in rs).items(), key=lambda kv: str(kv[0]))),
             "n_ne_76_plus_2m": sum(1 for r in rs if r["n"] != "" and r["m"] != "" and r["n"] != 76 + 2 * r["m"]),
@@ -281,7 +281,7 @@ def main() -> int:
         },
         "by_split": by_split,
         "failed_rows": [
-            {k: r[k] for k in ("split", "row_pos", "cnid", "k", "seed", "fixed_b_ok", "slave_ok", "error_type", "error")}
+            {k: r[k] for k in ("split", "row_pos", "cnid", "k", "seed", "fixed_b_ok", "replica_ok", "error_type", "error")}
             for r in records if not r["getitem_ok"]
         ],
         "successful_rows_above_threshold": [

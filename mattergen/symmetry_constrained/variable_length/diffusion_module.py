@@ -59,8 +59,8 @@ class SymmetryConstrainedDiffusionModule(DiffusionModule):
     ``_corrupt_batch`` (mirrors ``mattergen.symmetry_constrained.diffusion_module.FixedSlotDiffusionModule``'s role
     for the fixed N_PAD=128 layout, applied here to the variable-length,
     padding-free proposed layout instead -- follow-up). Restores
-    FIXED_A/FIXED_B (corrupted by the pos SDE) and re-derives SLAVE deterministically from the
-    noised MASTER + noised ``gb_t``, keeping the score model's training-time input distribution
+    FIXED_A/FIXED_B (corrupted by the pos SDE) and re-derives REPLICA deterministically from the
+    noised PRIMARY + noised ``gb_t``, keeping the score model's training-time input distribution
     consistent with what ``pc_sampler.py``'s generation-time projector call sees.
 
     Unlike the fixed-length transplant source, this class does **not** accept a
