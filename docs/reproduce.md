@@ -8,7 +8,7 @@ All commands use environment variables instead of paths; there are no defaults (
 | variable | meaning |
 |---|---|
 | `GBREL_CODE` | root of this repository |
-| `GBREL_DATA` | the extracted data record (Zenodo `<ZENODO_DOI>`): `training/ generation/ relaxation/ evaluation/ dft/ weights/` |
+| `GBREL_DATA` | the extracted data record (Zenodo `10.5281/zenodo.23667782`): `training/ generation/ relaxation/ evaluation/ dft/ weights/` |
 | `GBREL_WORK` | writable work directory (empty or new). `gb_eval/make_compat_tree.py` builds `$GBREL_WORK/workspace/...`, a symlink view that mirrors the directory layout the analysis scripts were written for; new outputs are written there |
 | `MACE_MODEL_PATH` | MACE-MH-1 model file (not distributed; see the top-level README) |
 | `MACE_PY` | python of the evaluation environment (`environment-eval.yml`) |
@@ -156,7 +156,7 @@ The adapter configuration `adapter/scm_al_baseline.yaml` of the baseline's train
 - `figures/scripts/fig_F6_si_dft_vs_mlip.py`, `fig_F7_si_representative_structures.py`, `fig_F8_si_dx_distribution.py` and `fig_F9_si_dmax_ecdf.py` read an extract of the
   paper's numbers table (`data/paper_numbers/ledger_subset.yaml`), not the full ledger. Numbers of the paper that were taken from internal working documents (design notes,
   decision note, a drafting reference table) are not backed by a file in this repository.
-- The checkpoints contain a few strings of the original absolute paths of the training run (inside the pickled configuration); they are not used.
+- The released checkpoints were re-saved: the strings of the original absolute paths inside the pickled configuration were replaced, and every tensor is identical to the files used for the paper (see `NOTICE`, section 3).
 
 ## Names used before this release
 

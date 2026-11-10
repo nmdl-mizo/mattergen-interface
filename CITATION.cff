@@ -1,25 +1,40 @@
 cff-version: 1.2.0
-message: "If you use this software or the accompanying data, please cite it as below and also cite the works it builds on (see references). The accompanying paper is in preparation; its reference will be added here when it is published."
+message: "If you use this software or the accompanying data, please cite it as below and also cite the works it builds on (see references). The accompanying paper has been submitted to APL Machine Learning; its reference will be added here when it is published."
 title: "mattergen-interface: symmetry-constrained MatterGen for Al Sigma5(210)[001] grain boundaries"
 type: software
 authors:
   - family-names: "Miyamoto"
     given-names: "Kazuya"
+    affiliation: "Department of Materials Engineering, the University of Tokyo, Tokyo, Japan"
+    email: "miya1216@iis.u-tokyo.ac.jp"
+  - family-names: "Okuda"
+    given-names: "Ibuki"
+    affiliation: "Department of Materials Engineering, the University of Tokyo, Tokyo, Japan"
+  - family-names: "Takahara"
+    given-names: "Izumi"
+    affiliation: "Department of Materials Engineering, the University of Tokyo, Tokyo, Japan"
   - family-names: "Mizoguchi"
     given-names: "Teruyasu"
+    affiliation: "Department of Materials Engineering, the University of Tokyo, Tokyo, Japan; Institute of Industrial Science, the University of Tokyo, Tokyo, Japan"
+    email: "teru@iis.u-tokyo.ac.jp"
 repository-code: "https://github.com/nmdl-mizo/mattergen-interface"
 license: MIT
 references:
   - type: article
-    title: "Energy-conditioned generation of Al Σ5(210)[001] grain boundaries with a symmetry-constrained MatterGen"
+    title: "Generating grain boundary structures at a specified energy with a symmetry-constrained diffusion model"
     authors:
       - family-names: "Miyamoto"
         given-names: "Kazuya"
+      - family-names: "Okuda"
+        given-names: "Ibuki"
+      - family-names: "Takahara"
+        given-names: "Izumi"
       - family-names: "Mizoguchi"
         given-names: "Teruyasu"
     year: 2026
-    status: in-preparation
-    notes: "Accompanying paper; the author list will be finalized at publication."
+    status: submitted
+    journal: "APL Machine Learning"
+    notes: "Accompanying paper."
   - type: article
     title: "A generative model for inorganic materials design"
     authors:

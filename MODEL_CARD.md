@@ -1,6 +1,6 @@
 # Model card: symmetry-constrained MatterGen for Al Sigma5(210)[001] tilt grain boundaries
 
-This card describes the two checkpoints released with this repository (in the Zenodo record `<ZENODO_DOI>`):
+This card describes the two checkpoints released with this repository (in the Zenodo record `10.5281/zenodo.23667782`):
 `proposed_epoch159.ckpt` (the *symmetry-constrained model*, proposed) and `baseline_epoch129.ckpt` (the *unconstrained baseline*).
 It replaces the model card of upstream MatterGen, which is kept in the upstream repository (https://github.com/microsoft/mattergen) and does not describe these checkpoints.
 
@@ -9,7 +9,7 @@ It replaces the model card of upstream MatterGen, which is kept in the upstream 
 - Both checkpoints are fine-tuned from the pretrained checkpoint `mattergen_base` of [microsoft/mattergen](https://github.com/microsoft/mattergen) (MIT License), with the full model fine-tuned (`full_finetuning: true`).
 - **Proposed (symmetry-constrained) model**: one grain boundary is generated and the second one is reconstructed from it by a 2_1 screw operation at every denoising step; the bulk regions are fixed. It is conditioned on the grain-boundary energy gamma (J/m^2) with classifier-free guidance (probability of dropping the condition during training: 0.2). See `README.md` section 2.
 - **Unconstrained baseline**: MatterGen fine-tuned on the same rows with the standard data representation and without the constraint; all atoms and the cell diffuse.
-- Training: AdamW, learning rate 5.0e-06 with cosine annealing, batch size 4, 200 epochs, precision 32, gradient clipping 0.5 (value), seed 20290000, on 1 GPU. The resolved configurations are released next to the checkpoints (`proposed_resolved_config.yaml`, `baseline_resolved_config.yaml`; see `docs/reproduce.md`). Training hardware: <TRAINING_HARDWARE>.
+- Training: AdamW, learning rate 5.0e-06 with cosine annealing, batch size 4, 200 epochs, precision 32, gradient clipping 0.5 (value), seed 20290000, on 1 GPU. The resolved configurations are released next to the checkpoints (`proposed_resolved_config.yaml`, `baseline_resolved_config.yaml`; see `docs/reproduce.md`). Training hardware: one NVIDIA RTX PRO 5000 Blackwell GPU (48 GB) per model; 200 epochs took 9.1 h (proposed) and 8.4 h (baseline).
 - Code state at training time: see `NOTICE`.
 
 ## Training data
@@ -49,5 +49,5 @@ MIT License (see `LICENSE`; the same license as the upstream MatterGen weights).
 
 ## Citation
 
-Please cite this repository as given in `CITATION.cff`. The accompanying paper, "Energy-conditioned generation of Al Sigma5(210)[001] grain boundaries with a symmetry-constrained MatterGen", is in preparation.
+Please cite this repository as given in `CITATION.cff`. The accompanying paper, "Generating grain boundary structures at a specified energy with a symmetry-constrained diffusion model", has been submitted to APL Machine Learning.
 Please also cite MatterGen: Zeni et al., Nature 639, 624-632 (2025), doi:10.1038/s41586-025-08628-5. See `CITATION.cff`.

@@ -4,7 +4,7 @@
 > This repository is a modified version of [microsoft/mattergen](https://github.com/microsoft/mattergen) (snapshot of September 2025). It is **not** affiliated with,
 > endorsed by, or supported by Microsoft. Original work: Copyright (c) Microsoft Corporation. Modifications: Copyright (c) 2026 nmdl-mizo. Both under the MIT License (see `LICENSE`, `NOTICE`).
 
-Reference implementation, trained weights and data of the paper "Energy-conditioned generation of Al Σ5(210)[001] grain boundaries with a symmetry-constrained MatterGen" (in preparation, `<PAPER_DOI>`).
+Reference implementation, trained weights and data of the paper "Generating grain boundary structures at a specified energy with a symmetry-constrained diffusion model" (submitted to APL Machine Learning).
 
 <p align="center">
   <img src="docs/images/denoising_trajectory.gif" alt="Denoising trajectory of an Al Σ5(210)[001] bicrystal generated with the symmetry-constrained MatterGen" width="100%">
@@ -57,7 +57,7 @@ conda env create -n gbrel-eval -f environment-eval.yml
 
 ## 4. Trained weights and data
 
-Weights and data are in one Zenodo record: `<ZENODO_URL>` (DOI `<ZENODO_DOI>`). After downloading, verify with `sha256sum -c SHA256SUMS`.
+Weights and data are in one Zenodo record: https://doi.org/10.5281/zenodo.23667782 (DOI `10.5281/zenodo.23667782`). After downloading, verify with `sha256sum -c SHA256SUMS`.
 
 | item in the record | content |
 |---|---|
@@ -109,10 +109,10 @@ UPSTREAM_README.md                           README of upstream MatterGen (kept 
 If you use this repository, please cite it as given in `CITATION.cff` (on GitHub, "Cite this repository" in the sidebar):
 
 ```
-Miyamoto, K. and Mizoguchi, T. mattergen-interface: symmetry-constrained MatterGen for Al Σ5(210)[001] grain boundaries. https://github.com/nmdl-mizo/mattergen-interface
+Miyamoto, K., Okuda, I., Takahara, I. and Mizoguchi, T. mattergen-interface: symmetry-constrained MatterGen for Al Σ5(210)[001] grain boundaries. https://github.com/nmdl-mizo/mattergen-interface
 ```
 
-The accompanying paper, "Energy-conditioned generation of Al Σ5(210)[001] grain boundaries with a symmetry-constrained MatterGen", is in preparation; its reference will be added here when it is published.
+The accompanying paper, "Generating grain boundary structures at a specified energy with a symmetry-constrained diffusion model", has been submitted to APL Machine Learning; its reference will be added here when it is published.
 
 Please also cite the works it builds on: Zeni et al., "A generative model for inorganic materials design", Nature 639, 624-632 (2025), doi:10.1038/s41586-025-08628-5 (MatterGen);
 Batatia et al., "Cross Learning between Electronic Structure Theories for Unifying Molecular, Surface, and Inorganic Crystal Foundation Force Fields", arXiv:2510.25380 (MACE-MH-1).
@@ -128,6 +128,6 @@ Xie, Shibata and Mizoguchi, "interface_master: Python package building CSL and a
 
 ## 9. Acknowledgments and contact
 
-<ACKNOWLEDGMENTS>
+This study was supported by the Ministry of Education, Culture, Sports, Science and Technology (MEXT) Supporting Pioneering Research through AI for 1,000 Discovery challenges Program (SPReAD), Japan, Grant Number JPMXP1781046134, Japan Science and Technology Agency (JST) (Nos. JPMJAX24DB and JPMJBS2418), MEXT (Nos. 25K24645 and 26K01205, 26K22608). Some computations were carried out using the computer resource offered by Research Institute for Information Technology, Kyushu University.
 
-Contact: <CONTACT>
+Contact: Kazuya Miyamoto (miya1216@iis.u-tokyo.ac.jp) and Teruyasu Mizoguchi (teru@iis.u-tokyo.ac.jp)
