@@ -128,6 +128,6 @@ Xie, Shibata and Mizoguchi, "interface_master: Python package building CSL and a
 
 ## 9. Acknowledgments and contact
 
-This study was supported by the Ministry of Education, Culture, Sports, Science and Technology (MEXT) Supporting Pioneering Research through AI for 1,000 Discovery challenges Program (SPReAD), Japan, Grant Number JPMXP1781046134, Japan Science and Technology Agency (JST) (Nos. JPMJAX24DB and JPMJBS2418), and JSPS KAKENHI Grant Numbers JP25K24645, JP26K01205, and JP26K22608. Some computations were carried out using the computer resource offered by Research Institute for Information Technology, Kyushu University.
+This study was supported by the Ministry of Education, Culture, Sports, Science and Technology (MEXT) Supporting Pioneering Research through AI for 1,000 Discovery challenges Program (SPReAD), Japan, Grant Number JPMXP1726265519, Japan Science and Technology Agency (JST) (Nos. JPMJAX24DB and JPMJBS2418), and JSPS KAKENHI Grant Numbers JP25K24645, JP26K01205, and JP26K22608. Some computations were carried out using the computer resource offered by Research Institute for Information Technology, Kyushu University.
 
 Contact: Kazuya Miyamoto (miya1216@iis.u-tokyo.ac.jp) and Teruyasu Mizoguchi (teru@iis.u-tokyo.ac.jp)
